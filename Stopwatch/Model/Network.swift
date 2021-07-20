@@ -45,7 +45,6 @@ class Network: NSObject {
                         DispatchQueue.main.async {
                             completion(player!)
                         }
-                        
                     }
                 }
             }

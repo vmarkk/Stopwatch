@@ -29,15 +29,34 @@
         <!--Training-->
         <scene sceneID="bms-Q6-VLp">
             <objects>
-                <viewController id="wOH-95-WlS" sceneMemberID="viewController">
+                <viewController id="wOH-95-WlS" customClass="HomeViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="40N-M6-Bv2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fg2-z8-rva">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wOH-95-WlS" id="abz-Jf-FiL"/>
+                                    <outlet property="delegate" destination="wOH-95-WlS" id="LQY-hP-r2R"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3vz-He-vkF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fg2-z8-rva" firstAttribute="leading" secondItem="3vz-He-vkF" secondAttribute="leading" id="1Xa-SZ-car"/>
+                            <constraint firstItem="3vz-He-vkF" firstAttribute="trailing" secondItem="fg2-z8-rva" secondAttribute="trailing" id="XTl-Ij-1I8"/>
+                            <constraint firstAttribute="bottom" secondItem="fg2-z8-rva" secondAttribute="bottom" id="qTG-sl-fvl"/>
+                            <constraint firstItem="fg2-z8-rva" firstAttribute="top" secondItem="40N-M6-Bv2" secondAttribute="top" id="yF9-4E-EzR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kz3-lr-zYU"/>
                     <navigationItem key="navigationItem" title="Training" id="D81-PV-ey8"/>
+                    <connections>
+                        <outlet property="playersTV" destination="fg2-z8-rva" id="xfK-aI-ude"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQD-3C-LNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +99,7 @@
         <!--Leaderboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -19,6 +19,8 @@
 		EAD4F5C026A742060057DF32 /* RoundTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */; };
 		EAD4F5C226A756C20057DF32 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F5C126A756C20057DF32 /* Network.swift */; };
 		EAD4F5C426A756E60057DF32 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F5C326A756E60057DF32 /* Player.swift */; };
+		EAD4F5C726A775C60057DF32 /* PlayerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F5C526A775C60057DF32 /* PlayerTVCell.swift */; };
+		EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		EAD4F5C126A756C20057DF32 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		EAD4F5C326A756E60057DF32 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		EAD4F5C526A775C60057DF32 /* PlayerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTVCell.swift; sourceTree = "<group>"; };
+		EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 				EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */,
 				EAD4F5C126A756C20057DF32 /* Network.swift */,
 				EAD4F5C326A756E60057DF32 /* Player.swift */,
+				EAD4F5C526A775C60057DF32 /* PlayerTVCell.swift */,
+				EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */,
 				EAD4F59726A73C910057DF32 /* LaunchScreen.storyboard in Resources */,
 				EAD4F59426A73C910057DF32 /* Assets.xcassets in Resources */,
 				EAD4F59226A73C900057DF32 /* Main.storyboard in Resources */,
@@ -298,6 +305,7 @@
 				EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */,
 				EAD4F5C226A756C20057DF32 /* Network.swift in Sources */,
 				EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */,
+				EAD4F5C726A775C60057DF32 /* PlayerTVCell.swift in Sources */,
 				EAD4F5C426A756E60057DF32 /* Player.swift in Sources */,
 				EAD4F58D26A73C900057DF32 /* SceneDelegate.swift in Sources */,
 				EAD4F5C026A742060057DF32 /* RoundTabBarControllerViewController.swift in Sources */,
