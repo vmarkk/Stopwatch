@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Nbl-x6-Fa7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Round Tab Bar Controller View Controller-->
+        <scene sceneID="zW5-UH-epJ">
+            <objects>
+                <tabBarController id="Nbl-x6-Fa7" customClass="RoundTabBarControllerViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U0g-v2-3Sg" customClass="RoundTabBar" customModule="Stopwatch" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bgf-rz-eYQ" kind="relationship" relationship="viewControllers" id="Fk1-as-pxL"/>
+                        <segue destination="ayW-Wg-71G" kind="relationship" relationship="viewControllers" id="1cS-e6-jia"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nui-cr-KOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771" y="302"/>
+        </scene>
+        <!--Players-->
+        <scene sceneID="bms-Q6-VLp">
+            <objects>
+                <viewController id="wOH-95-WlS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="40N-M6-Bv2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3vz-He-vkF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="kz3-lr-zYU"/>
+                    <navigationItem key="navigationItem" title="Players" id="D81-PV-ey8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CQD-3C-LNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432" y="-85"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FqF-CQ-BQo">
+            <objects>
+                <navigationController id="bgf-rz-eYQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="timerIconUnselected" selectedImage="timerIconSelected" id="9ox-h9-u2U"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6XN-pH-aCl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wOH-95-WlS" kind="relationship" relationship="rootViewController" id="4zT-Wy-ag7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0F-Tf-oof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="-85"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lyd-ec-Ebs">
+            <objects>
+                <navigationController id="ayW-Wg-71G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="leaderboardIconUnselected" selectedImage="leaderboardIconSelected" id="Kyh-wt-rJ9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="plb-dn-uqa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="n0f-Nb-P9N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="435-6X-QVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="413" y="863"/>
+        </scene>
+        <!--Leaderboard-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3Co-Nk-ICb"/>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="Tmf-hW-NDC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="863"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="leaderboardIconSelected" width="25" height="20"/>
+        <image name="leaderboardIconUnselected" width="25" height="20"/>
+        <image name="timerIconSelected" width="24" height="29"/>
+        <image name="timerIconUnselected" width="24" height="29"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
