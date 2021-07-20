@@ -13,9 +13,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var playersTV: UITableView!
     
     
-    private var players: [Player]? {
+    private var players = [Player]() {
         didSet {
-            print(players!.count)
+           
         }
     }
     
@@ -24,13 +24,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         Network.fetchPlayers(completion: { player in
-            self.players?.insert(player, at: 0)
+            self.players.insert(player, at: 0)
+            
+            self.playersTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         })
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players?.count ?? 0
+        return players.count 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
