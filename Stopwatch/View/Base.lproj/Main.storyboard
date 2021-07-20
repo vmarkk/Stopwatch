@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-771" y="302"/>
         </scene>
-        <!--Players-->
+        <!--Training-->
         <scene sceneID="bms-Q6-VLp">
             <objects>
                 <viewController id="wOH-95-WlS" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kz3-lr-zYU"/>
-                    <navigationItem key="navigationItem" title="Players" id="D81-PV-ey8"/>
+                    <navigationItem key="navigationItem" title="Training" id="D81-PV-ey8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQD-3C-LNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

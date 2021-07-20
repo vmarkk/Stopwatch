@@ -8,10 +8,19 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    
+    private var players: [Player]? {
+        didSet {
+            print(players!.count)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        
+        players = Network.fetchPlayers()
     }
 
 
