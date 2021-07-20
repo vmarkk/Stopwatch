@@ -20,7 +20,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
       
         
-        players = Network.fetchPlayers()
+      Network.fetchPlayers(completion: { player in
+       
+    
+        })
     }
 
 
