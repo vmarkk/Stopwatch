@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		AE1C1249D73FCB5B08B78B33 /* Pods_Stopwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED2B1ED48413EE743630CA5 /* Pods_Stopwatch.framework */; };
 		EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15626A83F7E000F1797 /* Extensions.swift */; };
 		EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */; };
+		EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */; };
 		EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58A26A73C900057DF32 /* AppDelegate.swift */; };
 		EAD4F58D26A73C900057DF32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58C26A73C900057DF32 /* SceneDelegate.swift */; };
 		EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58E26A73C900057DF32 /* HomeViewController.swift */; };
@@ -56,6 +57,7 @@
 		D416D715FE7EFB15898060F6 /* Pods_Stopwatch_StopwatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch_StopwatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA82E15626A83F7E000F1797 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EAD4F58726A73C900057DF32 /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD4F58A26A73C900057DF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD4F58C26A73C900057DF32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +129,6 @@
 				3BBF0B5ADE7F8711015D328B /* Pods-StopwatchTests.debug.xcconfig */,
 				0226D848DB029C935663ADE4 /* Pods-StopwatchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,6 +139,23 @@
 				EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		EA82E15C26A85DA5000F1797 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EAD4F5C326A756E60057DF32 /* Player.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EA82E15D26A85DAE000F1797 /* CustomShapes */ = {
+			isa = PBXGroup;
+			children = (
+				EAD4F5BD26A73E8E0057DF32 /* RoundTabBar.swift */,
+				EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */,
+			);
+			path = CustomShapes;
 			sourceTree = "<group>";
 		};
 		EAD4F57E26A73C900057DF32 = {
@@ -198,11 +216,8 @@
 		EAD4F5BA26A73D690057DF32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA82E15526A83F57000F1797 /* Cells */,
-				EAD4F5BD26A73E8E0057DF32 /* RoundTabBar.swift */,
-				EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */,
+				EA82E15C26A85DA5000F1797 /* Data */,
 				EAD4F5C126A756C20057DF32 /* Network.swift */,
-				EAD4F5C326A756E60057DF32 /* Player.swift */,
 				EA82E15626A83F7E000F1797 /* Extensions.swift */,
 			);
 			path = Model;
@@ -211,6 +226,8 @@
 		EAD4F5BB26A73D6D0057DF32 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EA82E15526A83F57000F1797 /* Cells */,
+				EA82E15D26A85DAE000F1797 /* CustomShapes */,
 				EAD4F59026A73C900057DF32 /* Main.storyboard */,
 			);
 			path = View;
@@ -221,6 +238,7 @@
 			children = (
 				EAD4F58E26A73C900057DF32 /* HomeViewController.swift */,
 				EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */,
+				EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,6 +484,7 @@
 			files = (
 				EAD4F5BE26A73E8E0057DF32 /* RoundTabBar.swift in Sources */,
 				EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */,
+				EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */,
 				EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */,
 				EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */,
 				EAD4F5C226A756C20057DF32 /* Network.swift in Sources */,

@@ -28,12 +28,10 @@ class RoundTabBar: UITabBar {
     
     
     func createPath() -> UIBezierPath {
-        
-       
+
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 30, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width/2-30, y: 0))
-     //   path.addArc(withCenter: CGPoint(x: (self.frame.width/2), y: tabCircleCenterY), radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
         path.addLine(to: CGPoint(x: self.frame.width/2+30, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width-30, y: 0))
         path.addArc(withCenter: CGPoint(x: self.frame.width-30, y: 30), radius: 30, startAngle: (.pi/2), endAngle: (0), clockwise: true)

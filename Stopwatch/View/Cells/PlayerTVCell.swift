@@ -14,6 +14,8 @@ class PlayerTVCell: UITableViewCell {
     @IBOutlet weak var sexPlayerImage: UIImageView!
     @IBOutlet weak var sexPlayer: UILabel!
     @IBOutlet weak var namePlayer: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +25,7 @@ class PlayerTVCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         if selected {
-            contentView.backgroundColor = .black
+            contentView.backgroundColor = .gray
         } else {
             contentView.backgroundColor = .white
         }

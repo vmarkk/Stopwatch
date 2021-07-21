@@ -12,6 +12,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     @IBOutlet weak var playersTV: UITableView!
+
+    private var selectedPlayer: Player?
     
     
     private var players = [Player]() {
@@ -52,8 +54,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         if player.name.title == "Mr" {
             sex = "Male"
+            cell.sexPlayerImage.image = UIImage(named: "male")
         } else {
             sex = "Female"
+            cell.sexPlayerImage.image = UIImage(named: "female")
         }
 
         cell.namePlayer.text = "\(player.name.first) \(player.name.last)"
@@ -78,7 +82,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        selectedPlayer = players[indexPath.row]
+
+        performSegue(withIdentifier: "goSettings", sender: self)
     }
 
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let backItem = UIBarButtonItem()
+           backItem.title = ""
+           navigationItem.backBarButtonItem = backItem
+
+        if segue.destination is SettingsViewController {
+            if let vc = segue.destination as? SettingsViewController {
+
+                vc.player = selectedPlayer
+            }
+        }
+    }
 }
 

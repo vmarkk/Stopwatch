@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.023" height="37.023" viewBox="0 0 37.023 37.023">
+  <g id="Raggruppa_68" data-name="Raggruppa 68" transform="translate(161.91 -729.541) rotate(45)">
+    <g id="Ellisse_29" data-name="Ellisse 29" transform="translate(416 621.866)" fill="none" stroke="#000" stroke-width="4">
+      <circle cx="11.555" cy="11.555" r="11.555" stroke="none"/>
+      <circle cx="11.555" cy="11.555" r="9.555" fill="none"/>
+    </g>
+    <rect id="Rettangolo_64" data-name="Rettangolo 64" width="4.622" height="15.122" transform="translate(425.244 608)"/>
+    <g id="Raggruppa_67" data-name="Raggruppa 67" transform="translate(417.75 604.172)">
+      <path id="Rettangolo_65" data-name="Rettangolo 65" d="M0,0H4.622a0,0,0,0,1,0,0V11.555a2.311,2.311,0,0,1-2.311,2.311h0A2.311,2.311,0,0,1,0,11.555V0A0,0,0,0,1,0,0Z" transform="translate(9.804 0) rotate(45)"/>
+      <path id="Rettangolo_66" data-name="Rettangolo 66" d="M2.311,0h0A2.311,2.311,0,0,1,4.622,2.311V13.865a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.311A2.311,2.311,0,0,1,2.311,0Z" transform="translate(19.609 9.804) rotate(135)"/>
+    </g>
+  </g>
+</svg>
