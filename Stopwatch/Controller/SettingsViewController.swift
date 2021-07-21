@@ -137,7 +137,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
 
         UIView.animate(withDuration: 0.12) {
             self.startOutlet.transform = .identity
+        } completion: { done in
+            if done {
+                self.performSegue(withIdentifier: "goSession", sender: self)
+            }
         }
+        
+        
     }
     
     @IBAction func startCancel(_ sender: UIButton) {
@@ -167,6 +173,18 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func startTouchUpOutside(_ sender: UIButton) {
         UIView.animate(withDuration: 0.12) {
             self.startOutlet.transform = .identity
+        }
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SessionViewController {
+            if let vc = segue.destination as? SessionViewController {
+
+                vc.player = player
+                vc.distance = distance
+            }
         }
     }
 }

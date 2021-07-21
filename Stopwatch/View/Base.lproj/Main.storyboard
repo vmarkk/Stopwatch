@@ -83,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Choose a distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emE-mk-ROk">
-                                <rect key="frame" x="15" y="160" width="182.5" height="25.5"/>
+                                <rect key="frame" x="15" y="108" width="182.5" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="peg-wK-R7E"/>
                                 </constraints>
@@ -92,7 +92,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KZR-IA-H54">
-                                <rect key="frame" x="147" y="255.5" width="120" height="40"/>
+                                <rect key="frame" x="147" y="203.5" width="120" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="frL-0o-bEI">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
@@ -168,16 +168,50 @@
                             <constraint firstItem="W79-gr-hOi" firstAttribute="trailing" secondItem="V3t-Yn-i6Q" secondAttribute="trailing" constant="30" id="z8H-Z1-APK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="J8b-YO-DY8"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="J8b-YO-DY8"/>
                     <connections>
                         <outlet property="buttonBottomConstraint" destination="weZ-cC-Wq4" id="nbq-SD-zgw"/>
                         <outlet property="distanceTxtField" destination="gjA-mj-FRD" id="VUw-lg-ayO"/>
                         <outlet property="startOutlet" destination="V3t-Yn-i6Q" id="jfo-Z1-zgw"/>
+                        <segue destination="0u5-gq-IyW" kind="presentation" identifier="goSession" modalPresentationStyle="overFullScreen" id="xx7-Bq-vGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0t-eQ-eXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2318.840579710145" y="-78.348214285714278"/>
+            <point key="canvasLocation" x="2257" y="-79"/>
+        </scene>
+        <!--Session View Controller-->
+        <scene sceneID="BBg-LC-fHa">
+            <objects>
+                <viewController id="0u5-gq-IyW" customClass="SessionViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M9z-4a-pug">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VF-Xf-p0K">
+                                <rect key="frame" x="20" y="59" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7VF-Xf-p0K" secondAttribute="height" id="OYj-8H-UoD"/>
+                                    <constraint firstAttribute="height" constant="20" id="WCY-aG-rfi"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="x"/>
+                                <connections>
+                                    <action selector="x:" destination="0u5-gq-IyW" eventType="touchUpInside" id="EQR-u4-YuG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7He-ls-bzg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7VF-Xf-p0K" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="2fv-h1-TeM"/>
+                            <constraint firstItem="7VF-Xf-p0K" firstAttribute="leading" secondItem="7He-ls-bzg" secondAttribute="leading" constant="20" id="Jkm-6g-M9F"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5k-wc-a6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3203" y="-79"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FqF-CQ-BQo">
@@ -238,6 +272,7 @@
         <image name="runMan" width="293.22500610351562" height="185.5469970703125"/>
         <image name="timerIconSelected" width="24" height="29"/>
         <image name="timerIconUnselected" width="24" height="29"/>
+        <image name="x" width="55.25" height="54.997001647949219"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
