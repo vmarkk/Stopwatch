@@ -19,3 +19,25 @@ extension UINavigationController {
     }
 
 }
+
+
+extension UIButton {
+    
+    func addGradiant() {
+        let GradientLayerName = "gradientLayer"
+        
+        if let oldlayer = self.layer.sublayers?.filter({$0.name == GradientLayerName}).first {
+            oldlayer.removeFromSuperlayer()
+        }
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [UIColor(named: "darkRed")!.cgColor, UIColor(named: "lightRed")!.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1 )
+        gradientLayer.frame = self.bounds
+        gradientLayer.name = GradientLayerName
+        gradientLayer.cornerRadius = gradientLayer.frame.size.height/2
+        self.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+}

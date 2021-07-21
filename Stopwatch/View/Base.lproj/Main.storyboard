@@ -136,6 +136,7 @@
                                             <constraint firstItem="emE-mk-ROk" firstAttribute="top" secondItem="SqJ-ML-XRD" secondAttribute="top" constant="20" id="HqC-Jw-HwD"/>
                                             <constraint firstItem="KZR-IA-H54" firstAttribute="centerX" secondItem="SqJ-ML-XRD" secondAttribute="centerX" id="ZYn-ob-ExE"/>
                                             <constraint firstItem="emE-mk-ROk" firstAttribute="leading" secondItem="SqJ-ML-XRD" secondAttribute="leading" constant="15" id="m3z-Oq-Ggl"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KZR-IA-H54" secondAttribute="bottom" id="zqI-tT-fw2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -148,6 +149,27 @@
                                     <constraint firstItem="SqJ-ML-XRD" firstAttribute="width" secondItem="s7i-1o-Rv5" secondAttribute="width" id="sds-oC-Xt8"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3t-Yn-i6Q">
+                                <rect key="frame" x="30" y="723" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LTq-IH-Tnh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="60" minY="13" maxX="232" maxY="13"/>
+                                <state key="normal" title="START SESSION" image="runMan">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="m42-1b-aSv" eventType="touchUpInside" id="cKE-y9-Oit"/>
+                                    <action selector="startCancel:" destination="m42-1b-aSv" eventType="touchCancel" id="GBR-Vg-FT0"/>
+                                    <action selector="startDragExit:" destination="m42-1b-aSv" eventType="touchDragExit" id="TeF-6n-RSg"/>
+                                    <action selector="startTouchDown:" destination="m42-1b-aSv" eventType="touchDown" id="MtR-kv-iwq"/>
+                                    <action selector="startTouchUpOutside:" destination="m42-1b-aSv" eventType="touchUpOutside" id="dsU-UF-bNi"/>
+                                    <action selector="touchDragOutside:" destination="m42-1b-aSv" eventType="touchDragOutside" id="FRV-Cv-7YV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W79-gr-hOi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -155,17 +177,21 @@
                             <constraint firstItem="s7i-1o-Rv5" firstAttribute="leading" secondItem="W79-gr-hOi" secondAttribute="leading" id="2X0-jn-6mz"/>
                             <constraint firstItem="s7i-1o-Rv5" firstAttribute="top" secondItem="mns-9u-m4O" secondAttribute="top" id="AXb-n1-6E4"/>
                             <constraint firstItem="W79-gr-hOi" firstAttribute="trailing" secondItem="s7i-1o-Rv5" secondAttribute="trailing" id="FQH-Ju-rQt"/>
+                            <constraint firstItem="V3t-Yn-i6Q" firstAttribute="leading" secondItem="W79-gr-hOi" secondAttribute="leading" constant="30" id="FUs-i0-IWM"/>
                             <constraint firstAttribute="bottom" secondItem="s7i-1o-Rv5" secondAttribute="bottom" id="KOr-qv-UWd"/>
+                            <constraint firstItem="W79-gr-hOi" firstAttribute="bottom" secondItem="V3t-Yn-i6Q" secondAttribute="bottom" constant="40" id="weZ-cC-Wq4"/>
+                            <constraint firstItem="W79-gr-hOi" firstAttribute="trailing" secondItem="V3t-Yn-i6Q" secondAttribute="trailing" constant="30" id="z8H-Z1-APK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J8b-YO-DY8"/>
                     <connections>
                         <outlet property="distanceTxtField" destination="gjA-mj-FRD" id="VUw-lg-ayO"/>
+                        <outlet property="startOutlet" destination="V3t-Yn-i6Q" id="jfo-Z1-zgw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0t-eQ-eXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-78"/>
+            <point key="canvasLocation" x="2318.840579710145" y="-78.348214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FqF-CQ-BQo">
@@ -223,6 +249,7 @@
     <resources>
         <image name="leaderboardIconSelected" width="25" height="20"/>
         <image name="leaderboardIconUnselected" width="25" height="20"/>
+        <image name="runMan" width="293.22500610351562" height="185.5469970703125"/>
         <image name="timerIconSelected" width="24" height="29"/>
         <image name="timerIconUnselected" width="24" height="29"/>
         <systemColor name="systemBackgroundColor">
