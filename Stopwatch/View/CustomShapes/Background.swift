@@ -28,20 +28,18 @@ class Background: UIView {
         
         
         path = UIBezierPath()
-        // ORIGINAL VALUE: 30
-        let heightValue = rect.height*0.113
-        
-        let to = CGPoint(x: rect.width/2, y: rect.height)
-        let cP2 = CGPoint(x: 0, y: rect.height-heightValue)
+
+    
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: CGPoint(x: rect.width, y: 0))
-        path.addLine(to: CGPoint(x: rect.width, y: rect.height-heightValue))
-        path.addQuadCurve(to: cP2, controlPoint: to)
+        path.addLine(to: CGPoint(x: rect.width, y: rect.height/2.5))
+        path.addLine(to: CGPoint(x: 0, y: rect.height/2.5))
+     
 
       
         path.addClip()
         
-        // create and add the gradient
+ 
         let colors = [UIColor(named: "darkRed")!.cgColor, UIColor(named: "lightRed")!.cgColor]
         
         
@@ -59,13 +57,58 @@ class Background: UIView {
         let startPoint = CGPoint(x: bounds.minX, y: bounds.maxY)
         let endPoint = CGPoint(x: bounds.maxX, y: bounds.minY)
         
-        // and lastly, draw the gradient.
+     
         context.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: CGGradientDrawingOptions.drawsAfterEndLocation)
         
         
         
     }
     var gradient: CAGradientLayer!
+    
+    
+}
+
+
+
+
+
+
+@IBDesignable
+class BackgroundWhite: UIView {
+    
+    var path: UIBezierPath!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .white
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        backgroundColor = .clear
+    }
+    
+    override func draw(_ rect: CGRect) {
+        
+        
+        path = UIBezierPath()
+        let cP2 = CGPoint(x: rect.width/2, y: 0)
+        let to = CGPoint(x: rect.width, y: 35)
+        
+        path.move(to: CGPoint(x: 0, y: 35))
+        path.addQuadCurve(to: to, controlPoint: cP2)
+        path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+        path.addLine(to: CGPoint(x: 0, y: rect.height))
+        path.addLine(to: CGPoint(x: 0, y: 35))
+        
+        
+        #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).setFill()
+      
+        path.fill()
+        
+        
+    }
+   
     
     
 }

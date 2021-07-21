@@ -9,12 +9,16 @@ import UIKit
 
 class SessionViewController: UIViewController {
     
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var finishOutlet: UIButton!
     var player: Player?
     var distance: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scroll.contentInset.top = 300
 
         setUpViews()
         
@@ -31,6 +35,7 @@ class SessionViewController: UIViewController {
         finishOutlet.layer.borderWidth = 2
         finishOutlet.layer.borderColor = UIColor.white.cgColor
       
+    
     }
     
 
