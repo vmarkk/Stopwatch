@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().layer.shadowOpacity = 0.15
         UINavigationBar.appearance().barTintColor = UIColor.white
         UINavigationBar.appearance().layer.masksToBounds = false
-        
         return true
     }
 
@@ -43,4 +42,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
+
 

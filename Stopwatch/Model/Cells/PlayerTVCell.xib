@@ -40,8 +40,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="94j-y2-QJ6">
                                 <rect key="frame" x="95" y="17.5" width="210" height="45.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDg-az-1Nj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDg-az-1Nj">
                                         <rect key="frame" x="0.0" y="0.0" width="15.5" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6wh-df-y9j"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,8 +59,11 @@
                                                     <constraint firstAttribute="width" secondItem="5KO-9E-ehm" secondAttribute="height" multiplier="1:1" id="YX6-6S-KGr"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm2-gb-8I5">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm2-gb-8I5">
                                                 <rect key="frame" x="25" y="4" width="12.5" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="KTJ-CK-Lj3"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
@@ -77,6 +83,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageContainer" destination="Cqb-Al-ERg" id="c4S-3e-W1o"/>
+                <outlet property="imageProfile" destination="6vW-mG-Kw3" id="Pbx-PU-qya"/>
+                <outlet property="namePlayer" destination="UDg-az-1Nj" id="Gdj-nU-RYO"/>
+                <outlet property="sexPlayer" destination="Fm2-gb-8I5" id="FfS-0T-wk4"/>
+                <outlet property="sexPlayerImage" destination="5KO-9E-ehm" id="nx5-js-L6l"/>
+            </connections>
             <point key="canvasLocation" x="113.768115942029" y="70.647321428571431"/>
         </tableViewCell>
     </objects>

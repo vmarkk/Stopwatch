@@ -15,22 +15,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private var players = [Player]() {
         didSet {
-           
+            self.playersTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
+        playersTV.register(UINib(nibName: "PlayerTVCell", bundle: nil), forCellReuseIdentifier: "cellPlayer")
+        playersTV.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: playersTV.frame.size.width, height: 1))
+
         Network.fetchPlayers(completion: { player in
             self.players.insert(player, at: 0)
-            
-            self.playersTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         })
     }
-    
-    
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        navigationController?.setShadow()
+    }
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count 
     }
@@ -38,8 +45,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellPlayer") as? PlayerTVCell else { return UITableViewCell() }
+
+        let player = players[indexPath.row]
+        var sex = ""
+
+        if player.name.title == "Mr" {
+            sex = "Male"
+        } else {
+            sex = "Female"
+        }
+
+        cell.namePlayer.text = "\(player.name.first) \(player.name.last)"
+        cell.sexPlayer.text = sex
+
+        cell.imageProfile.layer.cornerRadius = cell.imageProfile.frame.size.height/2
+        cell.imageContainer.layer.cornerRadius = cell.imageContainer.frame.size.height/2
+        cell.imageContainer.layer.shadowColor = UIColor.black.cgColor
+        cell.imageContainer.layer.shadowOffset = CGSize(width: 2, height: 3)
+        cell.imageContainer.layer.shadowRadius = 7
+        cell.imageContainer.layer.shadowOpacity = 0.1
+
         
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 }
