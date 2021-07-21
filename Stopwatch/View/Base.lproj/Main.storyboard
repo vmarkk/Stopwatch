@@ -42,13 +42,23 @@
                                     <outlet property="delegate" destination="wOH-95-WlS" id="LQY-hP-r2R"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIR-KT-znE" customClass="Spinner" customModule="Stopwatch" customModuleProvider="target">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BIR-KT-znE" secondAttribute="height" id="4wn-pB-uG8"/>
+                                    <constraint firstAttribute="height" constant="60" id="yVz-Lq-aeX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3vz-He-vkF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fg2-z8-rva" firstAttribute="leading" secondItem="3vz-He-vkF" secondAttribute="leading" id="1Xa-SZ-car"/>
+                            <constraint firstItem="BIR-KT-znE" firstAttribute="centerY" secondItem="40N-M6-Bv2" secondAttribute="centerY" id="Khf-2c-OfR"/>
                             <constraint firstItem="3vz-He-vkF" firstAttribute="trailing" secondItem="fg2-z8-rva" secondAttribute="trailing" id="XTl-Ij-1I8"/>
                             <constraint firstAttribute="bottom" secondItem="fg2-z8-rva" secondAttribute="bottom" id="qTG-sl-fvl"/>
+                            <constraint firstItem="BIR-KT-znE" firstAttribute="centerX" secondItem="40N-M6-Bv2" secondAttribute="centerX" id="rnt-yc-yIo"/>
                             <constraint firstItem="fg2-z8-rva" firstAttribute="top" secondItem="40N-M6-Bv2" secondAttribute="top" id="yF9-4E-EzR"/>
                         </constraints>
                     </view>
@@ -56,6 +66,7 @@
                     <navigationItem key="navigationItem" title="Training" id="D81-PV-ey8"/>
                     <connections>
                         <outlet property="playersTV" destination="fg2-z8-rva" id="xfK-aI-ude"/>
+                        <outlet property="spinner" destination="BIR-KT-znE" id="2kk-z4-57G"/>
                         <segue destination="m42-1b-aSv" kind="show" identifier="goSettings" id="S1m-oD-Qch"/>
                     </connections>
                 </viewController>

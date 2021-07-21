@@ -108,7 +108,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func startTouchDown(_ sender: UIButton) {
         UIView.animate(withDuration: 0.12) {
-            self.startOutlet.transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
+            self.startOutlet.transform = CGAffineTransform(scaleX: 0.94, y: 0.94)
         }
     }
     

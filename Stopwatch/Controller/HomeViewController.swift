@@ -11,6 +11,7 @@ import SDWebImage
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var spinner: Spinner!
     @IBOutlet weak var playersTV: UITableView!
 
     private var selectedPlayer: Player?
@@ -19,11 +20,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     private var players = [Player]() {
         didSet {
             self.playersTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+            
+            if players.count == 1 {
+                self.spinner.stopRotate()
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        spinner.rotate()
 
         playersTV.register(UINib(nibName: "PlayerTVCell", bundle: nil), forCellReuseIdentifier: "cellPlayer")
         playersTV.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: playersTV.frame.size.width, height: 1))

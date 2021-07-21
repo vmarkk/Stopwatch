@@ -27,6 +27,7 @@
 		EAD4F5C426A756E60057DF32 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F5C326A756E60057DF32 /* Player.swift */; };
 		EAD4F5C726A775C60057DF32 /* PlayerTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F5C526A775C60057DF32 /* PlayerTVCell.swift */; };
 		EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */; };
+		EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		EAD4F5C326A756E60057DF32 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EAD4F5C526A775C60057DF32 /* PlayerTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTVCell.swift; sourceTree = "<group>"; };
 		EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTVCell.xib; sourceTree = "<group>"; };
+		EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		EE3EBE5C0B771E7B94FE9D3D /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 			children = (
 				EAD4F5BD26A73E8E0057DF32 /* RoundTabBar.swift */,
 				EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */,
+				EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */,
 			);
 			path = CustomShapes;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */,
 				EAD4F5C226A756C20057DF32 /* Network.swift in Sources */,
 				EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */,
+				EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */,
 				EAD4F5C726A775C60057DF32 /* PlayerTVCell.swift in Sources */,
 				EAD4F5C426A756E60057DF32 /* Player.swift in Sources */,
 				EAD4F58D26A73C900057DF32 /* SceneDelegate.swift in Sources */,
