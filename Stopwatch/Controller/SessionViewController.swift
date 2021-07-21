@@ -18,7 +18,7 @@ class SessionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scroll.contentInset.top = 300
+        scroll.contentInset.top = 250
 
         setUpViews()
         
