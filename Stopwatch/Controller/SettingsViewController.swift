@@ -7,13 +7,16 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var distanceTxtField: UITextField!
 
+    
     private let accessoryToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
     private var accessoryDoneButton: UIBarButtonItem!
     var player: Player?
+    private var distance = ""
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,4 +60,22 @@ class SettingsViewController: UIViewController {
     @objc private func donePressed() {
         view.endEditing(true)
     }
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+       
+        let currentText = textField.text ?? ""
+
+        guard let stringRange = Range(range, in: currentText) else { return false }
+
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+
+        distance = updatedText
+        
+        // I DECIDED TO LIMIT DISTANCE DIGITS TO 4
+        return updatedText.count <= 4
+    }
 }
+
+
+
