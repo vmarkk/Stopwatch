@@ -23,18 +23,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqb-Al-ERg" userLabel="ImageContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6vW-mG-Kw3">
-                                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6vW-mG-Kw3">
+                                        <rect key="frame" x="3" y="3" width="74" height="74"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="6vW-mG-Kw3" firstAttribute="top" secondItem="Cqb-Al-ERg" secondAttribute="top" constant="8" id="8LO-KI-vKS"/>
+                                    <constraint firstItem="6vW-mG-Kw3" firstAttribute="top" secondItem="Cqb-Al-ERg" secondAttribute="top" constant="3" id="8LO-KI-vKS"/>
                                     <constraint firstAttribute="width" secondItem="Cqb-Al-ERg" secondAttribute="height" id="DXu-HC-P5H"/>
-                                    <constraint firstItem="6vW-mG-Kw3" firstAttribute="leading" secondItem="Cqb-Al-ERg" secondAttribute="leading" constant="8" id="dJe-SF-xD2"/>
-                                    <constraint firstAttribute="bottom" secondItem="6vW-mG-Kw3" secondAttribute="bottom" constant="8" id="fr2-AJ-C60"/>
+                                    <constraint firstItem="6vW-mG-Kw3" firstAttribute="leading" secondItem="Cqb-Al-ERg" secondAttribute="leading" constant="3" id="dJe-SF-xD2"/>
+                                    <constraint firstAttribute="bottom" secondItem="6vW-mG-Kw3" secondAttribute="bottom" constant="3" id="fr2-AJ-C60"/>
                                     <constraint firstAttribute="height" constant="80" id="iVs-2Q-ljL"/>
-                                    <constraint firstAttribute="trailing" secondItem="6vW-mG-Kw3" secondAttribute="trailing" constant="8" id="zuK-Yv-4ph"/>
+                                    <constraint firstAttribute="trailing" secondItem="6vW-mG-Kw3" secondAttribute="trailing" constant="3" id="zuK-Yv-4ph"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="94j-y2-QJ6">

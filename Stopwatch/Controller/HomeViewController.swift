@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -61,10 +62,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageProfile.layer.cornerRadius = cell.imageProfile.frame.size.height/2
         cell.imageContainer.layer.cornerRadius = cell.imageContainer.frame.size.height/2
         cell.imageContainer.layer.shadowColor = UIColor.black.cgColor
-        cell.imageContainer.layer.shadowOffset = CGSize(width: 2, height: 3)
-        cell.imageContainer.layer.shadowRadius = 7
-        cell.imageContainer.layer.shadowOpacity = 0.1
-
+        cell.imageContainer.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.imageContainer.layer.shadowRadius = 15
+        cell.imageContainer.layer.shadowOpacity = 0.23
+        
+        cell.imageProfile.sd_setImage(with: URL(string: player.picture.medium)) { image, err, cache, url in
+            if let userImage = image {
+                cell.imageProfile.image = userImage
+            }
+        }
+        
         
         return cell
     }
