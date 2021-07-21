@@ -97,7 +97,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="frL-0o-bEI">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E.g 33" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjA-mj-FRD">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E.g 33" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjA-mj-FRD">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="35"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -184,7 +184,7 @@
         <scene sceneID="BBg-LC-fHa">
             <objects>
                 <viewController id="0u5-gq-IyW" customClass="SessionViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="M9z-4a-pug">
+                    <view key="view" contentMode="scaleToFill" id="M9z-4a-pug" customClass="Background" customModule="Stopwatch" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -194,20 +194,45 @@
                                     <constraint firstAttribute="width" secondItem="7VF-Xf-p0K" secondAttribute="height" id="OYj-8H-UoD"/>
                                     <constraint firstAttribute="height" constant="20" id="WCY-aG-rfi"/>
                                 </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="x"/>
                                 <connections>
                                     <action selector="x:" destination="0u5-gq-IyW" eventType="touchUpInside" id="EQR-u4-YuG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-8L-cLu">
+                                <rect key="frame" x="176" y="59" width="62.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eS-5R-U1T">
+                                <rect key="frame" x="339" y="59" width="60" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="j7G-UQ-NeJ"/>
+                                    <constraint firstAttribute="width" constant="60" id="wGn-ma-PPQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <state key="normal" title="FINISH">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7He-ls-bzg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
+                            <constraint firstItem="gr3-8L-cLu" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="2ER-oz-8VL"/>
                             <constraint firstItem="7VF-Xf-p0K" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="2fv-h1-TeM"/>
                             <constraint firstItem="7VF-Xf-p0K" firstAttribute="leading" secondItem="7He-ls-bzg" secondAttribute="leading" constant="20" id="Jkm-6g-M9F"/>
+                            <constraint firstItem="1eS-5R-U1T" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="KZy-wH-KWq"/>
+                            <constraint firstItem="7He-ls-bzg" firstAttribute="trailing" secondItem="1eS-5R-U1T" secondAttribute="trailing" constant="15" id="f5g-pd-1qg"/>
+                            <constraint firstItem="gr3-8L-cLu" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="qCU-ix-fZh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finishOutlet" destination="1eS-5R-U1T" id="hgZ-Bj-Ml3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5k-wc-a6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,6 +300,9 @@
         <image name="x" width="55.25" height="54.997001647949219"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

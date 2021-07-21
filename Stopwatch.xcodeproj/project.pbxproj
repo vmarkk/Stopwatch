@@ -29,6 +29,7 @@
 		EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */; };
 		EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */; };
 		EAE7A6BF26A8B4A9001ACD32 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6BE26A8B4A9001ACD32 /* SessionViewController.swift */; };
+		EAE7A6C126A8BB9B001ACD32 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6C026A8BB9B001ACD32 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTVCell.xib; sourceTree = "<group>"; };
 		EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		EAE7A6BE26A8B4A9001ACD32 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
+		EAE7A6C026A8BB9B001ACD32 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		EE3EBE5C0B771E7B94FE9D3D /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				EAD4F5BD26A73E8E0057DF32 /* RoundTabBar.swift */,
 				EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */,
 				EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */,
+				EAE7A6C026A8BB9B001ACD32 /* Background.swift */,
 			);
 			path = CustomShapes;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAD4F5BE26A73E8E0057DF32 /* RoundTabBar.swift in Sources */,
+				EAE7A6C126A8BB9B001ACD32 /* Background.swift in Sources */,
 				EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */,
 				EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */,
 				EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */,
