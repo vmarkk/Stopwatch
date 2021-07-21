@@ -1,0 +1,6 @@
+framework module Pods_Stopwatch_StopwatchUITests {
+  umbrella header "Pods-Stopwatch-StopwatchUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

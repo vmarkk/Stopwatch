@@ -66,7 +66,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageContainer.layer.shadowRadius = 15
         cell.imageContainer.layer.shadowOpacity = 0.23
         
-        cell.imageProfile.sd_setImage(with: URL(string: player.picture.medium)) { image, err, cache, url in
+        cell.imageProfile.sd_setImage(with: URL(string: player.picture.large)) { image, err, cache, url in
             if let userImage = image {
                 cell.imageProfile.image = userImage
             }
