@@ -19,19 +19,30 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var player: Player?
     var distance: String?
+    private var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scroll.contentInset.top = 200
+        scroll.contentInset.top = 150
         
         setUpViews()
         
         if distance != nil {
             titleView.text = "\(distance!) m"
         }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0,
+            target: self,
+            selector: #selector(startTimer),
+            userInfo: nil,
+            repeats: false)
     }
     
+    
+    @objc private func startTimer() {
+        
+    }
 
     @IBAction func x(_ sender: UIButton) {
         alert()
