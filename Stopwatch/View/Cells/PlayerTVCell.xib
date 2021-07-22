@@ -72,7 +72,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="uoy-SH-pY3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="runManRed" translatesAutoresizingMaskIntoConstraints="NO" id="uoy-SH-pY3">
                                 <rect key="frame" x="275" y="25" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="fLT-eQ-xS2"/>
@@ -103,7 +103,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrowRight" width="27" height="27"/>
+        <image name="runManRed" width="364" height="364"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
