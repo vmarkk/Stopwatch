@@ -268,6 +268,14 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="lap:" destination="0u5-gq-IyW" eventType="touchUpInside" id="nO7-O0-iKU"/>
+                                    <action selector="lapDragExit:" destination="0u5-gq-IyW" eventType="touchDragExit" id="pQw-xH-pun"/>
+                                    <action selector="lapDragOut:" destination="0u5-gq-IyW" eventType="touchDragOutside" id="eWE-E0-i6h"/>
+                                    <action selector="lapTouchCancel:" destination="0u5-gq-IyW" eventType="touchCancel" id="SqC-A2-Wms"/>
+                                    <action selector="lapTouchDown:" destination="0u5-gq-IyW" eventType="touchDown" id="Sm5-R8-BRS"/>
+                                    <action selector="lapTouchUpOut:" destination="0u5-gq-IyW" eventType="touchUpOutside" id="4fq-ZS-Ecw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VF-Xf-p0K">
                                 <rect key="frame" x="20" y="59" width="20" height="20"/>

@@ -76,5 +76,41 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         present(alert, animated: true, completion: nil)
     }
     
-
+    @IBAction func lapTouchDown(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            self.lapOutlet.transform = CGAffineTransform(scaleX: 0.94, y: 0.94)
+        }
+    }
+    
+    @IBAction func lapTouchCancel(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            self.lapOutlet.transform = .identity
+        }
+    }
+    
+    @IBAction func lapDragExit(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            self.lapOutlet.transform = .identity
+        }
+    }
+    
+    @IBAction func lapDragOut(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            self.lapOutlet.transform = .identity
+        }
+    }
+    
+    
+    @IBAction func lap(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            self.lapOutlet.transform = .identity
+        }
+    }
+    
+    @IBAction func lapTouchUpOut(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.12) {
+            self.lapOutlet.transform = .identity
+        }
+    }
+    
 }
