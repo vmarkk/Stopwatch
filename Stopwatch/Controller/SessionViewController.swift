@@ -10,7 +10,10 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var centsLabel: UILabel!
+    @IBOutlet weak var minutesLabel: UILabel!
+    
+    @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var lapOutlet: UIButton!
     @IBOutlet weak var container: UIView!
@@ -49,9 +52,12 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc private func startTimer() {
         count += 1
-        let time = secondsToMinuteSecondsCents(seconds: count)
-        let timeString = timeString(minutes: time.0, seconds: time.1, cents: time.2)
-        timerLabel.text = timeString
+   
+        minutesLabel.text = String(format: "%02d", secondsToMinuteSecondsCents(seconds: count).0)
+        
+        secondsLabel.text = String(format: "%02d", secondsToMinuteSecondsCents(seconds: count).1)
+        
+        centsLabel.text = String(format: "%02d", secondsToMinuteSecondsCents(seconds: count).2)
     }
     
     private func secondsToMinuteSecondsCents(seconds: Int) -> (Int, Int, Int) {
@@ -59,17 +65,6 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    private func timeString(minutes: Int, seconds: Int, cents: Int) -> String {
-        var timeString = ""
-        
-        timeString += String(format: "%02d", minutes)
-        timeString += ":"
-        timeString += String(format: "%02d", seconds)
-        timeString += ":"
-        timeString += String(format: "%02d", cents)
-        
-        return timeString
-    }
 
     @IBAction func x(_ sender: UIButton) {
         alert()
