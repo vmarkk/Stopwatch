@@ -195,8 +195,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-dt-Ysv">
-                                <rect key="frame" x="111.5" y="130" width="191" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-dt-Ysv">
+                                <rect key="frame" x="15" y="130" width="384" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="c42-8d-NOQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -302,9 +305,11 @@
                             <constraint firstItem="COW-76-Hhg" firstAttribute="top" secondItem="gr3-8L-cLu" secondAttribute="bottom" constant="20" id="QCX-dh-oDi"/>
                             <constraint firstItem="i5n-dt-Ysv" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="ToN-9E-ro8"/>
                             <constraint firstItem="7He-ls-bzg" firstAttribute="bottom" secondItem="q4P-7h-itQ" secondAttribute="bottom" constant="15" id="WuO-4G-gdr"/>
+                            <constraint firstItem="i5n-dt-Ysv" firstAttribute="leading" secondItem="7He-ls-bzg" secondAttribute="leading" constant="15" id="YfI-yN-mAS"/>
                             <constraint firstItem="COW-76-Hhg" firstAttribute="leading" secondItem="M9z-4a-pug" secondAttribute="leading" id="cEu-CO-ehq"/>
                             <constraint firstItem="7He-ls-bzg" firstAttribute="trailing" secondItem="1eS-5R-U1T" secondAttribute="trailing" constant="15" id="f5g-pd-1qg"/>
                             <constraint firstItem="i5n-dt-Ysv" firstAttribute="top" secondItem="gr3-8L-cLu" secondAttribute="bottom" constant="50" id="g9i-qb-v3q"/>
+                            <constraint firstItem="7He-ls-bzg" firstAttribute="trailing" secondItem="i5n-dt-Ysv" secondAttribute="trailing" constant="15" id="gB6-n6-i0R"/>
                             <constraint firstItem="q4P-7h-itQ" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="h96-Dr-O1M"/>
                             <constraint firstItem="gr3-8L-cLu" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="qCU-ix-fZh"/>
                         </constraints>
@@ -314,6 +319,7 @@
                         <outlet property="finishOutlet" destination="1eS-5R-U1T" id="hgZ-Bj-Ml3"/>
                         <outlet property="lapOutlet" destination="q4P-7h-itQ" id="uZf-gc-FJX"/>
                         <outlet property="scroll" destination="COW-76-Hhg" id="s6t-zz-jXc"/>
+                        <outlet property="timerLabel" destination="i5n-dt-Ysv" id="aj6-g8-uln"/>
                         <outlet property="titleView" destination="gr3-8L-cLu" id="kMO-Bw-8Qa"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,7 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var lapOutlet: UIButton!
     @IBOutlet weak var container: UIView!
@@ -20,6 +21,16 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     var player: Player?
     var distance: String?
     private var timer = Timer()
+    private var count = 0
+    private var isCounting = false {
+        didSet {
+            if isCounting {
+                UIView.animate(withDuration: 0.1) {
+                    self.lapOutlet.setTitle("LAP", for: .normal)
+                }
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +43,32 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             titleView.text = "\(distance!) m"
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0,
-            target: self,
-            selector: #selector(startTimer),
-            userInfo: nil,
-            repeats: false)
+      
     }
     
     
     @objc private func startTimer() {
+        count += 1
+        let time = secondsToMinuteSecondsCents(seconds: count)
+        let timeString = timeString(minutes: time.0, seconds: time.1, cents: time.2)
+        timerLabel.text = timeString
+    }
+    
+    private func secondsToMinuteSecondsCents(seconds: Int) -> (Int, Int, Int) {
+        return ((seconds/3600), ((seconds % 3600)/60), (seconds%3600)%60)
+    }
+    
+    
+    private func timeString(minutes: Int, seconds: Int, cents: Int) -> String {
+        var timeString = ""
         
+        timeString += String(format: "%02d", minutes)
+        timeString += ":"
+        timeString += String(format: "%02d", seconds)
+        timeString += ":"
+        timeString += String(format: "%02d", cents)
+        
+        return timeString
     }
 
     @IBAction func x(_ sender: UIButton) {
@@ -111,6 +138,20 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         UIView.animate(withDuration: 0.12) {
             self.lapOutlet.transform = .identity
         }
+        
+        isCounting = true
+        count = 0
+        timer.invalidate()
+        if isCounting {
+            
+            timer = Timer.scheduledTimer(timeInterval: 1/60,
+                target: self,
+                selector: #selector(startTimer),
+                userInfo: nil,
+                repeats: true)
+        } 
+        
+       
     }
     
     @IBAction func lapTouchUpOut(_ sender: UIButton) {
