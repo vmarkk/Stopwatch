@@ -39,6 +39,11 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     @IBAction func x(_ sender: UIButton) {
+        alert()
+    }
+    
+    
+    private func dismiss() {
         NotificationCenter.default.post(name: Notification.Name("popView"), object: nil)
         dismiss(animated: true, completion: nil)
     }
@@ -49,6 +54,26 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         finishOutlet.layer.borderWidth = 2
         finishOutlet.layer.borderColor = UIColor.white.cgColor
         lapOutlet.layer.cornerRadius = lapOutlet.frame.size.height/2
+    }
+    
+    
+    private func alert(finish: Bool = true) {
+        
+        let alert = UIAlertController(title: "Stop session", message: "Are you sure to end this session?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Terminate", style: .default) { _ in
+            
+            self.dismiss()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("")
+        }
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
 
