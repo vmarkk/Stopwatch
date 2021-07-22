@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -195,8 +196,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-dt-Ysv">
-                                <rect key="frame" x="128.5" y="130" width="157" height="43"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="36"/>
+                                <rect key="frame" x="111.5" y="130" width="191" height="53"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="44"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -258,6 +259,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4P-7h-itQ">
+                                <rect key="frame" x="149.5" y="732" width="115" height="115"/>
+                                <color key="backgroundColor" name="lightRed"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q4P-7h-itQ" secondAttribute="height" id="4fg-zg-Boj"/>
+                                    <constraint firstAttribute="height" constant="115" id="w1O-mS-G5K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="START"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VF-Xf-p0K">
                                 <rect key="frame" x="20" y="59" width="20" height="20"/>
                                 <constraints>
@@ -282,16 +293,20 @@
                             <constraint firstItem="1eS-5R-U1T" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="KZy-wH-KWq"/>
                             <constraint firstAttribute="bottom" secondItem="COW-76-Hhg" secondAttribute="bottom" id="Nlj-cl-Cdr"/>
                             <constraint firstItem="i5n-dt-Ysv" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="ToN-9E-ro8"/>
+                            <constraint firstItem="7He-ls-bzg" firstAttribute="bottom" secondItem="q4P-7h-itQ" secondAttribute="bottom" constant="15" id="WuO-4G-gdr"/>
                             <constraint firstItem="COW-76-Hhg" firstAttribute="leading" secondItem="M9z-4a-pug" secondAttribute="leading" id="cEu-CO-ehq"/>
                             <constraint firstItem="7He-ls-bzg" firstAttribute="trailing" secondItem="1eS-5R-U1T" secondAttribute="trailing" constant="15" id="f5g-pd-1qg"/>
                             <constraint firstItem="i5n-dt-Ysv" firstAttribute="top" secondItem="gr3-8L-cLu" secondAttribute="bottom" constant="50" id="g9i-qb-v3q"/>
+                            <constraint firstItem="q4P-7h-itQ" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="h96-Dr-O1M"/>
                             <constraint firstItem="gr3-8L-cLu" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="qCU-ix-fZh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="container" destination="p61-vf-Ocw" id="ohJ-6T-hW3"/>
                         <outlet property="finishOutlet" destination="1eS-5R-U1T" id="hgZ-Bj-Ml3"/>
+                        <outlet property="lapOutlet" destination="q4P-7h-itQ" id="uZf-gc-FJX"/>
                         <outlet property="scroll" destination="COW-76-Hhg" id="s6t-zz-jXc"/>
+                        <outlet property="titleView" destination="gr3-8L-cLu" id="kMO-Bw-8Qa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q5k-wc-a6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,6 +373,9 @@
         <image name="timerIconSelected" width="24" height="29"/>
         <image name="timerIconUnselected" width="24" height="29"/>
         <image name="x" width="55.25" height="54.997001647949219"/>
+        <namedColor name="lightRed">
+            <color red="0.90100002288818359" green="0.46299999952316284" blue="0.46700000762939453" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
