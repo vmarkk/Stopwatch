@@ -39,7 +39,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     @IBAction func x(_ sender: UIButton) {
-        
+        NotificationCenter.default.post(name: Notification.Name("popView"), object: nil)
         dismiss(animated: true, completion: nil)
     }
     

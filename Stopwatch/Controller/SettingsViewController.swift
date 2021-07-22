@@ -33,6 +33,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(popView), name: Notification.Name("popView"), object: nil)
+        
         startOutlet.isUserInteractionEnabled = false
         startOutlet.alpha = 0.5
     }
@@ -47,6 +49,11 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             self.view.layoutIfNeeded()
         }
       }
+    
+    
+    @objc private func popView() {
+        navigationController?.popViewController(animated: false)
+    }
 
     
       @objc private func keyboardWillHide(_ notification: Notification) {
