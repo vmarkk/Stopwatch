@@ -106,7 +106,7 @@
                                                     <constraint firstAttribute="height" constant="35" id="kXK-DR-txY"/>
                                                 </constraints>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="m42-1b-aSv" id="7eL-WV-hG7"/>
@@ -202,10 +202,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COW-76-Hhg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p61-vf-Ocw" userLabel="containerView" customClass="BackgroundWhite" customModule="Stopwatch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Laps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-wx-dVo">
                                                 <rect key="frame" x="20" y="50" width="44.5" height="24"/>
@@ -295,11 +295,11 @@
                         <constraints>
                             <constraint firstItem="gr3-8L-cLu" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="2ER-oz-8VL"/>
                             <constraint firstItem="7VF-Xf-p0K" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="2fv-h1-TeM"/>
-                            <constraint firstItem="COW-76-Hhg" firstAttribute="top" secondItem="M9z-4a-pug" secondAttribute="top" id="At3-2r-fsk"/>
                             <constraint firstAttribute="trailing" secondItem="COW-76-Hhg" secondAttribute="trailing" id="I3k-3Q-VIu"/>
                             <constraint firstItem="7VF-Xf-p0K" firstAttribute="leading" secondItem="7He-ls-bzg" secondAttribute="leading" constant="20" id="Jkm-6g-M9F"/>
                             <constraint firstItem="1eS-5R-U1T" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="KZy-wH-KWq"/>
                             <constraint firstAttribute="bottom" secondItem="COW-76-Hhg" secondAttribute="bottom" id="Nlj-cl-Cdr"/>
+                            <constraint firstItem="COW-76-Hhg" firstAttribute="top" secondItem="gr3-8L-cLu" secondAttribute="bottom" constant="20" id="QCX-dh-oDi"/>
                             <constraint firstItem="i5n-dt-Ysv" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="ToN-9E-ro8"/>
                             <constraint firstItem="7He-ls-bzg" firstAttribute="bottom" secondItem="q4P-7h-itQ" secondAttribute="bottom" constant="15" id="WuO-4G-gdr"/>
                             <constraint firstItem="COW-76-Hhg" firstAttribute="leading" secondItem="M9z-4a-pug" secondAttribute="leading" id="cEu-CO-ehq"/>

@@ -8,27 +8,22 @@
 import UIKit
 
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
+
     
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var lapOutlet: UIButton!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var finishOutlet: UIButton!
+    
+    
     var player: Player?
     var distance: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scroll.contentInset.top = 250
+        scroll.contentInset.top = 200
         
         setUpViews()
         
@@ -112,5 +107,16 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.lapOutlet.transform = .identity
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
     
 }
