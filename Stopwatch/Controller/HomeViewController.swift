@@ -34,8 +34,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         playersTV.register(UINib(nibName: "PlayerTVCell", bundle: nil), forCellReuseIdentifier: "cellPlayer")
         
-        playersTV.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: playersTV.frame.size.width, height: 1))
-        playersTV.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: playersTV.frame.size.width, height: 1))
 
         Network.fetchPlayers(completion: { player in
             self.players.insert(player, at: 0)
@@ -87,6 +85,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         
+        if indexPath.row == players.count-1 {
+            cell.separatorView.isHidden = true
+        } else {
+            cell.separatorView.isHidden = false
+        }
         
         return cell
     }

@@ -9,6 +9,7 @@ import UIKit
 
 class PlayerTVCell: UITableViewCell {
 
+    @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var imageContainer: UIView!
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var sexPlayerImage: UIImageView!
