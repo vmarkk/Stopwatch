@@ -92,7 +92,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     private func secondsToMinuteSecondsCents(seconds: Int) -> (Int, Int, Int) {
-        return ((seconds/3600), ((seconds % 3600)/60), (seconds%3600)%100)
+        return ((seconds/3600), ((seconds % 3600)/100), (seconds)%100)
     }
     
     
@@ -222,6 +222,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 
         cell.selectionStyle = .none
+        cell.shadow.backgroundColor = .white
         cell.shadow.layer.cornerRadius = 18
         cell.shadow.layer.shadowColor = UIColor.black.cgColor
         cell.shadow.layer.shadowOffset = CGSize(width: 2, height: 2)
