@@ -310,6 +310,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         cell.lapNumber.text = "\(lap.lapNumber)"
 
+        print("lappppp \(2/3)")
+        
         if distance != nil {
 
             if lap.seconds > 0 {
@@ -323,7 +325,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         
-        cell.lapTime.text = lap.timeString
+        cell.lapTime.text = String(format: "%02d:%02d:%02d", lap.minutes, lap.seconds, lap.cents)
 
         cell.selectionStyle = .none
         cell.shadow.backgroundColor = .white
