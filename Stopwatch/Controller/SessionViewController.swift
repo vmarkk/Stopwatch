@@ -32,7 +32,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(laps[0])
             DispatchQueue.main.async {
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
-                self.lapTV.reloadData()
+
             }
         }
     }
@@ -53,6 +53,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         scroll.contentInset.top = 150
+        scroll.contentInset.bottom = lapOutlet.frame.size.height+15
 
         lapTV.register(UINib(nibName: "LapTVCell", bundle: nil), forCellReuseIdentifier: "cellLap")
 
@@ -178,6 +179,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                 userInfo: nil,
                 repeats: true)
 
+            RunLoop.main.add(timer, forMode: .common)
+
 
         } 
         
@@ -198,7 +201,18 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLap") as? LapTVCell else { return UITableViewCell() }
 
+        let lap = laps[indexPath.row]
+
+        cell.lapNumber.text = "\(lap.lapNumber)"
+        cell.lapSpeed.text = "\(lap.minutes)"
+
         cell.selectionStyle = .none
+        cell.shadow.layer.cornerRadius = 18
+        cell.shadow.layer.shadowColor = UIColor.black.cgColor
+        cell.shadow.layer.shadowOffset = CGSize(width: 2, height: 2)
+        cell.shadow.layer.shadowRadius = 7
+        cell.shadow.layer.shadowOpacity = 0.12
+
 
         return cell
     }
@@ -211,14 +225,14 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         let lapCents = secondsToMinuteSecondsCents(seconds: count).2
 
-        let lap = Lap(minutes: lapMinutes, seconds: lapSeconds, cents: lapCents)
+        let lap = Lap(lapNumber: laps.count+1, minutes: lapMinutes, seconds: lapSeconds, cents: lapCents)
 
         laps.insert(lap, at: 0)
 
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 100
     }
     
     

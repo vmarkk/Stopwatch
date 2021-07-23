@@ -174,7 +174,7 @@
                         <outlet property="buttonBottomConstraint" destination="weZ-cC-Wq4" id="nbq-SD-zgw"/>
                         <outlet property="distanceTxtField" destination="gjA-mj-FRD" id="VUw-lg-ayO"/>
                         <outlet property="startOutlet" destination="V3t-Yn-i6Q" id="jfo-Z1-zgw"/>
-                        <segue destination="0u5-gq-IyW" kind="presentation" identifier="goSession" modalPresentationStyle="overFullScreen" id="xx7-Bq-vGd"/>
+                        <segue destination="0u5-gq-IyW" kind="presentation" identifier="goSession" modalPresentationStyle="fullScreen" id="xx7-Bq-vGd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0t-eQ-eXl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,8 +189,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-8L-cLu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Session" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr3-8L-cLu">
                                 <rect key="frame" x="176" y="59" width="62.5" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="e5Q-x6-rJR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -245,6 +248,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-p9-8eX">
+                                <rect key="frame" x="0.0" y="358.5" width="414" height="537.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COW-76-Hhg">
                                 <rect key="frame" x="0.0" y="99.5" width="414" height="796.5"/>
                                 <subviews>
@@ -260,7 +267,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-2y-tlG">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-2y-tlG">
                                                 <rect key="frame" x="15" y="89" width="384" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -345,6 +352,7 @@
                             <constraint firstItem="8b7-L9-E5h" firstAttribute="centerY" secondItem="i5n-dt-Ysv" secondAttribute="centerY" id="GVx-Qq-tPd"/>
                             <constraint firstAttribute="trailing" secondItem="COW-76-Hhg" secondAttribute="trailing" id="I3k-3Q-VIu"/>
                             <constraint firstItem="7VF-Xf-p0K" firstAttribute="leading" secondItem="7He-ls-bzg" secondAttribute="leading" constant="20" id="Jkm-6g-M9F"/>
+                            <constraint firstItem="dnG-p9-8eX" firstAttribute="leading" secondItem="M9z-4a-pug" secondAttribute="leading" id="K6m-bI-0VH"/>
                             <constraint firstItem="1eS-5R-U1T" firstAttribute="top" secondItem="7He-ls-bzg" secondAttribute="top" constant="15" id="KZy-wH-KWq"/>
                             <constraint firstAttribute="bottom" secondItem="COW-76-Hhg" secondAttribute="bottom" id="Nlj-cl-Cdr"/>
                             <constraint firstItem="mhY-TZ-kI0" firstAttribute="leading" secondItem="5t3-EV-5II" secondAttribute="trailing" id="O35-vF-hdB"/>
@@ -356,10 +364,13 @@
                             <constraint firstItem="5t3-EV-5II" firstAttribute="leading" secondItem="8b7-L9-E5h" secondAttribute="trailing" id="gqM-vB-6ik"/>
                             <constraint firstItem="q4P-7h-itQ" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="h96-Dr-O1M"/>
                             <constraint firstItem="8b7-L9-E5h" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="jLP-Qb-Pgf"/>
+                            <constraint firstAttribute="trailing" secondItem="dnG-p9-8eX" secondAttribute="trailing" id="lPg-S6-X5F"/>
+                            <constraint firstItem="dnG-p9-8eX" firstAttribute="height" secondItem="M9z-4a-pug" secondAttribute="height" multiplier="0.6" id="mcG-Kg-a1S"/>
                             <constraint firstItem="5t3-EV-5II" firstAttribute="centerY" secondItem="8b7-L9-E5h" secondAttribute="centerY" id="nOP-Ys-CaD"/>
                             <constraint firstItem="8b7-L9-E5h" firstAttribute="centerY" secondItem="pak-VX-8P7" secondAttribute="centerY" id="p1l-6P-PKT"/>
                             <constraint firstItem="mhY-TZ-kI0" firstAttribute="centerY" secondItem="8b7-L9-E5h" secondAttribute="centerY" id="pGm-oO-HcG"/>
                             <constraint firstItem="gr3-8L-cLu" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="qCU-ix-fZh"/>
+                            <constraint firstAttribute="bottom" secondItem="dnG-p9-8eX" secondAttribute="bottom" id="zP4-0d-cvu"/>
                         </constraints>
                     </view>
                     <connections>

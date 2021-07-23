@@ -9,6 +9,7 @@ import Foundation
 
 struct Lap {
 
+    var lapNumber: Int
     var minutes: Int
     var seconds: Int
     var cents: Int
