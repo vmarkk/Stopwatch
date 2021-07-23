@@ -27,14 +27,15 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var timer = Timer()
     private var count = 0
     
-    private var lastTime: String?
+    private var lastTime: String? = ""
     
     private var laps = [Lap]() {
         didSet {
             DispatchQueue.main.async {
-                self.lapTV.beginUpdates()
+             
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
-                self.lapTV.endUpdates()
+             //   self.lapTV.reloadData()
+               
               
 
             }
@@ -242,7 +243,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         
-        cell.lapTime.text = lastTime
+        cell.lapTime.text = lap.timeString
 
         cell.selectionStyle = .none
         cell.shadow.backgroundColor = .white
@@ -263,11 +264,11 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         let lapSeconds = secondsToMinuteSecondsCents(seconds: count).1
 
         let lapCents = secondsToMinuteSecondsCents(seconds: count).2
-
-        let lap = Lap(lapNumber: laps.count+1, minutes: lapMinutes, seconds: lapSeconds, cents: lapCents)
         
         lastTime = "\(minutesLabel.text!):\(secondsLabel.text!):\(centsLabel.text!)"
 
+        let lap = Lap(lapNumber: laps.count+1, minutes: lapMinutes, seconds: lapSeconds, cents: lapCents, timeString: lastTime ?? "")
+        
         laps.insert(lap, at: 0)
 
         count = 0

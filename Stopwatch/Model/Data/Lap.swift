@@ -13,5 +13,6 @@ struct Lap {
     var minutes: Int
     var seconds: Int
     var cents: Int
+    var timeString: String
     
 }
