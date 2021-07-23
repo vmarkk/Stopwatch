@@ -12,9 +12,13 @@ class RoundTabBarControllerViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(changeTab), name: Notification.Name("changeTabViewController"), object: nil)
     }
     
+    
+    @objc private func changeTab() {
+        self.selectedIndex = 1
+    }
 
     
     override func viewDidLayoutSubviews() {

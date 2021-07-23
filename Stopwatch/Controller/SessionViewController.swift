@@ -26,12 +26,16 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     var distance: String?
     private var timer = Timer()
     private var count = 0
+    
+    private var lastTime: String?
+    
     private var laps = [Lap]() {
         didSet {
-
-            print(laps[0])
             DispatchQueue.main.async {
+                self.lapTV.beginUpdates()
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
+                self.lapTV.endUpdates()
+              
 
             }
         }
@@ -103,8 +107,13 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    private func dismiss() {
+    private func dismiss(finish: Bool = false) {
         NotificationCenter.default.post(name: Notification.Name("popView"), object: nil)
+        
+        if finish {
+            NotificationCenter.default.post(name: Notification.Name("changeTabViewController"), object: nil)
+        }
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -117,13 +126,19 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    private func alert(finish: Bool = true) {
+    private func alert(finish: Bool = false) {
         
-        let alert = UIAlertController(title: "Stop session", message: "Are you sure to end this session?", preferredStyle: .alert)
+        var alert = UIAlertController()
+        
+        if !finish {
+         alert = UIAlertController(title: "Stop session", message: "This session won't be saved", preferredStyle: .alert)
+        } else {
+            alert = UIAlertController(title: "Terminate session", message: "Are you sure to end this session?", preferredStyle: .alert)
+        }
         
         let okAction = UIAlertAction(title: "Terminate", style: .default) { _ in
             
-            self.dismiss()
+            self.dismiss(finish: finish)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
@@ -160,6 +175,12 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.lapOutlet.transform = .identity
         }
     }
+    
+    @IBAction func finish(_ sender: UIButton) {
+        timer.invalidate()
+        alert(finish: true)
+    }
+    
 
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -203,6 +224,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLap") as? LapTVCell else { return UITableViewCell() }
 
+        
         let lap = laps[indexPath.row]
 
         cell.lapNumber.text = "\(lap.lapNumber)"
@@ -218,6 +240,9 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.lapSpeed.text = "2 m/s"
             }
         }
+        
+        
+        cell.lapTime.text = lastTime
 
         cell.selectionStyle = .none
         cell.shadow.backgroundColor = .white
@@ -240,6 +265,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         let lapCents = secondsToMinuteSecondsCents(seconds: count).2
 
         let lap = Lap(lapNumber: laps.count+1, minutes: lapMinutes, seconds: lapSeconds, cents: lapCents)
+        
+        lastTime = "\(minutesLabel.text!):\(secondsLabel.text!):\(centsLabel.text!)"
 
         laps.insert(lap, at: 0)
 

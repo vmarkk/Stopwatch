@@ -268,7 +268,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-2y-tlG">
-                                                <rect key="frame" x="15" y="89" width="384" height="100"/>
+                                                <rect key="frame" x="0.0" y="89" width="414" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="02f-2B-9eA"/>
@@ -283,10 +283,10 @@
                                         <constraints>
                                             <constraint firstItem="d8r-wx-dVo" firstAttribute="top" secondItem="p61-vf-Ocw" secondAttribute="top" constant="50" id="9B6-yC-ScR"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BhZ-2y-tlG" secondAttribute="bottom" id="EzX-9D-NZo"/>
-                                            <constraint firstItem="BhZ-2y-tlG" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="15" id="HSH-zb-gIh"/>
+                                            <constraint firstItem="BhZ-2y-tlG" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" id="HSH-zb-gIh"/>
                                             <constraint firstItem="d8r-wx-dVo" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="20" id="V1k-hd-Uib"/>
                                             <constraint firstItem="BhZ-2y-tlG" firstAttribute="top" secondItem="d8r-wx-dVo" secondAttribute="bottom" constant="15" id="WJA-D2-1Yd"/>
-                                            <constraint firstAttribute="trailing" secondItem="BhZ-2y-tlG" secondAttribute="trailing" constant="15" id="tg7-oZ-yaB"/>
+                                            <constraint firstAttribute="trailing" secondItem="BhZ-2y-tlG" secondAttribute="trailing" id="tg7-oZ-yaB"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -310,6 +310,9 @@
                                 <state key="normal" title="FINISH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="finish:" destination="0u5-gq-IyW" eventType="touchUpInside" id="3Ha-sj-FWj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4P-7h-itQ">
                                 <rect key="frame" x="149.5" y="732" width="115" height="115"/>
