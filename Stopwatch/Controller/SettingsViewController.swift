@@ -37,6 +37,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         startOutlet.isUserInteractionEnabled = false
         startOutlet.alpha = 0.5
+        startOutlet.imageView?.layer.transform = CATransform3DMakeScale(0.95, 0.95, 0.95)
+        startOutlet.imageView?.contentMode = .scaleAspectFit
     }
 
     

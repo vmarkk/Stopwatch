@@ -258,7 +258,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p61-vf-Ocw" userLabel="containerView" customClass="BackgroundWhite" customModule="Stopwatch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="796.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Laps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-wx-dVo">
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Laps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8r-wx-dVo">
                                                 <rect key="frame" x="20" y="50" width="44.5" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6Ds-Ok-gCB"/>
@@ -383,6 +383,7 @@
                         <outlet property="lapOutlet" destination="q4P-7h-itQ" id="uZf-gc-FJX"/>
                         <outlet property="lapTV" destination="BhZ-2y-tlG" id="fjt-n6-HXe"/>
                         <outlet property="lapTVHeight" destination="02f-2B-9eA" id="hvJ-nn-G0n"/>
+                        <outlet property="lapsTitleLabel" destination="d8r-wx-dVo" id="U21-Zm-fc6"/>
                         <outlet property="minutesLabel" destination="i5n-dt-Ysv" id="OjI-Ml-amw"/>
                         <outlet property="scroll" destination="COW-76-Hhg" id="s6t-zz-jXc"/>
                         <outlet property="secondsLabel" destination="8b7-L9-E5h" id="t9j-yn-ub2"/>

@@ -10,6 +10,7 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var lapsTitleLabel: UILabel!
     @IBOutlet weak var lapTVHeight: NSLayoutConstraint!
     @IBOutlet weak var lapTV: UITableView!
     @IBOutlet weak var centsLabel: UILabel!
@@ -31,13 +32,16 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private var laps = [Lap]() {
         didSet {
+            
+            
+            if laps.count == 1 {
+                UIView.animate(withDuration: 0.2) {
+                    self.lapsTitleLabel.alpha = 1
+                }
+            }
+            
             DispatchQueue.main.async {
-             
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
-             //   self.lapTV.reloadData()
-               
-              
-
             }
         }
     }
