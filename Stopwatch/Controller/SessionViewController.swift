@@ -184,7 +184,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         if isCounting {
 
-            self.count = 0
+
             self.addLap()
             
             self.startTiming()
@@ -214,12 +214,15 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         if distance != nil {
 
+            if lap.seconds > 0 {
+                let metersPerSecond: Double = Double(Int(distance!)!/lap.seconds)
 
-        let metersPerSecond = lap.seconds/Int(distance!)!
-
+                print("numm \(Int(distance!)!)  \(lap.seconds)")
             cell.lapSpeed.text = "\(metersPerSecond) m/s"
+            } else {
+                cell.lapSpeed.text = "2 m/s"
+            }
         }
-
 
         cell.selectionStyle = .none
         cell.shadow.backgroundColor = .white
@@ -245,6 +248,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         laps.insert(lap, at: 0)
 
+        count = 0
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
