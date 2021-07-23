@@ -307,7 +307,7 @@
                                                 <rect key="frame" x="20" y="238" width="374" height="80"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aS-xk-Fv2" userLabel="shadowStatistics">
+                                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9aS-xk-Fv2" userLabel="shadowStatistics">
                                                 <rect key="frame" x="15" y="333.5" width="384" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
@@ -358,7 +358,7 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Statistics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbV-V6-w8v">
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Statistics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbV-V6-w8v">
                                                 <rect key="frame" x="15" y="353" width="86" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="RkM-lL-WSd"/>
@@ -367,7 +367,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="naI-yV-dgC">
+                                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="naI-yV-dgC">
                                                 <rect key="frame" x="25" y="669.5" width="364" height="147"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="hR4-0C-Ec5">
@@ -607,6 +607,7 @@
                         <outlet property="shadowProfile" destination="zJC-y7-uTY" id="nb8-XE-zic"/>
                         <outlet property="shadowStatistics" destination="9aS-xk-Fv2" id="XEv-28-zsf"/>
                         <outlet property="stackStatistics" destination="naI-yV-dgC" id="m3e-bE-4fs"/>
+                        <outlet property="statisticsTitleLabel" destination="xbV-V6-w8v" id="JA0-Fj-Fta"/>
                         <outlet property="titleView" destination="gr3-8L-cLu" id="kMO-Bw-8Qa"/>
                         <outlet property="tutorialLabel" destination="g2B-cp-laO" id="Y4G-jb-Mb8"/>
                     </connections>

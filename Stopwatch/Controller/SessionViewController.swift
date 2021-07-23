@@ -10,6 +10,7 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var statisticsTitleLabel: UILabel!
     @IBOutlet weak var stackStatistics: UIStackView!
     @IBOutlet weak var shadowStatistics: UIView!
     @IBOutlet weak var sexLabel: UILabel!
@@ -76,7 +77,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         scroll.contentInset.top = 150
-        scroll.contentInset.bottom = lapOutlet.frame.size.height+35
+        scroll.contentInset.bottom = lapOutlet.frame.size.height+45
 
         lapTV.register(UINib(nibName: "LapTVCell", bundle: nil), forCellReuseIdentifier: "cellLap")
 
@@ -205,6 +206,9 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         UIView.animate(withDuration: 0.2) {
             self.arrowImage.alpha = 0
             self.tutorialLabel.alpha = 0
+            self.stackStatistics.alpha = 1
+            self.statisticsTitleLabel.alpha = 1
+            self.shadowStatistics.alpha = 1
         } completion: { done in
             if done {
                 self.arrowImage.removeFromSuperview()
