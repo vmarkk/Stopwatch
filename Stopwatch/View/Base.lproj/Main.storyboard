@@ -248,8 +248,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-p9-8eX">
-                                <rect key="frame" x="0.0" y="358.5" width="414" height="537.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-p9-8eX" customClass="BackgroundWhite" customModule="Stopwatch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="313.5" width="414" height="582.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COW-76-Hhg">
@@ -365,7 +365,7 @@
                             <constraint firstItem="q4P-7h-itQ" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="h96-Dr-O1M"/>
                             <constraint firstItem="8b7-L9-E5h" firstAttribute="centerX" secondItem="M9z-4a-pug" secondAttribute="centerX" id="jLP-Qb-Pgf"/>
                             <constraint firstAttribute="trailing" secondItem="dnG-p9-8eX" secondAttribute="trailing" id="lPg-S6-X5F"/>
-                            <constraint firstItem="dnG-p9-8eX" firstAttribute="height" secondItem="M9z-4a-pug" secondAttribute="height" multiplier="0.6" id="mcG-Kg-a1S"/>
+                            <constraint firstItem="dnG-p9-8eX" firstAttribute="height" secondItem="M9z-4a-pug" secondAttribute="height" multiplier="0.65" id="mcG-Kg-a1S"/>
                             <constraint firstItem="5t3-EV-5II" firstAttribute="centerY" secondItem="8b7-L9-E5h" secondAttribute="centerY" id="nOP-Ys-CaD"/>
                             <constraint firstItem="8b7-L9-E5h" firstAttribute="centerY" secondItem="pak-VX-8P7" secondAttribute="centerY" id="p1l-6P-PKT"/>
                             <constraint firstItem="mhY-TZ-kI0" firstAttribute="centerY" secondItem="8b7-L9-E5h" secondAttribute="centerY" id="pGm-oO-HcG"/>

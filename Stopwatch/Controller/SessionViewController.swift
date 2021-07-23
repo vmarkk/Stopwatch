@@ -183,10 +183,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         timer.invalidate()
 
         if isCounting {
-
-
-            self.addLap()
             
+            self.addLap()
             self.startTiming()
 
         } 
