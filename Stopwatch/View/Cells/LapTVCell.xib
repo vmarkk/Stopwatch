@@ -44,6 +44,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lapNumber" destination="IYC-bR-bGU" id="RRH-iO-UyG"/>
+                <outlet property="lapSpeed" destination="W4B-7J-8qZ" id="UU5-16-mvn"/>
+                <outlet property="lapTime" destination="vd6-kq-nmU" id="diq-gC-md6"/>
+            </connections>
             <point key="canvasLocation" x="55.797101449275367" y="99.776785714285708"/>
         </tableViewCell>
     </objects>

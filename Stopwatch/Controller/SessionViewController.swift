@@ -10,9 +10,10 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var lapTVHeight: NSLayoutConstraint!
+    @IBOutlet weak var lapTV: UITableView!
     @IBOutlet weak var centsLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
-    
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var titleView: UILabel!
     @IBOutlet weak var lapOutlet: UIButton!
@@ -25,6 +26,18 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     var distance: String?
     private var timer = Timer()
     private var count = 0
+    private var laps = [Lap]() {
+        didSet {
+
+            print(laps[0])
+            DispatchQueue.main.async {
+                self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
+                self.lapTV.reloadData()
+            }
+        }
+    }
+
+
     private var isCounting = false {
         didSet {
             if isCounting {
@@ -35,10 +48,15 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scroll.contentInset.top = 150
+
+        lapTV.register(UINib(nibName: "LapTVCell", bundle: nil), forCellReuseIdentifier: "cellLap")
+
+        lapTV.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         
         setUpViews()
         
@@ -127,6 +145,17 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.lapOutlet.transform = .identity
         }
     }
+
+
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if let obj = object as? UITableView {
+            if obj == self.lapTV && keyPath == "contentSize" {
+                if let newSize = change?[NSKeyValueChangeKey.newKey] as? CGSize {
+                    self.lapTVHeight.constant = newSize.height
+                }
+            }
+        }
+    }
     
     
     @IBAction func lap(_ sender: UIButton) {
@@ -135,15 +164,21 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         isCounting = true
-        count = 0
+
         timer.invalidate()
+
         if isCounting {
+
+            self.count = 0
+            self.addLap()
             
             timer = Timer.scheduledTimer(timeInterval: 1/60,
                 target: self,
                 selector: #selector(startTimer),
                 userInfo: nil,
                 repeats: true)
+
+
         } 
         
        
@@ -157,11 +192,33 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return laps.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLap") as? LapTVCell else { return UITableViewCell() }
+
+        cell.selectionStyle = .none
+
+        return cell
+    }
+
+
+    private func addLap() {
+        let lapMinutes = secondsToMinuteSecondsCents(seconds: count).0
+
+        let lapSeconds = secondsToMinuteSecondsCents(seconds: count).1
+
+        let lapCents = secondsToMinuteSecondsCents(seconds: count).2
+
+        let lap = Lap(minutes: lapMinutes, seconds: lapSeconds, cents: lapCents)
+
+        laps.insert(lap, at: 0)
+
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     
     

@@ -12,6 +12,7 @@
 		AE1C1249D73FCB5B08B78B33 /* Pods_Stopwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED2B1ED48413EE743630CA5 /* Pods_Stopwatch.framework */; };
 		EA18667C26AA10A800616800 /* LapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18667A26AA10A800616800 /* LapTVCell.swift */; };
 		EA18667D26AA10A800616800 /* LapTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA18667B26AA10A800616800 /* LapTVCell.xib */; };
+		EA6BC23826AAE195000B8075 /* Lap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC23726AAE195000B8075 /* Lap.swift */; };
 		EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15626A83F7E000F1797 /* Extensions.swift */; };
 		EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */; };
 		EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */; };
@@ -62,6 +63,7 @@
 		D416D715FE7EFB15898060F6 /* Pods_Stopwatch_StopwatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch_StopwatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA18667A26AA10A800616800 /* LapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTVCell.swift; sourceTree = "<group>"; };
 		EA18667B26AA10A800616800 /* LapTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LapTVCell.xib; sourceTree = "<group>"; };
+		EA6BC23726AAE195000B8075 /* Lap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lap.swift; sourceTree = "<group>"; };
 		EA82E15626A83F7E000F1797 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EAD4F5C326A756E60057DF32 /* Player.swift */,
+				EA6BC23726AAE195000B8075 /* Lap.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAD4F5BE26A73E8E0057DF32 /* RoundTabBar.swift in Sources */,
+				EA6BC23826AAE195000B8075 /* Lap.swift in Sources */,
 				EAE7A6C126A8BB9B001ACD32 /* Background.swift in Sources */,
 				EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */,
 				EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */,

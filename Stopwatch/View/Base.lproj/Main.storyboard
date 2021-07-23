@@ -260,11 +260,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-2y-tlG">
-                                                <rect key="frame" x="15" y="119" width="384" height="0.0"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BhZ-2y-tlG">
+                                                <rect key="frame" x="15" y="89" width="384" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="02f-2B-9eA"/>
+                                                    <constraint firstAttribute="height" constant="100" id="02f-2B-9eA"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="0u5-gq-IyW" id="Rmy-lB-vES"/>
@@ -275,6 +275,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="d8r-wx-dVo" firstAttribute="top" secondItem="p61-vf-Ocw" secondAttribute="top" constant="50" id="9B6-yC-ScR"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BhZ-2y-tlG" secondAttribute="bottom" id="EzX-9D-NZo"/>
                                             <constraint firstItem="BhZ-2y-tlG" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="15" id="HSH-zb-gIh"/>
                                             <constraint firstItem="d8r-wx-dVo" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="20" id="V1k-hd-Uib"/>
                                             <constraint firstItem="BhZ-2y-tlG" firstAttribute="top" secondItem="d8r-wx-dVo" secondAttribute="bottom" constant="15" id="WJA-D2-1Yd"/>
@@ -366,6 +367,8 @@
                         <outlet property="container" destination="p61-vf-Ocw" id="ohJ-6T-hW3"/>
                         <outlet property="finishOutlet" destination="1eS-5R-U1T" id="hgZ-Bj-Ml3"/>
                         <outlet property="lapOutlet" destination="q4P-7h-itQ" id="uZf-gc-FJX"/>
+                        <outlet property="lapTV" destination="BhZ-2y-tlG" id="fjt-n6-HXe"/>
+                        <outlet property="lapTVHeight" destination="02f-2B-9eA" id="hvJ-nn-G0n"/>
                         <outlet property="minutesLabel" destination="i5n-dt-Ysv" id="OjI-Ml-amw"/>
                         <outlet property="scroll" destination="COW-76-Hhg" id="s6t-zz-jXc"/>
                         <outlet property="secondsLabel" destination="8b7-L9-E5h" id="t9j-yn-ub2"/>
