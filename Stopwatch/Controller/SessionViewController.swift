@@ -10,6 +10,8 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var stackStatistics: UIStackView!
+    @IBOutlet weak var shadowStatistics: UIView!
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var sexImage: UIImageView!
     @IBOutlet weak var namePlayer: UILabel!
@@ -74,7 +76,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         scroll.contentInset.top = 150
-        scroll.contentInset.bottom = lapOutlet.frame.size.height+15
+        scroll.contentInset.bottom = lapOutlet.frame.size.height+35
 
         lapTV.register(UINib(nibName: "LapTVCell", bundle: nil), forCellReuseIdentifier: "cellLap")
 
@@ -186,6 +188,12 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         shadowProfile.layer.shadowOffset = CGSize(width: 2, height: 3)
         shadowProfile.layer.shadowRadius = 7
         shadowProfile.layer.shadowOpacity = 0.12
+        
+        shadowStatistics.layer.cornerRadius = 20
+        shadowStatistics.layer.shadowColor = UIColor.black.cgColor
+        shadowStatistics.layer.shadowOffset = CGSize(width: 2, height: 3)
+        shadowStatistics.layer.shadowRadius = 7
+        shadowStatistics.layer.shadowOpacity = 0.12
         
         imageProfile.layer.cornerRadius = imageProfile.frame.size.height/2
     }
