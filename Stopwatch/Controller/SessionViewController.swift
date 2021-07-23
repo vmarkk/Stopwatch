@@ -78,14 +78,27 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         centsLabel.text = String(format: "%02d", secondsToMinuteSecondsCents(seconds: count).2)
     }
+
+
+    private func startTiming() {
+        timer = Timer.scheduledTimer(timeInterval: 0.01,
+            target: self,
+            selector: #selector(startTimer),
+            userInfo: nil,
+            repeats: true)
+
+        RunLoop.main.add(timer, forMode: .common)
+
+    }
     
     private func secondsToMinuteSecondsCents(seconds: Int) -> (Int, Int, Int) {
-        return ((seconds/3600), ((seconds % 3600)/60), (seconds%3600)%60)
+        return ((seconds/3600), ((seconds % 3600)/60), (seconds%3600)%100)
     }
     
     
 
     @IBAction func x(_ sender: UIButton) {
+        timer.invalidate()
         alert()
     }
     
@@ -114,7 +127,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-            print("")
+
+            self.startTiming()
         }
         
         alert.addAction(okAction)
@@ -173,14 +187,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.count = 0
             self.addLap()
             
-            timer = Timer.scheduledTimer(timeInterval: 1/60,
-                target: self,
-                selector: #selector(startTimer),
-                userInfo: nil,
-                repeats: true)
-
-            RunLoop.main.add(timer, forMode: .common)
-
+            self.startTiming()
 
         } 
         
@@ -204,7 +211,15 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         let lap = laps[indexPath.row]
 
         cell.lapNumber.text = "\(lap.lapNumber)"
-        cell.lapSpeed.text = "\(lap.minutes)"
+
+        if distance != nil {
+
+
+        let metersPerSecond = lap.seconds/Int(distance!)!
+
+            cell.lapSpeed.text = "\(metersPerSecond) m/s"
+        }
+
 
         cell.selectionStyle = .none
         cell.shadow.layer.cornerRadius = 18
