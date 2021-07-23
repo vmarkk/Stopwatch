@@ -374,7 +374,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="364" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Number of laps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqk-oH-vWJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6PQ-hn-uKG"/>
                                                                 </constraints>
@@ -382,8 +382,8 @@
                                                                 <color key="textColor" systemColor="systemGrayColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uks-y5-ylA">
-                                                                <rect key="frame" x="214.5" y="0.0" width="149.5" height="18"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uks-y5-ylA">
+                                                                <rect key="frame" x="350" y="0.0" width="14" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="8zx-Fg-SWc"/>
                                                                 </constraints>
@@ -600,6 +600,7 @@
                         <outlet property="lapsTitleLabel" destination="d8r-wx-dVo" id="U21-Zm-fc6"/>
                         <outlet property="minutesLabel" destination="i5n-dt-Ysv" id="OjI-Ml-amw"/>
                         <outlet property="namePlayer" destination="v13-DY-szb" id="Q5p-8B-Hw8"/>
+                        <outlet property="numberOfLaps" destination="Uks-y5-ylA" id="y5P-ay-mV3"/>
                         <outlet property="scroll" destination="COW-76-Hhg" id="s6t-zz-jXc"/>
                         <outlet property="secondsLabel" destination="8b7-L9-E5h" id="t9j-yn-ub2"/>
                         <outlet property="sexImage" destination="uCO-zn-wRA" id="SYh-K4-uPL"/>

@@ -31,6 +31,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var finishOutlet: UIButton!
     @IBOutlet weak var arrowImage: UIImageView!
+    @IBOutlet weak var numberOfLaps: UILabel!
     
     
     var player: Player?
@@ -43,6 +44,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var laps = [Lap]() {
         didSet {
             
+            numberOfLaps.text = "\(laps.count)"
             
             if laps.count == 1 {
                 UIView.animate(withDuration: 0.2) {
@@ -322,17 +324,18 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         cell.lapNumber.text = "\(lap.lapNumber)"
 
-        print("lappppp \(2/3)")
-        
+       
+    
         if distance != nil {
 
             if lap.seconds > 0 {
-                let metersPerSecond: Double = Double(Int(distance!)!/lap.seconds)
+                let doubleMetersPerSecond = Double(Int(distance!)!)/Double(lap.seconds)
+                let metersPerSecondString = String(format: "%.1f", doubleMetersPerSecond)
 
-                print("numm \(Int(distance!)!)  \(lap.seconds)")
-            cell.lapSpeed.text = "\(metersPerSecond) m/s"
+           
+            cell.lapSpeed.text = "\(metersPerSecondString) m/s"
             } else {
-                cell.lapSpeed.text = "2 m/s"
+                cell.lapSpeed.text = "\(distance!).0 m/s"
             }
         }
         
