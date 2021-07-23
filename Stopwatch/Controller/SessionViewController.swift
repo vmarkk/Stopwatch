@@ -10,6 +10,11 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var sexImage: UIImageView!
+    @IBOutlet weak var namePlayer: UILabel!
+    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet weak var shadowProfile: UIView!
     @IBOutlet weak var tutorialLabel: UILabel!
     @IBOutlet weak var lapsTitleLabel: UILabel!
     @IBOutlet weak var lapTVHeight: NSLayoutConstraint!
@@ -83,7 +88,27 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(foreground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+    
+        namePlayer.text = "\(player!.name.first) \(player!.name.last)"
       
+        
+        
+        imageProfile.sd_setImage(with: URL(string: player!.picture.large)) { img, err, cache, url in
+            
+            guard img != nil else {return}
+            
+            self.imageProfile.image = img
+        }
+        
+        
+        if player?.name.title == "Mr" {
+            sexImage.image = UIImage(named: "male")
+            sexLabel.text = "Male"
+        } else {
+            sexImage.image = UIImage(named: "female")
+            sexLabel.text = "Female"
+        }
     }
     
     
@@ -155,6 +180,14 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         finishOutlet.layer.borderWidth = 2
         finishOutlet.layer.borderColor = UIColor.white.cgColor
         lapOutlet.layer.cornerRadius = lapOutlet.frame.size.height/2
+        
+        shadowProfile.layer.cornerRadius = 20
+        shadowProfile.layer.shadowColor = UIColor.black.cgColor
+        shadowProfile.layer.shadowOffset = CGSize(width: 2, height: 3)
+        shadowProfile.layer.shadowRadius = 7
+        shadowProfile.layer.shadowOpacity = 0.12
+        
+        imageProfile.layer.cornerRadius = imageProfile.frame.size.height/2
     }
     
     
