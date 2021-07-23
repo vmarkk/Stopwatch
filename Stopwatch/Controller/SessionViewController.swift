@@ -10,6 +10,7 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var tutorialLabel: UILabel!
     @IBOutlet weak var lapsTitleLabel: UILabel!
     @IBOutlet weak var lapTVHeight: NSLayoutConstraint!
     @IBOutlet weak var lapTV: UITableView!
@@ -21,6 +22,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var finishOutlet: UIButton!
+    @IBOutlet weak var arrowImage: UIImageView!
     
     
     var player: Player?
@@ -42,6 +44,11 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             DispatchQueue.main.async {
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
+                
+                
+                UIView.animate(withDuration: 0.2) {
+                    self.view.layoutIfNeeded()
+                }
             }
         }
     }
@@ -74,9 +81,29 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             titleView.text = "\(distance!) m"
         }
         
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(foreground), name: UIApplication.willEnterForegroundNotification, object: nil)
       
     }
     
+    
+    @objc private func foreground() {
+
+        hideTutorial()
+    }
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.repeat, .autoreverse]) {
+            self.arrowImage.center.y+=30
+        } completion: { done in
+            print("done")
+        }
+
+    }
     
     @objc private func startTimer() {
         count += 1
@@ -128,6 +155,21 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         finishOutlet.layer.borderWidth = 2
         finishOutlet.layer.borderColor = UIColor.white.cgColor
         lapOutlet.layer.cornerRadius = lapOutlet.frame.size.height/2
+    }
+    
+    
+    private func hideTutorial() {
+        guard self.arrowImage != nil && self.tutorialLabel != nil else {return}
+        
+        UIView.animate(withDuration: 0.2) {
+            self.arrowImage.alpha = 0
+            self.tutorialLabel.alpha = 0
+        } completion: { done in
+            if done {
+                self.arrowImage.removeFromSuperview()
+                self.tutorialLabel.removeFromSuperview()
+            }
+        }
     }
     
     
@@ -208,6 +250,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.timer.invalidate()
             self.addLap()
         } else {
+            self.hideTutorial()
             isCounting = true
         }
         self.startTiming()

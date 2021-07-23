@@ -14,8 +14,8 @@
             filePath = "Stopwatch/Controller/SessionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "dismiss(finish:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Stopwatch/Controller/SessionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "308"
+            endingLineNumber = "308"
             landmarkName = "addLap()"
             landmarkType = "7">
          </BreakpointContent>
