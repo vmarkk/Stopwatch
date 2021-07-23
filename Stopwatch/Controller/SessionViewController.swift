@@ -178,19 +178,16 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.lapOutlet.transform = .identity
         }
         
-        isCounting = true
-
-        timer.invalidate()
-
         if isCounting {
-            
+            self.timer.invalidate()
             self.addLap()
-            self.startTiming()
+        } else {
+            isCounting = true
+        }
+        self.startTiming()
 
-        } 
-        
-       
     }
+
     
     @IBAction func lapTouchUpOut(_ sender: UIButton) {
         UIView.animate(withDuration: 0.12) {
