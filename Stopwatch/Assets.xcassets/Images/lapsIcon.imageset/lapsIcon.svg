@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.531" height="27.822" viewBox="0 0 45.531 27.822">
+  <g id="Raggruppa_15" data-name="Raggruppa 15" transform="translate(-195.734 -418.759)">
+    <g id="Raggruppa_12" data-name="Raggruppa 12" transform="matrix(0.966, -0.259, 0.259, 0.966, -105.448, 69.045)">
+      <g id="Raggruppa_13" data-name="Raggruppa 13" transform="translate(5.96 3.045)">
+        <g id="Rettangolo_18" data-name="Rettangolo 18" transform="translate(193.04 417.955)" fill="none" stroke="#000" stroke-width="1">
+          <rect width="21" height="14" stroke="none"/>
+          <rect x="0.5" y="0.5" width="20" height="13" fill="none"/>
+        </g>
+        <rect id="Rettangolo_19" data-name="Rettangolo 19" width="4" height="4" transform="translate(194.04 418.955)"/>
+        <rect id="Rettangolo_20" data-name="Rettangolo 20" width="4" height="4" transform="translate(194.04 426.955)"/>
+        <rect id="Rettangolo_21" data-name="Rettangolo 21" width="4" height="4" transform="translate(197.04 422.955)"/>
+        <rect id="Rettangolo_22" data-name="Rettangolo 22" width="4" height="4" transform="translate(201.04 418.955)"/>
+        <rect id="Rettangolo_23" data-name="Rettangolo 23" width="4" height="4" transform="translate(201.04 426.955)"/>
+        <rect id="Rettangolo_24" data-name="Rettangolo 24" width="4" height="4" transform="translate(205.04 422.955)"/>
+        <rect id="Rettangolo_25" data-name="Rettangolo 25" width="4" height="4" transform="translate(209.04 418.955)"/>
+        <rect id="Rettangolo_26" data-name="Rettangolo 26" width="4" height="4" transform="translate(209.04 426.955)"/>
+      </g>
+      <path id="Rettangolo_27" data-name="Rettangolo 27" d="M0,0H3A0,0,0,0,1,3,0V14.5A1.5,1.5,0,0,1,1.5,16h0A1.5,1.5,0,0,1,0,14.5V0A0,0,0,0,1,0,0Z" transform="translate(217 433)"/>
+    </g>
+    <g id="Raggruppa_14" data-name="Raggruppa 14" transform="matrix(-0.966, -0.259, 0.259, -0.966, 234.019, 451.241)">
+      <g id="Raggruppa_13-2" data-name="Raggruppa 13" transform="translate(0 14)">
+        <g id="Rettangolo_18-2" data-name="Rettangolo 18" transform="translate(0 0)" fill="none" stroke="#000" stroke-width="1">
+          <rect width="21" height="14" stroke="none"/>
+          <rect x="0.5" y="0.5" width="20" height="13" fill="none"/>
+        </g>
+        <rect id="Rettangolo_19-2" data-name="Rettangolo 19" width="4" height="4" transform="translate(1 9)"/>
+        <rect id="Rettangolo_20-2" data-name="Rettangolo 20" width="4" height="4" transform="translate(1 1)"/>
+        <rect id="Rettangolo_21-2" data-name="Rettangolo 21" width="4" height="4" transform="translate(4 5)"/>
+        <rect id="Rettangolo_22-2" data-name="Rettangolo 22" width="4" height="4" transform="translate(8 9)"/>
+        <rect id="Rettangolo_23-2" data-name="Rettangolo 23" width="4" height="4" transform="translate(8 1)"/>
+        <rect id="Rettangolo_24-2" data-name="Rettangolo 24" width="4" height="4" transform="translate(12 5)"/>
+        <rect id="Rettangolo_25-2" data-name="Rettangolo 25" width="4" height="4" transform="translate(16 9)"/>
+        <rect id="Rettangolo_26-2" data-name="Rettangolo 26" width="4" height="4" transform="translate(16 1)"/>
+      </g>
+      <path id="Rettangolo_27-2" data-name="Rettangolo 27" d="M1.5,0h0A1.5,1.5,0,0,1,3,1.5V16a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1.5A1.5,1.5,0,0,1,1.5,0Z" transform="translate(18 0)"/>
+    </g>
+  </g>
+</svg>

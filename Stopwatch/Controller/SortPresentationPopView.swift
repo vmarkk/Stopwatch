@@ -26,7 +26,7 @@ class SortPresentationPopView: UIPresentationController {
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
-        CGRect(x: 0, y: containerView!.frame.height*0.75, width: containerView!.frame.width, height: containerView!.frame.height*0.25)
+        CGRect(x: 0, y: containerView!.frame.height*0.7, width: containerView!.frame.width, height: containerView!.frame.height*0.3)
     }
     
     override func presentationTransitionWillBegin() {

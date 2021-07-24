@@ -427,7 +427,7 @@
                                                         <rect key="frame" x="0.0" y="86" width="364" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Peak speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-Mz-Ey8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="eqU-cg-2nO"/>
                                                                 </constraints>
@@ -436,7 +436,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD0-7g-a5J">
-                                                                <rect key="frame" x="350" y="0.0" width="14" height="18"/>
+                                                                <rect key="frame" x="190" y="0.0" width="174" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="YSM-bP-4fO"/>
                                                                 </constraints>
@@ -450,7 +450,7 @@
                                                         <rect key="frame" x="0.0" y="129" width="364" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Cadence:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIw-I3-1uX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="4Kx-q4-qz0"/>
                                                                 </constraints>
@@ -459,7 +459,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t06-7k-nAw">
-                                                                <rect key="frame" x="350" y="0.0" width="14" height="18"/>
+                                                                <rect key="frame" x="172" y="0.0" width="192" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="hzQ-id-vjr"/>
                                                                 </constraints>
@@ -698,7 +698,7 @@ Start a new training session and come back!</string>
                     <navigationItem key="navigationItem" title="Leaderboard" id="Tmf-hW-NDC">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="rhb-PJ-GpY">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yUp-MY-44K">
-                                <rect key="frame" x="302" y="7" width="128" height="128"/>
+                                <rect key="frame" x="266" y="0.0" width="128" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="-45" maxY="0.0"/>
                                 <state key="normal" image="sortIcon"/>
@@ -719,7 +719,7 @@ Start a new training session and come back!</string>
         <image name="leaderboardIconSelected" width="25" height="20"/>
         <image name="leaderboardIconUnselected" width="25" height="20"/>
         <image name="runMan" width="293.22500610351562" height="185.5469970703125"/>
-        <image name="sortIcon" width="43.957000732421875" height="32.791999816894531"/>
+        <image name="sortIcon" width="23.659000396728516" height="17.649999618530273"/>
         <image name="timerIconSelected" width="24" height="29"/>
         <image name="timerIconUnselected" width="24" height="29"/>
         <image name="x" width="55.25" height="54.997001647949219"/>
