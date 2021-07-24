@@ -327,15 +327,19 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
        
     
         if distance != nil {
-
+            
             if lap.seconds > 0 {
                 let doubleMetersPerSecond = Double(Int(distance!)!)/Double(lap.seconds)
-                let metersPerSecondString = String(format: "%.1f", doubleMetersPerSecond)
-
-           
-            cell.lapSpeed.text = "\(metersPerSecondString) m/s"
+                var metersPerSecondString = String(format: "%.1f", doubleMetersPerSecond)
+                
+                if metersPerSecondString.last == "0" {
+                    metersPerSecondString = String(metersPerSecondString.dropLast(2))
+                }
+                
+                cell.lapSpeed.text = "\(metersPerSecondString) m/s"
+                
             } else {
-                cell.lapSpeed.text = "\(distance!).0 m/s"
+                cell.lapSpeed.text = "\(distance!) m/s"
             }
         }
         

@@ -420,7 +420,7 @@
                                                         <rect key="frame" x="0.0" y="86" width="364" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Peak speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-Mz-Ey8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="215.5" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="eqU-cg-2nO"/>
                                                                 </constraints>
@@ -429,7 +429,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="8 m/s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD0-7g-a5J">
-                                                                <rect key="frame" x="190" y="0.0" width="174" height="18"/>
+                                                                <rect key="frame" x="324.5" y="0.0" width="39.5" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="YSM-bP-4fO"/>
                                                                 </constraints>
