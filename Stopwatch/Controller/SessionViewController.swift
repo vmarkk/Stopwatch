@@ -400,15 +400,31 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         averageSpeedLabel.text = averageSpeedString + " m/s"
     }
     
+    var lastLapSpeed: Double = 0
     
     private func calculatePeakSpeed() {
         
-        var lastLapSpeed = 0
-        var peakSpeed = 0
+        var peakSpeed: Double = 0
         
+        let lastLap = laps[0]
+      
+        if lastLapSpeed < lastLap.metersPerSecond {
+            peakSpeed = lastLap
+                .metersPerSecond
+            
+            var peakSpeedString = String(format: "%.1f", peakSpeed)
+            
+            if peakSpeedString.last == "0" {
+                peakSpeedString = String(peakSpeedString.dropLast(2))
+            }
+            
+            peakSpeedLabel.text = "\(peakSpeedString) m/s"
+        }
         
-        
+        lastLapSpeed = lastLap.metersPerSecond
+       
     }
+    
     
     private func calculateCadence() {
         
