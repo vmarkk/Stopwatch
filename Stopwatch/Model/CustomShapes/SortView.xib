@@ -37,10 +37,10 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-pN-EJ3">
-                    <rect key="frame" x="15" y="81.5" width="398" height="30"/>
+                    <rect key="frame" x="15" y="81.5" width="398" height="28"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wQX-Da-uVJ">
-                            <rect key="frame" x="0.0" y="1" width="298" height="28"/>
+                            <rect key="frame" x="0.0" y="0.0" width="301" height="28"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="runMan" translatesAutoresizingMaskIntoConstraints="NO" id="2X5-lx-Xc3">
                                     <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -51,7 +51,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Peak speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffu-Fa-o34">
-                                    <rect key="frame" x="48" y="0.0" width="250" height="28"/>
+                                    <rect key="frame" x="48" y="0.0" width="253" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="7So-Fl-lbL"/>
                                     </constraints>
@@ -61,11 +61,11 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5I-Zp-R1c">
-                            <rect key="frame" x="368" y="0.0" width="30" height="30"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkFull" translatesAutoresizingMaskIntoConstraints="NO" id="h5I-Zp-R1c">
+                            <rect key="frame" x="371" y="0.5" width="27" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="h5I-Zp-R1c" secondAttribute="height" id="6xo-or-oQL"/>
-                                <constraint firstAttribute="height" constant="30" id="f0x-EF-Rg6"/>
+                                <constraint firstAttribute="height" constant="27" id="f0x-EF-Rg6"/>
                             </constraints>
                         </imageView>
                     </subviews>
@@ -74,17 +74,17 @@
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AD1-52-kbh">
-                    <rect key="frame" x="30" y="131.5" width="368" height="1"/>
+                    <rect key="frame" x="30" y="129.5" width="368" height="1"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="n1K-Nm-JKh"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Qzp-vz-ToD">
-                    <rect key="frame" x="15" y="162.5" width="398" height="30"/>
+                    <rect key="frame" x="15" y="160.5" width="398" height="28"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mko-zm-EtE">
-                            <rect key="frame" x="0.0" y="1" width="298" height="28"/>
+                            <rect key="frame" x="0.0" y="0.0" width="301" height="28"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lapsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="r4M-Bd-nfd">
                                     <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
@@ -95,7 +95,7 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Number of laps" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTp-0b-Izu">
-                                    <rect key="frame" x="48" y="0.0" width="250" height="28"/>
+                                    <rect key="frame" x="48" y="0.0" width="253" height="28"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6pg-ja-D8J"/>
                                     </constraints>
@@ -105,11 +105,11 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-s7-Gu3">
-                            <rect key="frame" x="368" y="0.0" width="30" height="30"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-s7-Gu3">
+                            <rect key="frame" x="371" y="0.5" width="27" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="qSV-s7-Gu3" secondAttribute="height" id="GC3-S4-vGX"/>
-                                <constraint firstAttribute="height" constant="30" id="LzV-1S-3wv"/>
+                                <constraint firstAttribute="height" constant="27" id="LzV-1S-3wv"/>
                             </constraints>
                         </imageView>
                     </subviews>
@@ -140,6 +140,8 @@
         </view>
     </objects>
     <resources>
+        <image name="checkEmpty" width="122" height="120"/>
+        <image name="checkFull" width="108" height="108"/>
         <image name="lapsIcon" width="45.530998229980469" height="27.822000503540039"/>
         <image name="runMan" width="293.22500610351562" height="185.5469970703125"/>
         <systemColor name="systemBackgroundColor">
