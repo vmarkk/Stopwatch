@@ -695,7 +695,18 @@ Start a new training session and come back!</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3Co-Nk-ICb"/>
-                    <navigationItem key="navigationItem" title="Leaderboard" id="Tmf-hW-NDC"/>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="Tmf-hW-NDC">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rhb-PJ-GpY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yUp-MY-44K">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sort"/>
+                                <connections>
+                                    <action selector="sort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofW-CK-FHO"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

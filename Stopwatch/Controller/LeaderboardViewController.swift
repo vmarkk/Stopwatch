@@ -16,6 +16,25 @@ class LeaderboardViewController: UIViewController {
     }
     
 
+    @IBAction func sort(_ sender: UIButton) {
+        
+        let sortView = SortViewController()
+        sortView.modalPresentationStyle = .custom
+        sortView.transitioningDelegate = self
+        present(sortView, animated: true, completion: nil)
+    }
+    
+    
 
 
+}
+
+
+
+
+extension LeaderboardViewController: UIViewControllerTransitioningDelegate {
+
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+       SortPresentationPopView(presentedViewController: presented, presenting: presented)
+    }
 }

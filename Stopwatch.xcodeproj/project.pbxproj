@@ -16,6 +16,10 @@
 		EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15626A83F7E000F1797 /* Extensions.swift */; };
 		EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */; };
 		EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */; };
+		EAA7ACD226AC4C58008619BC /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7ACD126AC4C58008619BC /* Realm.swift */; };
+		EAA7ACD426AC5193008619BC /* SortPresentationPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7ACD326AC5193008619BC /* SortPresentationPopView.swift */; };
+		EAA7ACD626AC564B008619BC /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA7ACD526AC564B008619BC /* SortView.xib */; };
+		EAA7ACD826AC56FB008619BC /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7ACD726AC56FB008619BC /* SortViewController.swift */; };
 		EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58A26A73C900057DF32 /* AppDelegate.swift */; };
 		EAD4F58D26A73C900057DF32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58C26A73C900057DF32 /* SceneDelegate.swift */; };
 		EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58E26A73C900057DF32 /* HomeViewController.swift */; };
@@ -67,6 +71,10 @@
 		EA82E15626A83F7E000F1797 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EAA7ACD126AC4C58008619BC /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		EAA7ACD326AC5193008619BC /* SortPresentationPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPresentationPopView.swift; sourceTree = "<group>"; };
+		EAA7ACD526AC564B008619BC /* SortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
+		EAA7ACD726AC56FB008619BC /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		EAD4F58726A73C900057DF32 /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD4F58A26A73C900057DF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD4F58C26A73C900057DF32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 				EAD4F5BF26A742060057DF32 /* RoundTabBarControllerViewController.swift */,
 				EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */,
 				EAE7A6C026A8BB9B001ACD32 /* Background.swift */,
+				EAA7ACD526AC564B008619BC /* SortView.xib */,
 			);
 			path = CustomShapes;
 			sourceTree = "<group>";
@@ -236,6 +245,7 @@
 				EA82E15C26A85DA5000F1797 /* Data */,
 				EAD4F5C126A756C20057DF32 /* Network.swift */,
 				EA82E15626A83F7E000F1797 /* Extensions.swift */,
+				EAA7ACD126AC4C58008619BC /* Realm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +267,8 @@
 				EA82E15826A83FDC000F1797 /* LeaderboardViewController.swift */,
 				EA82E15A26A84D1C000F1797 /* SettingsViewController.swift */,
 				EAE7A6BE26A8B4A9001ACD32 /* SessionViewController.swift */,
+				EAA7ACD326AC5193008619BC /* SortPresentationPopView.swift */,
+				EAA7ACD726AC56FB008619BC /* SortViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -369,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA7ACD626AC564B008619BC /* SortView.xib in Resources */,
 				EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */,
 				EAD4F59726A73C910057DF32 /* LaunchScreen.storyboard in Resources */,
 				EAD4F59426A73C910057DF32 /* Assets.xcassets in Resources */,
@@ -505,14 +518,17 @@
 				EA6BC23826AAE195000B8075 /* Lap.swift in Sources */,
 				EAE7A6C126A8BB9B001ACD32 /* Background.swift in Sources */,
 				EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */,
+				EAA7ACD426AC5193008619BC /* SortPresentationPopView.swift in Sources */,
 				EA82E15B26A84D1C000F1797 /* SettingsViewController.swift in Sources */,
 				EA18667C26AA10A800616800 /* LapTVCell.swift in Sources */,
 				EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */,
 				EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */,
+				EAA7ACD226AC4C58008619BC /* Realm.swift in Sources */,
 				EAD4F5C226A756C20057DF32 /* Network.swift in Sources */,
 				EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */,
 				EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */,
 				EAE7A6BF26A8B4A9001ACD32 /* SessionViewController.swift in Sources */,
+				EAA7ACD826AC56FB008619BC /* SortViewController.swift in Sources */,
 				EAD4F5C726A775C60057DF32 /* PlayerTVCell.swift in Sources */,
 				EAD4F5C426A756E60057DF32 /* Player.swift in Sources */,
 				EAD4F58D26A73C900057DF32 /* SceneDelegate.swift in Sources */,
