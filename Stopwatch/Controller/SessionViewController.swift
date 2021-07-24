@@ -36,7 +36,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var numberOfLaps: UILabel!
     
-    
+    private var lastLapSpeed: Double = 0
     private var scrollIsHidingTime = false
     var player: Player?
     var distance: String?
@@ -400,7 +400,6 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         averageSpeedLabel.text = averageSpeedString + " m/s"
     }
     
-    var lastLapSpeed: Double = 0
     
     private func calculatePeakSpeed() {
         
@@ -422,11 +421,38 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         lastLapSpeed = lastLap.metersPerSecond
-       
     }
     
     
     private func calculateCadence() {
+        
+        var totalSeconds: Int = 0
+        var totalCents: Int = 0
+        
+        
+        for lap in laps {
+            totalSeconds += lap.minutes*60 + lap.seconds
+            totalCents = lap.cents
+        }
+        
+        var lapsPerMinute: Float = 1.0
+        
+        if totalSeconds > 0 {
+            lapsPerMinute = Float(laps.count)/Float(totalSeconds)*Float(60)
+        } else {
+            lapsPerMinute = Float(laps.count)/Float(Float(totalCents)/Float(100))*Float(60)
+        }
+        
+        var lapsPerMinuteString = String(format: "%.1f", lapsPerMinute)
+        
+        if lapsPerMinuteString.last == "0" {
+            lapsPerMinuteString = String(lapsPerMinuteString.dropLast(2))
+        }
+        
+        self.cadenceLabel.text = "\(lapsPerMinuteString) lps/min"
+        
+       
+      
         
     }
     
