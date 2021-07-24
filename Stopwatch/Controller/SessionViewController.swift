@@ -49,16 +49,22 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var laps = [Lap]() {
         didSet {
             
-            numberOfLaps.text = "\(laps.count)"
-            
-            if laps.count == 1 {
-                UIView.animate(withDuration: 0.2) {
-                    self.lapsTitleLabel.alpha = 1
-                }
-            }
-            
             DispatchQueue.main.async {
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
+                
+                
+                // STATS FIELDS
+                self.numberOfLaps.text = "\(self.laps.count)"
+                self.calculateAverageSpeed()
+                self.calculatePeakSpeed()
+                self.calculateCadence()
+                
+                
+                if self.laps.count == 1 {
+                    UIView.animate(withDuration: 0.2) {
+                        self.lapsTitleLabel.alpha = 1
+                    }
+                }
                 
                 
                 UIView.animate(withDuration: 0.2) {
@@ -386,11 +392,36 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     private func calculateAverageSpeed() {
+        var lapMetersPerSecond: Float = 0
+        var averageSpeed: Double = 0
         
+        for lap in laps {
+            lapMetersPerSecond += Float(lap.metersPerSecond)
+            
+            if lapMetersPerSecond.isInfinite {
+                lapMetersPerSecond = Float.greatestFiniteMagnitude
+            }
+        }
+        
+        averageSpeed = Double(lapMetersPerSecond)/Double(laps.count)
+        
+        var averageSpeedString = String(format: "%.1f", averageSpeed)
+        
+        if averageSpeedString.last == "0" {
+            averageSpeedString = String(averageSpeedString.dropLast(2))
+        }
+        
+        averageSpeedLabel.text = averageSpeedString + " m/s"
+       
     }
     
     
     private func calculatePeakSpeed() {
+        
+        var lastLapSpeed = 0
+        var peakSpeed = 0
+        
+     
         
     }
     
@@ -407,12 +438,36 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         let lapCents = secondsToMinuteSecondsCents(seconds: count).2
         
         lastTime = "\(minutesLabel.text!):\(secondsLabel.text!):\(centsLabel.text!)"
-
-        let lap = Lap(lapNumber: laps.count+1, minutes: lapMinutes, seconds: lapSeconds, cents: lapCents, timeString: lastTime ?? "")
+        
+        
+        let lap = Lap(lapNumber: laps.count+1, minutes: lapMinutes, seconds: lapSeconds, cents: lapCents, timeString: lastTime ?? "", metersPerSecond: calculateMetersPerSecond(lapMinutes: lapMinutes, lapSeconds: lapSeconds))
         
         laps.insert(lap, at: 0)
 
         count = 0
+    }
+    
+    
+    
+    private func calculateMetersPerSecond(lapMinutes: Int, lapSeconds: Int) -> Double {
+        
+        let minutes = lapMinutes
+        var seconds = lapSeconds
+        var mPs: Double = 0
+        
+        if minutes > 0 {
+            seconds += 60*minutes
+        }
+        
+        if seconds < 1 {
+            return Double(distance!)!
+        }
+        
+        print(Double(Int(distance!)!)/Double(lapSeconds))
+        
+        mPs = Double(Int(distance!)!)/Double(lapSeconds)
+        
+        return mPs
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

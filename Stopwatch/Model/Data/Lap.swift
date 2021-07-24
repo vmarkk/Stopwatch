@@ -14,5 +14,6 @@ struct Lap {
     var seconds: Int
     var cents: Int
     var timeString: String
+    var metersPerSecond: Double
     
 }
