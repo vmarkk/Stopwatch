@@ -33,6 +33,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var numberOfLaps: UILabel!
     
+    private var scrollIsHidingTime = false
+    
     
     var player: Player?
     var distance: String?
@@ -143,6 +145,20 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         secondsLabel.text = String(format: "%02d", secondsToMinuteSecondsCents(seconds: count).1)
         
         centsLabel.text = String(format: "%02d", secondsToMinuteSecondsCents(seconds: count).2)
+        
+      
+        
+        
+        if scrollIsHidingTime {
+            UIView.animate(withDuration: 0.13) {
+                self.titleView.text = "\(self.minutesLabel.text ?? ""):\(self.secondsLabel.text ?? ""):\(self.centsLabel.text ?? "")"
+            }
+        } else {
+            guard titleView.text != distance else {return}
+            UIView.animate(withDuration: 0.13) {
+                self.titleView.text = "\(self.distance!) m"
+            }
+        }
     }
 
 
@@ -388,4 +404,24 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
+}
+
+
+
+
+extension SessionViewController: UIScrollViewDelegate {
+    
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       
+        if scroll.contentOffset.y > -15 {
+            scrollIsHidingTime = true
+        } else {
+            scrollIsHidingTime = false
+        }
+        
+        
+    
+    }
 }
