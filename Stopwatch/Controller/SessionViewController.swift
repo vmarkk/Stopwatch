@@ -328,8 +328,15 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
         if distance != nil {
             
-            if lap.seconds > 0 {
-                let doubleMetersPerSecond = Double(Int(distance!)!)/Double(lap.seconds)
+            var lapSeconds = lap.seconds
+            
+            if lap.minutes > 0 {
+                lapSeconds += 60*lap.minutes
+            }
+            
+            if lapSeconds > 0 {
+                
+                let doubleMetersPerSecond = Double(Int(distance!)!)/Double(lapSeconds)
                 var metersPerSecondString = String(format: "%.1f", doubleMetersPerSecond)
                 
                 if metersPerSecondString.last == "0" {
