@@ -697,10 +697,11 @@ Start a new training session and come back!</string>
                     <tabBarItem key="tabBarItem" title="Item" id="3Co-Nk-ICb"/>
                     <navigationItem key="navigationItem" title="Leaderboard" id="Tmf-hW-NDC">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="rhb-PJ-GpY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="yUp-MY-44K">
-                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yUp-MY-44K">
+                                <rect key="frame" x="302" y="7" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sort"/>
+                                <inset key="imageEdgeInsets" minX="45" minY="0.0" maxX="-45" maxY="0.0"/>
+                                <state key="normal" image="sortIcon"/>
                                 <connections>
                                     <action selector="sort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofW-CK-FHO"/>
                                 </connections>
@@ -718,6 +719,7 @@ Start a new training session and come back!</string>
         <image name="leaderboardIconSelected" width="25" height="20"/>
         <image name="leaderboardIconUnselected" width="25" height="20"/>
         <image name="runMan" width="293.22500610351562" height="185.5469970703125"/>
+        <image name="sortIcon" width="43.957000732421875" height="32.791999816894531"/>
         <image name="timerIconSelected" width="24" height="29"/>
         <image name="timerIconUnselected" width="24" height="29"/>
         <image name="x" width="55.25" height="54.997001647949219"/>

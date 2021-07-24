@@ -242,6 +242,8 @@
 		EAD4F5BA26A73D690057DF32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EA82E15526A83F57000F1797 /* Cells */,
+				EA82E15D26A85DAE000F1797 /* CustomShapes */,
 				EA82E15C26A85DA5000F1797 /* Data */,
 				EAD4F5C126A756C20057DF32 /* Network.swift */,
 				EA82E15626A83F7E000F1797 /* Extensions.swift */,
@@ -253,8 +255,6 @@
 		EAD4F5BB26A73D6D0057DF32 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA82E15526A83F57000F1797 /* Cells */,
-				EA82E15D26A85DAE000F1797 /* CustomShapes */,
 				EAD4F59026A73C900057DF32 /* Main.storyboard */,
 			);
 			path = View;

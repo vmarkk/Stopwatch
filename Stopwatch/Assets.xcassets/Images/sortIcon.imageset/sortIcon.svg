@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.659" height="17.65" viewBox="0 0 23.659 17.65">
+  <g id="Raggruppa_10" data-name="Raggruppa 10" transform="translate(-175 -461.592)">
+    <g id="Raggruppa_9" data-name="Raggruppa 9" transform="translate(185.765 461.592)">
+      <rect id="Rettangolo_12" data-name="Rettangolo 12" width="2.772" height="16.147" rx="1.386" transform="translate(5.025 0)"/>
+      <rect id="Rettangolo_13" data-name="Rettangolo 13" width="2.56" height="8.467" rx="1.28" transform="translate(7.798 15.414) rotate(135)"/>
+      <rect id="Rettangolo_14" data-name="Rettangolo 14" width="2.56" height="8.467" rx="1.28" transform="matrix(0.695, 0.719, -0.719, 0.695, 11.116, 9.5)"/>
+    </g>
+    <rect id="Rettangolo_15" data-name="Rettangolo 15" width="14" height="3" rx="1.5" transform="translate(175 462)"/>
+    <rect id="Rettangolo_16" data-name="Rettangolo 16" width="9" height="3" rx="1.5" transform="translate(175 468)"/>
+    <rect id="Rettangolo_17" data-name="Rettangolo 17" width="6" height="3" rx="1.5" transform="translate(175 474)"/>
+    <path id="Tracciato_12" data-name="Tracciato 12" d="M0,0,1.9.891l.179,1.189-2.043-.1Z" transform="translate(190.708 477.772) rotate(-45)"/>
+  </g>
+</svg>
