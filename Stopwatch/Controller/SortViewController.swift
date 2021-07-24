@@ -71,6 +71,17 @@ class SortViewController: UIViewController {
     }
     
 
- 
-
+    @IBAction func tapLap(_ sender: UITapGestureRecognizer) {
+        if selected != "laps" {
+            self.selected = "laps"
+        }
+    }
+    
+    
+    @IBAction func tapPeak(_ sender: UITapGestureRecognizer) {
+        if selected != "peak" {
+            self.selected = "peak"
+        }
+    }
+    
 }

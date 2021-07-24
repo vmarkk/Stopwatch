@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortViewController" customModule="Stopwatch" customModuleProvider="target">
             <connections>
                 <outlet property="indicatorView" destination="yhE-SN-6FK" id="Uzi-YU-YmU"/>
+                <outlet property="numLapsCheck" destination="qSV-s7-Gu3" id="2OQ-JH-9PX"/>
+                <outlet property="peakSpeedCheck" destination="h5I-Zp-R1c" id="zDe-Bu-mby"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lc5-id-i8C"/>
             </connections>
         </placeholder>
@@ -73,12 +75,28 @@
                         <constraint firstItem="h5I-Zp-R1c" firstAttribute="width" secondItem="h5I-Zp-R1c" secondAttribute="height" id="Nla-5Q-wY0"/>
                     </constraints>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AD1-52-kbh">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AD1-52-kbh" userLabel="separator">
                     <rect key="frame" x="30" y="129.5" width="368" height="1"/>
                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="n1K-Nm-JKh"/>
                     </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1k-hj-kLi" userLabel="peakView">
+                    <rect key="frame" x="0.0" y="56.5" width="428" height="73"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="s46-MT-6rH" appends="YES" id="Rb0-P5-8je"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yK7-Q1-gsv" userLabel="lapView">
+                    <rect key="frame" x="0.0" y="130.5" width="428" height="78"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="0Hf-DC-1m6" appends="YES" id="63y-Dk-0vY"/>
+                    </connections>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Qzp-vz-ToD">
                     <rect key="frame" x="15" y="160.5" width="398" height="28"/>
@@ -119,34 +137,49 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="AD1-52-kbh" firstAttribute="top" secondItem="C1k-hj-kLi" secondAttribute="bottom" id="4by-PF-xaY"/>
                 <constraint firstItem="Qzp-vz-ToD" firstAttribute="top" secondItem="AD1-52-kbh" secondAttribute="bottom" constant="30" id="7pF-vb-fii"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Qzp-vz-ToD" secondAttribute="trailing" constant="15" id="8me-h4-qbh"/>
+                <constraint firstItem="yK7-Q1-gsv" firstAttribute="bottom" secondItem="Qzp-vz-ToD" secondAttribute="bottom" constant="20" id="Ecj-GF-IJz"/>
+                <constraint firstItem="yK7-Q1-gsv" firstAttribute="top" secondItem="AD1-52-kbh" secondAttribute="bottom" id="G2h-Q9-B5E"/>
                 <constraint firstItem="yhE-SN-6FK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HeW-J8-L6h"/>
                 <constraint firstItem="AD1-52-kbh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="L4K-ir-JUd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AD1-52-kbh" secondAttribute="trailing" constant="30" id="RhE-II-w3v"/>
                 <constraint firstItem="Qzp-vz-ToD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="Sde-rX-0he"/>
+                <constraint firstItem="yK7-Q1-gsv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xbr-KY-ObQ"/>
                 <constraint firstItem="DCs-pN-EJ3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="YW1-f9-X5D"/>
                 <constraint firstItem="AD1-52-kbh" firstAttribute="top" secondItem="DCs-pN-EJ3" secondAttribute="bottom" constant="20" id="YmH-YF-Cls"/>
+                <constraint firstItem="C1k-hj-kLi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZzQ-iK-Bx0"/>
                 <constraint firstItem="TE2-9Z-OvJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="aK7-uA-O1b"/>
+                <constraint firstAttribute="trailing" secondItem="yK7-Q1-gsv" secondAttribute="trailing" id="aS8-LI-zBF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DCs-pN-EJ3" secondAttribute="trailing" constant="15" id="crH-0w-bzP"/>
                 <constraint firstItem="TE2-9Z-OvJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="fcQ-2N-Tpa"/>
+                <constraint firstAttribute="trailing" secondItem="C1k-hj-kLi" secondAttribute="trailing" id="kNc-sC-i0l"/>
                 <constraint firstItem="yhE-SN-6FK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="qa9-6S-pkp"/>
+                <constraint firstItem="C1k-hj-kLi" firstAttribute="top" secondItem="TE2-9Z-OvJ" secondAttribute="bottom" constant="5" id="sQw-Po-mDU"/>
                 <constraint firstItem="DCs-pN-EJ3" firstAttribute="top" secondItem="TE2-9Z-OvJ" secondAttribute="bottom" constant="30" id="zup-Nq-rNR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="142.02898550724638" y="202.56696428571428"/>
         </view>
+        <tapGestureRecognizer id="0Hf-DC-1m6">
+            <connections>
+                <action selector="tapLap:" destination="-1" id="Vth-wJ-dbS"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="s46-MT-6rH">
+            <connections>
+                <action selector="tapPeak:" destination="-1" id="afe-OA-rq7"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="checkEmpty" width="122" height="120"/>
         <image name="checkFull" width="108" height="108"/>
         <image name="lapsIcon" width="45.530998229980469" height="27.822000503540039"/>
         <image name="runMan" width="293.22500610351562" height="185.5469970703125"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
