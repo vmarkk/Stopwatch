@@ -7,3 +7,13 @@
 
 import Foundation
 import RealmSwift
+
+class Realm: NSObject {
+    
+    
+    public func updateRealmPlayer(player: PlayerRealm) {
+        
+        
+        
+    }
+}

@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LeaderboardViewController: UIViewController {
+    
+   // private let players = try! Rea
 
+    private var sortOption = "laps"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +24,7 @@ class LeaderboardViewController: UIViewController {
     @IBAction func sort(_ sender: UIButton) {
         
         let sortView = SortViewController()
+        sortView.sortOption = "laps"
         sortView.modalPresentationStyle = .custom
         sortView.transitioningDelegate = self
         present(sortView, animated: true, completion: nil)

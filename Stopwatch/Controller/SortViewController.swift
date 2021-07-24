@@ -11,23 +11,14 @@ class SortViewController: UIViewController {
 
     
     @IBOutlet weak var peakSpeedCheck: UIImageView!
-    
     @IBOutlet weak var numLapsCheck: UIImageView!
     @IBOutlet weak var indicatorView: UIView!
-    var hasSetPointOrigin = false
-    var pointOrigin: CGPoint?
     
-    private var selected = "peak" {
-        didSet {
-            if selected == "laps" {
-                peakSpeedCheck.image = UIImage(named: "checkEmpty")
-                numLapsCheck.image = UIImage(named: "checkFull")
-            } else {
-                numLapsCheck.image = UIImage(named: "checkEmpty")
-                peakSpeedCheck.image = UIImage(named: "checkFull")
-            }
-        }
-    }
+    
+    private var hasSetPointOrigin = false
+    private var pointOrigin: CGPoint?
+    
+    var sortOption = "peak"
     
     
     override func viewDidLoad() {
@@ -38,7 +29,19 @@ class SortViewController: UIViewController {
         
         indicatorView.roundedCorners([.allCorners], radius: 2)
         
+        checkImage()
         
+    }
+    
+    
+    private func checkImage() {
+        if sortOption == "laps" {
+            peakSpeedCheck.image = UIImage(named: "checkEmpty")
+            numLapsCheck.image = UIImage(named: "checkFull")
+        } else {
+            numLapsCheck.image = UIImage(named: "checkEmpty")
+            peakSpeedCheck.image = UIImage(named: "checkFull")
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -72,16 +75,20 @@ class SortViewController: UIViewController {
     
 
     @IBAction func tapLap(_ sender: UITapGestureRecognizer) {
-        if selected != "laps" {
-            self.selected = "laps"
+        if sortOption != "laps" {
+            self.sortOption = "laps"
+            self.checkImage()
         }
+        dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func tapPeak(_ sender: UITapGestureRecognizer) {
-        if selected != "peak" {
-            self.selected = "peak"
+        if sortOption != "peak" {
+            self.sortOption = "peak"
+            self.checkImage()
         }
+        dismiss(animated: true, completion: nil)
     }
     
 }

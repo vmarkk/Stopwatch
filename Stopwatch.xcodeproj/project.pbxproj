@@ -20,6 +20,7 @@
 		EAA7ACD426AC5193008619BC /* SortPresentationPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7ACD326AC5193008619BC /* SortPresentationPopView.swift */; };
 		EAA7ACD626AC564B008619BC /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAA7ACD526AC564B008619BC /* SortView.xib */; };
 		EAA7ACD826AC56FB008619BC /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7ACD726AC56FB008619BC /* SortViewController.swift */; };
+		EAA7ACDA26AC6962008619BC /* PlayerRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7ACD926AC6962008619BC /* PlayerRealm.swift */; };
 		EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58A26A73C900057DF32 /* AppDelegate.swift */; };
 		EAD4F58D26A73C900057DF32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58C26A73C900057DF32 /* SceneDelegate.swift */; };
 		EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD4F58E26A73C900057DF32 /* HomeViewController.swift */; };
@@ -75,6 +76,7 @@
 		EAA7ACD326AC5193008619BC /* SortPresentationPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortPresentationPopView.swift; sourceTree = "<group>"; };
 		EAA7ACD526AC564B008619BC /* SortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
 		EAA7ACD726AC56FB008619BC /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		EAA7ACD926AC6962008619BC /* PlayerRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRealm.swift; sourceTree = "<group>"; };
 		EAD4F58726A73C900057DF32 /* Stopwatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stopwatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD4F58A26A73C900057DF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAD4F58C26A73C900057DF32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				EAD4F5C326A756E60057DF32 /* Player.swift */,
 				EA6BC23726AAE195000B8075 /* Lap.swift */,
+				EAA7ACD926AC6962008619BC /* PlayerRealm.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */,
 				EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */,
 				EAE7A6BF26A8B4A9001ACD32 /* SessionViewController.swift in Sources */,
+				EAA7ACDA26AC6962008619BC /* PlayerRealm.swift in Sources */,
 				EAA7ACD826AC56FB008619BC /* SortViewController.swift in Sources */,
 				EAD4F5C726A775C60057DF32 /* PlayerTVCell.swift in Sources */,
 				EAD4F5C426A756E60057DF32 /* Player.swift in Sources */,

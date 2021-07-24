@@ -237,7 +237,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         if !finish {
             alert = UIAlertController(title: "Stop session", message: "This session won't be saved", preferredStyle: .alert)
         } else {
-            alert = UIAlertController(title: "Terminate session", message: "Are you sure to end this session?", preferredStyle: .alert)
+            alert = UIAlertController(title: "Terminate session", message: "Do you want to end and save this session?", preferredStyle: .alert)
         }
         
         let okAction = UIAlertAction(title: "Terminate", style: .default) { _ in
