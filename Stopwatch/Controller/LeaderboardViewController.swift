@@ -12,7 +12,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
    
   
     @IBOutlet weak var leaderTV: UITableView!
-    
+
     
     private var sortOption = "laps"
     

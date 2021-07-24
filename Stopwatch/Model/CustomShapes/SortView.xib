@@ -90,14 +90,6 @@
                         <outletCollection property="gestureRecognizers" destination="s46-MT-6rH" appends="YES" id="Rb0-P5-8je"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yK7-Q1-gsv" userLabel="lapView">
-                    <rect key="frame" x="0.0" y="130.5" width="428" height="78"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="0Hf-DC-1m6" appends="YES" id="63y-Dk-0vY"/>
-                    </connections>
-                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="Qzp-vz-ToD">
                     <rect key="frame" x="15" y="160.5" width="398" height="28"/>
                     <subviews>
@@ -135,6 +127,14 @@
                         <constraint firstItem="qSV-s7-Gu3" firstAttribute="width" secondItem="qSV-s7-Gu3" secondAttribute="height" id="C9r-Mz-fyQ"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yK7-Q1-gsv" userLabel="lapView">
+                    <rect key="frame" x="0.0" y="130.5" width="428" height="78"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="0Hf-DC-1m6" appends="YES" id="63y-Dk-0vY"/>
+                    </connections>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
