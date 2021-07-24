@@ -7,8 +7,8 @@ target 'Stopwatch' do
 
   # Pods for Stopwatch
 
-pod 'SDWebImage'
 pod 'RealmSwift'
+pod 'SDWebImage'
 
   target 'StopwatchTests' do
     inherit! :search_paths

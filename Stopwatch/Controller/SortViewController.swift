@@ -7,12 +7,14 @@
 
 import UIKit
 
+
 protocol SortPopUpDelegate {
     func syncSortOption(sortOption: String)
 }
 
 class SortViewController: UIViewController {
 
+    
     
     @IBOutlet weak var peakSpeedCheck: UIImageView!
     @IBOutlet weak var numLapsCheck: UIImageView!
@@ -22,13 +24,15 @@ class SortViewController: UIViewController {
     private var hasSetPointOrigin = false
     private var pointOrigin: CGPoint?
     var delegate: SortPopUpDelegate?
-    
+   
     var sortOption = "peak"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(pan))
         view.addGestureRecognizer(panGesture)
         

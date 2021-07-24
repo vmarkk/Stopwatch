@@ -13,13 +13,16 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
   
     @IBOutlet weak var leaderTV: UITableView!
 
-    
+   
+    private let players = try! Realm().objects(PlayerRealm.self)
     private var sortOption = "laps"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
 
+    
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         navigationController?.setShadow()
     }

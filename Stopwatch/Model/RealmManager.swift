@@ -6,16 +6,16 @@
 //
 
 import Foundation
-import RealmSwift
 
-class Realm: NSObject {
+
+class RealmManager: NSObject {
     
  
     
-    public func updateRealmPlayer(player: PlayerRealm) {
+   // public func updateRealmPlayer(player: PlayerRealm) {
         
       
         
        
-    }
+    //}
 }

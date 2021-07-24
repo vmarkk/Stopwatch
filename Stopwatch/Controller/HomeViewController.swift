@@ -15,7 +15,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var playersTV: UITableView!
 
     private var selectedPlayer: Player?
-    
+  
     
     private var players = [Player]() {
         didSet {
@@ -27,11 +27,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         spinner.rotate()
-
+        
         playersTV.register(UINib(nibName: "PlayerTVCell", bundle: nil), forCellReuseIdentifier: "cellPlayer")
         
 
