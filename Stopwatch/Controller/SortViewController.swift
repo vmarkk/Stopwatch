@@ -10,9 +10,25 @@ import UIKit
 class SortViewController: UIViewController {
 
     
+    @IBOutlet weak var peakSpeedCheck: UIImageView!
+    
+    @IBOutlet weak var numLapsCheck: UIImageView!
     @IBOutlet weak var indicatorView: UIView!
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
+    
+    private var selected = "peak" {
+        didSet {
+            if selected == "laps" {
+                peakSpeedCheck.image = UIImage(named: "checkEmpty")
+                numLapsCheck.image = UIImage(named: "checkFull")
+            } else {
+                numLapsCheck.image = UIImage(named: "checkEmpty")
+                peakSpeedCheck.image = UIImage(named: "checkFull")
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +37,8 @@ class SortViewController: UIViewController {
         view.addGestureRecognizer(panGesture)
         
         indicatorView.roundedCorners([.allCorners], radius: 2)
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
