@@ -8,16 +8,19 @@
 import UIKit
 import RealmSwift
 
-class LeaderboardViewController: UIViewController, SortPopUpDelegate {
+class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableViewDelegate, UITableViewDataSource {
+   
   
+    @IBOutlet weak var leaderTV: UITableView!
     
-   // private let players = try! Rea
-
+    
     private var sortOption = "laps"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         navigationController?.setShadow()
     }
     
@@ -36,6 +39,18 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate {
     func syncSortOption(sortOption: String) {
         self.sortOption = sortOption
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLeader") as? LeaderTVCell else { return UITableViewCell() }
+        
+        return cell
+    }
+    
     
 
 }

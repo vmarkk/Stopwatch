@@ -10,6 +10,8 @@
 		2E615552DE65C03B7935699E /* Pods_Stopwatch_StopwatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D416D715FE7EFB15898060F6 /* Pods_Stopwatch_StopwatchUITests.framework */; };
 		9D72095209D24C63092EDBAC /* Pods_StopwatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117B35CC553716FF68C87EFE /* Pods_StopwatchTests.framework */; };
 		AE1C1249D73FCB5B08B78B33 /* Pods_Stopwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ED2B1ED48413EE743630CA5 /* Pods_Stopwatch.framework */; };
+		EA110C3926AC725C00B97715 /* LeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA110C3726AC725C00B97715 /* LeaderTVCell.swift */; };
+		EA110C3A26AC725C00B97715 /* LeaderTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA110C3826AC725C00B97715 /* LeaderTVCell.xib */; };
 		EA18667C26AA10A800616800 /* LapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18667A26AA10A800616800 /* LapTVCell.swift */; };
 		EA18667D26AA10A800616800 /* LapTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA18667B26AA10A800616800 /* LapTVCell.xib */; };
 		EA6BC23826AAE195000B8075 /* Lap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC23726AAE195000B8075 /* Lap.swift */; };
@@ -66,6 +68,8 @@
 		AC4F65274F3E1612F0D78D45 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C99990DF278D4CFF8A6F8DB3 /* Pods-Stopwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch/Pods-Stopwatch.release.xcconfig"; sourceTree = "<group>"; };
 		D416D715FE7EFB15898060F6 /* Pods_Stopwatch_StopwatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch_StopwatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA110C3726AC725C00B97715 /* LeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderTVCell.swift; sourceTree = "<group>"; };
+		EA110C3826AC725C00B97715 /* LeaderTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderTVCell.xib; sourceTree = "<group>"; };
 		EA18667A26AA10A800616800 /* LapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTVCell.swift; sourceTree = "<group>"; };
 		EA18667B26AA10A800616800 /* LapTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LapTVCell.xib; sourceTree = "<group>"; };
 		EA6BC23726AAE195000B8075 /* Lap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lap.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				EAD4F5C626A775C60057DF32 /* PlayerTVCell.xib */,
 				EA18667A26AA10A800616800 /* LapTVCell.swift */,
 				EA18667B26AA10A800616800 /* LapTVCell.xib */,
+				EA110C3726AC725C00B97715 /* LeaderTVCell.swift */,
+				EA110C3826AC725C00B97715 /* LeaderTVCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */,
 				EAD4F59726A73C910057DF32 /* LaunchScreen.storyboard in Resources */,
 				EAD4F59426A73C910057DF32 /* Assets.xcassets in Resources */,
+				EA110C3A26AC725C00B97715 /* LeaderTVCell.xib in Resources */,
 				EAD4F59226A73C900057DF32 /* Main.storyboard in Resources */,
 				EA18667D26AA10A800616800 /* LapTVCell.xib in Resources */,
 			);
@@ -527,6 +534,7 @@
 				EA82E15926A83FDC000F1797 /* LeaderboardViewController.swift in Sources */,
 				EAD4F58F26A73C900057DF32 /* HomeViewController.swift in Sources */,
 				EAA7ACD226AC4C58008619BC /* Realm.swift in Sources */,
+				EA110C3926AC725C00B97715 /* LeaderTVCell.swift in Sources */,
 				EAD4F5C226A756C20057DF32 /* Network.swift in Sources */,
 				EAD4F58B26A73C900057DF32 /* AppDelegate.swift in Sources */,
 				EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */,

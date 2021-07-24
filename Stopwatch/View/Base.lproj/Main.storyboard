@@ -427,7 +427,7 @@
                                                         <rect key="frame" x="0.0" y="86" width="364" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Peak speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-Mz-Ey8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="eqU-cg-2nO"/>
                                                                 </constraints>
@@ -436,7 +436,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD0-7g-a5J">
-                                                                <rect key="frame" x="190" y="0.0" width="174" height="18"/>
+                                                                <rect key="frame" x="350" y="0.0" width="14" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="YSM-bP-4fO"/>
                                                                 </constraints>
@@ -450,7 +450,7 @@
                                                         <rect key="frame" x="0.0" y="129" width="364" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Cadence:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIw-I3-1uX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="63" height="18"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="4Kx-q4-qz0"/>
                                                                 </constraints>
@@ -459,7 +459,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t06-7k-nAw">
-                                                                <rect key="frame" x="172" y="0.0" width="192" height="18"/>
+                                                                <rect key="frame" x="350" y="0.0" width="14" height="18"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="hzQ-id-vjr"/>
                                                                 </constraints>
@@ -676,6 +676,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6UW-av-5f1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="N8h-A7-NZp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qly-my-kah"/>
+                                </connections>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbT-9d-ET7">
                                 <rect key="frame" x="20" y="431.5" width="374" height="33.5"/>
                                 <string key="text">No session found
@@ -689,7 +697,11 @@ Start a new training session and come back!</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="XbT-9d-ET7" secondAttribute="trailing" constant="20" id="3Jq-XL-SrS"/>
+                            <constraint firstItem="6UW-av-5f1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3of-lX-K8B"/>
                             <constraint firstItem="XbT-9d-ET7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BJH-Xr-Rt8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6UW-av-5f1" secondAttribute="trailing" id="Mbm-XX-5HP"/>
+                            <constraint firstItem="6UW-av-5f1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WXY-dj-5Lv"/>
+                            <constraint firstAttribute="bottom" secondItem="6UW-av-5f1" secondAttribute="bottom" id="bKt-dd-2ve"/>
                             <constraint firstItem="XbT-9d-ET7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcr-QF-Y1W"/>
                             <constraint firstItem="XbT-9d-ET7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="x6W-Qd-xUg"/>
                         </constraints>
@@ -708,6 +720,9 @@ Start a new training session and come back!</string>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="leaderTV" destination="6UW-av-5f1" id="3UF-tf-Nlx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
