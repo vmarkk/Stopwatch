@@ -158,7 +158,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     private func secondsToMinuteSecondsCents(seconds: Int) -> (Int, Int, Int) {
-        return ((seconds/3600), ((seconds % 3600)/100), (seconds)%100)
+        return ((seconds/6000 % 60), (seconds/100%60), (seconds%100))
     }
     
     
