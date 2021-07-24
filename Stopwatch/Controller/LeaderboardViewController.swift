@@ -8,7 +8,8 @@
 import UIKit
 import RealmSwift
 
-class LeaderboardViewController: UIViewController {
+class LeaderboardViewController: UIViewController, SortPopUpDelegate {
+  
     
    // private let players = try! Rea
 
@@ -24,14 +25,18 @@ class LeaderboardViewController: UIViewController {
     @IBAction func sort(_ sender: UIButton) {
         
         let sortView = SortViewController()
-        sortView.sortOption = "laps"
+        sortView.sortOption = sortOption
         sortView.modalPresentationStyle = .custom
+        sortView.delegate = self
         sortView.transitioningDelegate = self
         present(sortView, animated: true, completion: nil)
     }
     
     
-
+    func syncSortOption(sortOption: String) {
+        self.sortOption = sortOption
+    }
+    
 
 }
 

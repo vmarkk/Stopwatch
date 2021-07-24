@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SortPopUpDelegate {
+    func syncSortOption(sortOption: String)
+}
+
 class SortViewController: UIViewController {
 
     
@@ -17,6 +21,7 @@ class SortViewController: UIViewController {
     
     private var hasSetPointOrigin = false
     private var pointOrigin: CGPoint?
+    var delegate: SortPopUpDelegate?
     
     var sortOption = "peak"
     
@@ -78,6 +83,7 @@ class SortViewController: UIViewController {
         if sortOption != "laps" {
             self.sortOption = "laps"
             self.checkImage()
+            self.delegate!.syncSortOption(sortOption: sortOption)
         }
         dismiss(animated: true, completion: nil)
     }
@@ -87,6 +93,7 @@ class SortViewController: UIViewController {
         if sortOption != "peak" {
             self.sortOption = "peak"
             self.checkImage()
+            self.delegate!.syncSortOption(sortOption: sortOption)
         }
         dismiss(animated: true, completion: nil)
     }
