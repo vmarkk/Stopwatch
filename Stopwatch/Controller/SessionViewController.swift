@@ -10,6 +10,9 @@ import UIKit
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    @IBOutlet weak var cadenceLabel: UILabel!
+    @IBOutlet weak var peakSpeedLabel: UILabel!
+    @IBOutlet weak var averageSpeedLabel: UILabel!
     @IBOutlet weak var statisticsTitleLabel: UILabel!
     @IBOutlet weak var stackStatistics: UIStackView!
     @IBOutlet weak var shadowStatistics: UIView!
@@ -379,6 +382,20 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
 
 
         return cell
+    }
+    
+    
+    private func calculateAverageSpeed() {
+        
+    }
+    
+    
+    private func calculatePeakSpeed() {
+        
+    }
+    
+    private func calculateCadence() {
+        
     }
 
 
