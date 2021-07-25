@@ -11,6 +11,7 @@ import RealmSwift
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var chartView: Chart!
     @IBOutlet weak var cadenceLabel: UILabel!
     @IBOutlet weak var peakSpeedLabel: UILabel!
     @IBOutlet weak var averageSpeedLabel: UILabel!
@@ -46,7 +47,10 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var count = 0
     private var lastTime: String? = ""
     private let realm = try! Realm()
+  
+   var point = CGPoint(x: 0, y: 0)
     
+    var testValue: CGFloat = 0
     private var laps = [Lap]() {
         didSet {
             
@@ -57,6 +61,13 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                     UIView.animate(withDuration: 0.1) {
                         self.finishOutlet.alpha = 1
                     }
+                    
+                   
+                   
+                    self.point = CGPoint(x: self.chartView.frame.size.width, y: self.testValue)
+                    self.chartView.points.append(self.point)
+                  
+                    self.testValue = -self.testValue
                 }
                 
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
@@ -95,6 +106,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.testValue = 100
         scroll.contentInset.top = 150
         scroll.contentInset.bottom = lapOutlet.frame.size.height+45
         
@@ -342,6 +354,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         
         if isCounting {
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+                       generator.impactOccurred()
             self.timer.invalidate()
             self.addLap()
         } else {
