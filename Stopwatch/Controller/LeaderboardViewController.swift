@@ -10,11 +10,31 @@ import RealmSwift
 
 class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableViewDelegate, UITableViewDataSource {
    
-  
+    @IBOutlet weak var noSessionFoundLabel: UILabel!
+    
     @IBOutlet weak var leaderTV: UITableView!
 
    
-    private let players = try! Realm().objects(PlayerRealm.self)
+    private var players: Results<PlayerRealm>? {
+        didSet {
+            
+            DispatchQueue.main.async {
+                self.leaderTV.reloadData()
+                
+                if self.players!.count > 0 && !self.noSessionFoundLabel.isHidden {
+                    UIView.animate(withDuration: 0.13) {
+                        self.noSessionFoundLabel.alpha = 0
+                    } completion: { _ in
+                        self.noSessionFoundLabel.removeFromSuperview()
+                    }
+                }
+                
+            }
+           
+        }
+    }
+    
+    
     private var sortOption = "peak"
     
     
@@ -22,12 +42,20 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         super.viewDidLoad()
      
 
-        print(players.count)
+        print(players?.count ?? 0)
     
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         leaderTV.tableFooterView = UIView()
         
         navigationController?.setShadow()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        players = try! Realm().objects(PlayerRealm.self)
+        
     }
     
 
@@ -48,13 +76,29 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return players?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLeader") as? LeaderTVCell else { return UITableViewCell() }
         
         cell.background.layer.cornerRadius = 20
+        cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size.height/2
+        
+        guard players != nil else {
+            return UITableViewCell()
+        }
+        
+        let player = players![indexPath.row]
+        
+        cell.namePlayer.text = player.fullName
+        cell.profileImage.sd_setImage(with: URL(string: player.pictureUrl)) { image, err, cache, url in
+            
+        
+            guard image != nil else {return}
+            
+            cell.profileImage.image = image
+        }
         
         return cell
     }
