@@ -23,15 +23,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "67747D63-978F-4D60-B7B3-89E596855161"
-            shouldBeEnabled = "No"
+            uuid = "43DF8AC0-A9AD-4218-A294-38DEA7E4D6CF"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Stopwatch/Model/RealmManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
             landmarkName = "updateRealmPlayer(player:)"
             landmarkType = "7">
          </BreakpointContent>

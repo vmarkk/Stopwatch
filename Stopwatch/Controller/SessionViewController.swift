@@ -51,6 +51,14 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         didSet {
             
             DispatchQueue.main.async {
+                
+                if self.laps.count > 0 {
+                    self.finishOutlet.isUserInteractionEnabled = true
+                    UIView.animate(withDuration: 0.1) {
+                        self.finishOutlet.alpha = 1
+                    }
+                }
+                
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
                 
                 // STATS FIELDS
@@ -76,12 +84,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var isCounting = false {
         didSet {
             if isCounting {
-                
-                self.finishOutlet.isUserInteractionEnabled = true
-                
                 UIView.animate(withDuration: 0.1) {
                     self.lapOutlet.setTitle("LAP", for: .normal)
-                    self.finishOutlet.alpha = 1
                 }
             }
         }

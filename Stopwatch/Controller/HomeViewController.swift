@@ -80,8 +80,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageContainer.layer.cornerRadius = cell.imageContainer.frame.size.height/2
         cell.imageContainer.layer.shadowColor = UIColor.black.cgColor
         cell.imageContainer.layer.shadowOffset = CGSize(width: 2, height: 2)
-        cell.imageContainer.layer.shadowRadius = 15
-        cell.imageContainer.layer.shadowOpacity = 0.23
+        cell.imageContainer.layer.shadowRadius = 10
+        cell.imageContainer.layer.shadowOpacity = 0.2
         
         cell.imageProfile.sd_setImage(with: URL(string: player.picture.large)) { image, err, cache, url in
             if let userImage = image {

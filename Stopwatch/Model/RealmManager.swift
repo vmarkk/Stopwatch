@@ -16,8 +16,6 @@ class RealmManager: NSObject {
         
         let realm = try! Realm()
         
-        let obj = realm.objects(PlayerRealm.self)
-        
         let playerToUpdate = realm.objects(PlayerRealm.self).filter("fullName == '\(player.fullName)'").first
         
         
