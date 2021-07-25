@@ -21,6 +21,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
             DispatchQueue.main.async {
                 self.leaderTV.reloadData()
                 
+                guard self.noSessionFoundLabel != nil else {return}
                 if self.players!.count > 0 && !self.noSessionFoundLabel.isHidden {
                     UIView.animate(withDuration: 0.13) {
                         self.noSessionFoundLabel.alpha = 0
@@ -40,9 +41,6 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-
-        print(players?.count ?? 0)
     
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         leaderTV.tableFooterView = UIView()
@@ -55,7 +53,6 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         super.viewWillAppear(animated)
     
         players = try! Realm().objects(PlayerRealm.self)
-        
     }
     
 
@@ -91,7 +88,11 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         
         let player = players![indexPath.row]
         
+        cell.leaderNum.text = "\(indexPath.row+1)"
         cell.namePlayer.text = player.fullName
+        cell.explValue.text = "\(player.peakSpeed) m/s"
+        cell.lapsValue.text = "\(player.totalLaps)"
+        
         cell.profileImage.sd_setImage(with: URL(string: player.pictureUrl)) { image, err, cache, url in
             
         

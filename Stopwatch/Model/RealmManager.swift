@@ -24,7 +24,8 @@ class RealmManager: NSObject {
             if playerToUpdate != nil {
                 
                 // JUST UPDATE PLAYER LAST SESSION IN CASE THERE'S ALREADY A SAVED SESSION
-                playerToUpdate!.totalLaps += player.totalLaps
+                playerToUpdate?.peakSpeed = player.peakSpeed
+                playerToUpdate!.totalLaps = player.totalLaps
                 playerToUpdate!.numOfSessions += 1
                 
             } else {
