@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -37,6 +37,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var numberOfLaps: UILabel!
     
+    private var peakSpeed: Float?
     private var lastLapSpeed: Double = 0
     private var scrollIsHidingTime = false
     var player: Player?
@@ -44,6 +45,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var timer = Timer()
     private var count = 0
     private var lastTime: String? = ""
+    private let realm = try! Realm()
     
     private var laps = [Lap]() {
         didSet {
@@ -242,6 +244,17 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let okAction = UIAlertAction(title: "Terminate", style: .default) { _ in
             
+            if finish {
+                
+                let playerToUpdate = PlayerRealm()
+                playerToUpdate.fullName = "\(self.player!.name.first) \(self.player!.name.last)"
+                playerToUpdate.numOfSessions+=1
+                playerToUpdate.peakSpeed = self.peakSpeed ?? 0.0
+                playerToUpdate.totalLaps += Int32(self.laps.count)
+                
+                RealmManager().updateRealmPlayer(player: playerToUpdate)
+            }
+            
             self.dismiss(finish: finish)
         }
         
@@ -411,6 +424,9 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         if lastLapSpeed < lastLap.metersPerSecond {
             peakSpeed = lastLap
                 .metersPerSecond
+            
+            // GLOBAL PEAK SPEED VALUE
+            self.peakSpeed = Float(peakSpeed)
             
             var peakSpeedString = String(format: "%.1f", peakSpeed)
             

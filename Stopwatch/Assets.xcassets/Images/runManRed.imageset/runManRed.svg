@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="364" height="364" viewBox="0 0 364 364">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="86" height="86" viewBox="0 0 86 86">
   <defs>
-    <linearGradient id="linear-gradient" x1="0.76" y1="0.075" x2="0.169" y2="0.873" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#eb4263"/>
-      <stop offset="1" stop-color="#e57677"/>
+    <linearGradient id="linear-gradient" x1="0.723" y1="0.097" x2="0.206" y2="0.887" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f47878"/>
+      <stop offset="1" stop-color="#ff2761"/>
     </linearGradient>
   </defs>
-  <g id="Raggruppa_8" data-name="Raggruppa 8" transform="translate(-32 -179)">
-    <circle id="Ellisse_5" data-name="Ellisse 5" cx="182" cy="182" r="182" transform="translate(32 179)" fill="url(#linear-gradient)"/>
-    <g id="Raggruppa_5" data-name="Raggruppa 5" transform="translate(22 -54)">
-      <circle id="Ellisse_4" data-name="Ellisse 4" cx="19" cy="19" r="19" transform="translate(254 328)" fill="#fff"/>
-      <path id="Tracciato_7" data-name="Tracciato 7" d="M.223,3.247s17.9-17.134,39.547-17.134S65.849,2.262,86.8,3.247s36.765-13.2,36.765-13.2" transform="translate(198.316 379.757) rotate(7)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="18"/>
-      <rect id="Rettangolo_11" data-name="Rettangolo 11" width="33.51" height="67" transform="matrix(0.921, 0.391, -0.391, 0.921, 244.984, 378.841)" fill="#fff"/>
-      <path id="Tracciato_8" data-name="Tracciato 8" d="M62.364-1.283S50.414,17.25,34.818,23,0,23,0,23" transform="translate(169.136 435.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="18"/>
-      <path id="Tracciato_9" data-name="Tracciato 9" d="M0,0S14.132,11.147,24.507,24.72A150.12,150.12,0,0,1,41.5,54.29" transform="translate(231.5 447.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="18"/>
-      <path id="Tracciato_10" data-name="Tracciato 10" d="M0,0H87" transform="translate(58.5 366.355)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="10"/>
-      <path id="Tracciato_11" data-name="Tracciato 11" d="M0,0H87" transform="translate(76.136 420.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="10"/>
-      <line id="Linea_3" data-name="Linea 3" x2="87" transform="translate(48.136 474.645)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="10"/>
+  <g id="Raggruppa_23" data-name="Raggruppa 23" transform="translate(-77 -521)">
+    <circle id="Ellisse_12" data-name="Ellisse 12" cx="43" cy="43" r="43" transform="translate(77 521)" fill="url(#linear-gradient)"/>
+    <g id="Raggruppa_22" data-name="Raggruppa 22" transform="translate(91.997 546.504)">
+      <circle id="Ellisse_4" data-name="Ellisse 4" cx="3.88" cy="3.88" r="3.88" transform="translate(42.684 -0.409)" fill="#fff"/>
+      <path id="Tracciato_7" data-name="Tracciato 7" d="M0,3.5S3.653,0,8.068,0s5.321,3.295,9.594,3.5A11.571,11.571,0,0,0,25.163.8" transform="translate(31.03 7.697) rotate(7)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+      <rect id="Rettangolo_11" data-name="Rettangolo 11" width="6.837" height="13.669" transform="matrix(0.921, 0.391, -0.391, 0.921, 40.161, 10.317)" fill="#fff"/>
+      <path id="Tracciato_8" data-name="Tracciato 8" d="M13.815-3.043S10.285,2.26,7.1,3.434s-7.1,0-7.1,0" transform="translate(24.686 23.136)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+      <path id="Tracciato_9" data-name="Tracciato 9" d="M0,0A32.756,32.756,0,0,1,5,5.043a30.627,30.627,0,0,1,3.467,6.033" transform="translate(37.41 24.325)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+      <path id="Tracciato_10" data-name="Tracciato 10" d="M0,0H17.75" transform="translate(2.115 7.77)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <path id="Tracciato_11" data-name="Tracciato 11" d="M0,0H17.75" transform="translate(5.713 18.816)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
+      <line id="Linea_3" data-name="Linea 3" x2="17.75" transform="translate(0 29.863)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
     </g>
   </g>
 </svg>

@@ -22,7 +22,8 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         super.viewDidLoad()
      
 
-    
+        print(players.count)
+        print(players[0])
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         navigationController?.setShadow()
     }
