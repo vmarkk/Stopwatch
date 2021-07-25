@@ -5,7 +5,7 @@ App to track athletes lap speed
 ## 🛠HOW TO INSTALL
 
 
-### Important: Only in case you don't have Cocoapods installed on your device:
+### Important: only in case you don't have Cocoapods installed on your device:
 - Open Terminal on your MacOs
 - Type "**sudo gem pod install**"
 - Press enter button and wait for the process to finish
