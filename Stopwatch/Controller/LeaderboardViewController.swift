@@ -52,7 +52,8 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-        players = try! Realm().objects(PlayerRealm.self)
+        players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: "peakSpeed", ascending: false)
+        
     }
     
 
@@ -90,7 +91,15 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         
         cell.leaderNum.text = "\(indexPath.row+1)"
         cell.namePlayer.text = player.fullName
-        cell.explValue.text = "\(player.peakSpeed) m/s"
+        
+        var peakSpeedString = String(format: "%.1f", player.peakSpeed)
+        
+        if peakSpeedString.last == "0" {
+            peakSpeedString = String(peakSpeedString.dropLast(2))
+        }
+        
+        
+        cell.explValue.text = "\(peakSpeedString) m/s"
         cell.lapsValue.text = "\(player.totalLaps)"
         
         cell.profileImage.sd_setImage(with: URL(string: player.pictureUrl)) { image, err, cache, url in
