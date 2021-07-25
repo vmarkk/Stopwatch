@@ -47,8 +47,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var count = 0
     private var lastTime: String? = ""
     private let realm = try! Realm()
-  
-   var point = CGPoint(x: 0, y: 0)
+    private var point = CGPoint(x: 0, y: 0)
+    private var lapTime: CGFloat = 0
     
     var testValue: CGFloat = 0
     private var laps = [Lap]() {
@@ -62,9 +62,11 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                         self.finishOutlet.alpha = 1
                     }
                     
+                    print("lapsss \(self.totalLapSeconds())")
+                    
+                    self.lapTime = self.chartView.frame.size.height/100*CGFloat(self.totalLapSeconds())
                    
-                   
-                    self.point = CGPoint(x: self.chartView.frame.size.width, y: self.testValue)
+                    self.point = CGPoint(x: self.chartView.frame.size.width, y: self.lapTime)
                     self.chartView.points.append(self.point)
                   
                     self.testValue = -self.testValue
@@ -154,6 +156,17 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc private func foreground() {
         hideTutorial()
+    }
+    
+    
+    private func totalLapSeconds() -> Int {
+        var totalSeconds: Int = 0
+    
+        let lastLap = laps.first
+        
+        totalSeconds = lastLap!.minutes*60 + lastLap!.seconds
+        
+        return totalSeconds
     }
     
     
