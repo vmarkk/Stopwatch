@@ -46,6 +46,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         leaderTV.tableFooterView = UIView()
+        leaderTV.contentInset.bottom = 15
         
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         leaderTV.addSubview(refreshControl)
@@ -167,6 +168,76 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    
+    
+    // CONTEXT MENU
+    func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        guard
+            let identifier = configuration.identifier as? String,
+            let index = Int(identifier),
+            let cell = leaderTV.cellForRow(at: IndexPath(row: index, section: 0)) as? LeaderTVCell
+        
+        else {
+            return nil
+        }
+        
+        let param = UIPreviewParameters()
+    
+       param.backgroundColor = .clear
+   
+        let targetView = UITargetedPreview(view: cell.background, parameters: param)
+        return targetView
+    }
+    
+    
+    func tableView(_ tableView: UITableView, previewForDismissingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        guard
+            let identifier = configuration.identifier as? String,
+            let index = Int(identifier),
+            let cell = leaderTV.cellForRow(at: IndexPath(row: index, section: 0)) as? LeaderTVCell
+        
+        else {
+            return nil
+        }
+     
+        let targetView = UITargetedPreview(view: cell.background)
+        return targetView
+    }
+    
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let player = players![indexPath.row]
+        
+        return UIContextMenuConfiguration(identifier: "\(indexPath.row)" as NSString, previewProvider: nil) { suggestedActions in
+            
+            let deletePlayerSession = UIAction(title: "Delete this session", image: UIImage(systemName: "trash"), attributes: .destructive) { action in
+            
+                RealmManager().deletePlayerSession(player: player) { _ in
+                    
+                    DispatchQueue.main.async {
+                        self.leaderTV.deleteRows(at: [indexPath], with: .automatic)
+                       
+                        var cellNum = 1
+                        for cell in self.leaderTV.visibleCells {
+                            
+                            if let cellToUpdate = cell as? LeaderTVCell {
+                                cellToUpdate.leaderNum.text = "\(cellNum)"
+                                cellNum += 1
+                            }
+                        }
+                    }
+                }
+                
+            }
+            return UIMenu(title: "", children: [deletePlayerSession])
+    }
+    }
+    
+    func tableView(_ tableView: UITableView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
+        animator.preferredCommitStyle = .pop
+    }
+    // CONTEXT MENU
 
 }
 

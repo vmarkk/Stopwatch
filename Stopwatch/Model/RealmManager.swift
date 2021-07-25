@@ -33,9 +33,18 @@ class RealmManager: NSObject {
                 // ADD NEW PLAYER SESSION TO REALM
                 realm.add(player)
             }
-           
+        }
+    }
+    
+    
+    public func deletePlayerSession(player: PlayerRealm, completion: @escaping (Bool) -> ()) {
+        
+        let realm = try! Realm()
+        
+        try? realm.write {
+            realm.delete(player)
         }
         
-        
+        completion(true)
     }
 }
