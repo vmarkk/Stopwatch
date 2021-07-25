@@ -8,7 +8,7 @@ App to track athletes lap speed
 ### Important: Only in case you don't have Cocoapods installed on your device:
 - Open Terminal on your MacOs
 - Type "**sudo gem pod install**"
-- Press enter button, wait for the process to finish
+- Press enter button and wait for the process to finish
 - Go to step 1
 
 
@@ -28,7 +28,7 @@ App to track athletes lap speed
 - Move to the project folder by typing "**cd/Desktop/Stopwatch**"
 - Press enter button
 - Type "pod install"
-- Press enter, wait for the pod install process to end 
+- Press enter and wait for the pod install process to end 
 - Close terminal
 
 
@@ -48,6 +48,13 @@ App to track athletes lap speed
 
 - Clean build folder again
 
-- On device dropdown menu select a device to run on the project (iPad not supported yet), iPhone 12 Pro preferably or connect your physical device and run on it:
+- Tap on device dropdown menu and select a device to run on the project, iPhone 12 Pro preferably, or connect your physical device and run on it:
 <img width="252" alt="Schermata 2021-07-25 alle 14 47 53" src="https://user-images.githubusercontent.com/47919543/126899521-9e54a57d-fb4d-49f8-b554-2ae7dcb82c4d.png">
+
+
+
+## APP QUICK GUIDE
+
+- Select a player from the list with whom you would start a training session:
+![Simulator Screen Shot - iPhone 12 Pro - 2021-07-25 at 14 55 26](https://user-images.githubusercontent.com/47919543/126899944-94f7f332-abef-4141-aafb-47ed673934e5.png)
 
