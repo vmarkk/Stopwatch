@@ -54,7 +54,7 @@ App to track athletes lap speed
 # 📱 THE APP
 ### FRAMEWORKS INVOLVED:
 - UIKit: all the UI parts
-- Realm: local database to save each player's last session
+- Realm: local database used to save each player's last session
 
 ### ARCHITECTURAL PATTERN:
 - MVC
