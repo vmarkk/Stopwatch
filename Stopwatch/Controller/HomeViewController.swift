@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 
+
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
@@ -27,11 +28,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+     
         spinner.rotate()
         
         playersTV.register(UINib(nibName: "PlayerTVCell", bundle: nil), forCellReuseIdentifier: "cellPlayer")

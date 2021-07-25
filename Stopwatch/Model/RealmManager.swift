@@ -16,18 +16,22 @@ class RealmManager: NSObject {
         
         let realm = try! Realm()
         
-        
         let obj = realm.objects(PlayerRealm.self)
         
         let playerToUpdate = realm.objects(PlayerRealm.self).filter("fullName == '\(player.fullName)'").first
         
         
         try? realm.write {
+         
             if playerToUpdate != nil {
-                playerToUpdate?.fullName = player.fullName
-                playerToUpdate?.totalLaps += player.totalLaps
-                playerToUpdate?.numOfSessions += 1
+                
+                // JUST UPDATE PLAYER LAST SESSION IN CASE THERE'S ALREADY A SAVED SESSION
+                playerToUpdate!.totalLaps += player.totalLaps
+                playerToUpdate!.numOfSessions += 1
+                
             } else {
+                
+                // ADD NEW PLAYER SESSION TO REALM
                 realm.add(player)
             }
            

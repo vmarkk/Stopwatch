@@ -254,7 +254,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                 playerToUpdate.fullName = "\(self.player!.name.first) \(self.player!.name.last)"
                 playerToUpdate.numOfSessions+=1
                 playerToUpdate.peakSpeed = self.peakSpeed ?? 0.0
-                playerToUpdate.totalLaps += Int32(self.laps.count)
+                playerToUpdate.totalLaps = Int32(self.laps.count)
+                playerToUpdate.pictureUrl = self.player!.picture.large
                 
                 RealmManager().updateRealmPlayer(player: playerToUpdate)
             }
