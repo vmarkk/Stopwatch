@@ -45,20 +45,14 @@ class Chart: UIView {
             
             currentIndex += 1
             
-       
             path.move(to: CGPoint(x: lastPoint.x*CGFloat(currentIndex-1), y: lastPoint.y))
-            
-            print(point.y)
 
-            path.addLine(to: CGPoint(x: frame.size.width/CGFloat(points.count)*CGFloat(currentIndex), y: lastPoint.y-point.y))
+            path.addLine(to: CGPoint(x: frame.size.width/CGFloat(points.count)*CGFloat(currentIndex), y: frame.size.height-point.y))
             
             lastPoint.x = frame.size.width/CGFloat(points.count)
       
-            if currentIndex == 1 {
-            lastPoint.y = frame.height-point.y
-            } else {
-                lastPoint.y -= point.y
-            }
+                lastPoint.y = frame.height-point.y
+            
         }
         
         shapeLayer.path = path.cgPath

@@ -49,6 +49,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private let realm = try! Realm()
     private var point = CGPoint(x: 0, y: 0)
     private var lapTime: CGFloat = 0
+    private var secondLastLapTime: CGFloat = 0
     
     var testValue: CGFloat = 0
     private var laps = [Lap]() {
@@ -64,12 +65,14 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     print("lapsss \(self.totalLapSeconds())")
                     
-                    self.lapTime = self.chartView.frame.size.height/100*CGFloat(self.totalLapSeconds())
+                    self.lapTime = CGFloat(self.totalLapSeconds())/self.chartView.frame.size.height*100
+                    
+                    print("laptime \(self.lapTime)")
                    
                     self.point = CGPoint(x: self.chartView.frame.size.width, y: self.lapTime)
                     self.chartView.points.append(self.point)
                   
-                    self.testValue = -self.testValue
+                    self.secondLastLapTime = self.lapTime
                 }
                 
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
