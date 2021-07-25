@@ -87,6 +87,18 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
     
     func syncSortOption(sortOption: String) {
+        
+        if sortOption != self.sortOption {
+            if players != nil {
+                players = players!.sorted(byKeyPath: sortOption, ascending: false)
+            
+                DispatchQueue.main.async {
+                    self.leaderTV.reloadData()
+                }
+            
+            }
+        }
+        
         self.sortOption = sortOption
     }
     
@@ -126,6 +138,26 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
             guard image != nil else {return}
             
             cell.profileImage.image = image
+        }
+        
+        
+        if sortOption == "peakSpeed" {
+            cell.explValue.font = UIFont.systemFont(ofSize: 11, weight: .bold)
+            cell.explValue.textColor = .black
+            cell.explIcon.tintColor = .black
+            
+            cell.lapsValue.font = UIFont.systemFont(ofSize: 11, weight: .medium)
+            cell.lapsValue.textColor = UIColor(named: "labelGray")
+            cell.lapsIcon.tintColor = UIColor(named: "labelGray")
+            
+        } else {
+            cell.lapsValue.font = UIFont.systemFont(ofSize: 11, weight: .bold)
+            cell.lapsValue.textColor = .black
+            cell.lapsIcon.tintColor = .black
+            
+            cell.explValue.font = UIFont.systemFont(ofSize: 11, weight: .medium)
+            cell.explValue.textColor = UIColor(named: "labelGray")
+            cell.explIcon.tintColor = UIColor(named: "labelGray")
         }
         
         return cell
