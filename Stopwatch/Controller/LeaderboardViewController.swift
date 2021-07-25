@@ -15,7 +15,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
 
    
     private let players = try! Realm().objects(PlayerRealm.self)
-    private var sortOption = "laps"
+    private var sortOption = "peak"
     
     
     override func viewDidLoad() {
