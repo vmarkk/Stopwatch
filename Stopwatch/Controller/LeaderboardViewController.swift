@@ -10,10 +10,12 @@ import RealmSwift
 
 class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableViewDelegate, UITableViewDataSource {
    
-    @IBOutlet weak var noSessionFoundLabel: UILabel!
     
+    @IBOutlet weak var noSessionFoundLabel: UILabel!
     @IBOutlet weak var leaderTV: UITableView!
 
+    
+    private let refreshControl = UIRefreshControl()
    
     private var players: Results<PlayerRealm>? {
         didSet {
@@ -45,6 +47,10 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         leaderTV.tableFooterView = UIView()
         
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        leaderTV.addSubview(refreshControl)
+        leaderTV.contentInsetAdjustmentBehavior = .always
+        
         navigationController?.setShadow()
     }
     
@@ -54,6 +60,18 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
         players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: sortOption, ascending: false)
         
+    }
+    
+    
+    @objc private func refresh() {
+        
+        if refreshControl.isRefreshing {
+            
+            players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: sortOption, ascending: false)
+            DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                self.refreshControl.endRefreshing()
+            }
+        }
     }
     
 
