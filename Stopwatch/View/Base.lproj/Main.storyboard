@@ -494,7 +494,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUn-2J-MZE" userLabel="chartView2">
-                                                <rect key="frame" x="52" y="333.5" width="294" height="128"/>
+                                                <rect key="frame" x="52" y="333.5" width="302" height="128"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="u2t-AN-YSD"/>
@@ -635,6 +635,7 @@
                                             <constraint firstItem="Cdk-kG-m0b" firstAttribute="top" secondItem="p61-vf-Ocw" secondAttribute="top" id="Ogg-s9-SRh"/>
                                             <constraint firstItem="mda-Tp-KrU" firstAttribute="top" secondItem="1Ga-RE-PDv" secondAttribute="bottom" constant="20" id="PNt-YI-WtR"/>
                                             <constraint firstAttribute="trailing" secondItem="naI-yV-dgC" secondAttribute="trailing" constant="25" id="SWa-eW-SPw"/>
+                                            <constraint firstAttribute="trailing" secondItem="FUn-2J-MZE" secondAttribute="trailing" constant="60" id="Su0-eu-XyG"/>
                                             <constraint firstItem="naI-yV-dgC" firstAttribute="top" secondItem="xbV-V6-w8v" secondAttribute="bottom" constant="35" id="TVW-YE-ZBj"/>
                                             <constraint firstItem="mda-Tp-KrU" firstAttribute="height" secondItem="MDt-YG-RV4" secondAttribute="height" id="Te2-mK-hS6"/>
                                             <constraint firstItem="mda-Tp-KrU" firstAttribute="top" secondItem="MDt-YG-RV4" secondAttribute="top" id="TmW-Vb-rad"/>
@@ -642,7 +643,6 @@
                                             <constraint firstItem="yRc-aL-PfA" firstAttribute="top" secondItem="uen-J7-2zH" secondAttribute="bottom" constant="20" id="V0J-d3-NVN"/>
                                             <constraint firstItem="d8r-wx-dVo" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="20" id="V1k-hd-Uib"/>
                                             <constraint firstItem="BhZ-2y-tlG" firstAttribute="top" secondItem="d8r-wx-dVo" secondAttribute="bottom" constant="5" id="WJA-D2-1Yd"/>
-                                            <constraint firstItem="mda-Tp-KrU" firstAttribute="width" secondItem="FUn-2J-MZE" secondAttribute="width" id="XPA-Yp-Czm"/>
                                             <constraint firstItem="MDt-YG-RV4" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="15" id="aot-yY-ivc"/>
                                             <constraint firstItem="mda-Tp-KrU" firstAttribute="leading" secondItem="tKU-H7-Vif" secondAttribute="trailing" constant="5" id="bhE-vw-1sW"/>
                                             <constraint firstItem="FUn-2J-MZE" firstAttribute="leading" secondItem="tKU-H7-Vif" secondAttribute="leading" id="c5r-i7-BQ7"/>
