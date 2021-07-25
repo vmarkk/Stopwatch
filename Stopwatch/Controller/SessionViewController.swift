@@ -76,8 +76,12 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var isCounting = false {
         didSet {
             if isCounting {
+                
+                self.finishOutlet.isUserInteractionEnabled = true
+                
                 UIView.animate(withDuration: 0.1) {
                     self.lapOutlet.setTitle("LAP", for: .normal)
+                    self.finishOutlet.alpha = 1
                 }
             }
         }
@@ -260,7 +264,9 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             
-            self.startTiming()
+            if self.isCounting {
+                self.startTiming()
+            }
         }
         
         alert.addAction(okAction)
