@@ -56,5 +56,25 @@ App to track athletes lap speed
 ## APP QUICK GUIDE
 
 - Select a player from the list with whom you would start a training session:
-![Simulator Screen Shot - iPhone 12 Pro - 2021-07-25 at 14 55 26](https://user-images.githubusercontent.com/47919543/126899944-94f7f332-abef-4141-aafb-47ed673934e5.png)
+<img width="350" alt="Schermata 2021-07-25 alle 15 28 40" src="https://user-images.githubusercontent.com/47919543/126900965-f5d57ec5-c383-42e0-a45c-ea5cdfe9540f.png">
+
+
+- Choose a distance in meters for the current session:
+<img width="350" alt="Schermata 2021-07-25 alle 15 29 12" src="https://user-images.githubusercontent.com/47919543/126901030-92d39141-034f-4462-b648-8c0a9bfbf0c9.png">
+
+- Start the session and track all the player's laps, check live stats, cancel or terminate and save it to your local device:
+<img width="350" alt="Schermata 2021-07-25 alle 15 30 13" src="https://user-images.githubusercontent.com/47919543/126901055-aad809aa-ecfb-430f-8959-b39ec375a613.png">
+
+- List all the players' last session in order to compare them:
+<img width="350" alt="Schermata 2021-07-25 alle 15 30 54" src="https://user-images.githubusercontent.com/47919543/126901107-ca47cad6-6783-40e7-84d6-147f13bd4075.png">
+
+- Select a sort option based on your needs (explosiveness or endurance):
+<img width="350" alt="Schermata 2021-07-25 alle 15 31 53" src="https://user-images.githubusercontent.com/47919543/126901163-3e59cb9c-f465-4405-842e-f182bfd7af58.png">
+
+- Delete a session you don't need anymore by long pressing on correspondent cell:
+- <img width="350" alt="Schermata 2021-07-25 alle 15 31 15" src="https://user-images.githubusercontent.com/47919543/126901267-cb4547fe-454a-4ecf-a7bb-45138045fdd7.png">
+
+
+
+
 
