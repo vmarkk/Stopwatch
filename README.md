@@ -52,8 +52,11 @@ App to track athletes lap speed
 <img width="252" alt="Schermata 2021-07-25 alle 14 47 53" src="https://user-images.githubusercontent.com/47919543/126899521-9e54a57d-fb4d-49f8-b554-2ae7dcb82c4d.png">
 
 
+## FRAMEWORKS INVOLVED:
+- UIKit: all the UI parts
+- Realm: local database to save each player's last session
 
-## APP QUICK GUIDE
+## QUICK GUIDE
 
 - Select a player from the list with whom you would start a training session:
 <img width="350" alt="Schermata 2021-07-25 alle 15 28 40" src="https://user-images.githubusercontent.com/47919543/126900965-f5d57ec5-c383-42e0-a45c-ea5cdfe9540f.png">
