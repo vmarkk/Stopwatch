@@ -115,12 +115,13 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-s7-Gu3">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-s7-Gu3">
                             <rect key="frame" x="371" y="0.5" width="27" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="qSV-s7-Gu3" secondAttribute="height" id="GC3-S4-vGX"/>
                                 <constraint firstAttribute="height" constant="27" id="LzV-1S-3wv"/>
                             </constraints>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                         </imageView>
                     </subviews>
                     <constraints>
@@ -176,8 +177,8 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="checkEmpty" width="122" height="120"/>
-        <image name="checkFull" width="108" height="108"/>
+        <image name="checkEmpty" width="90" height="90"/>
+        <image name="checkFull" width="90" height="90"/>
         <image name="lapsIcon" width="45.530998229980469" height="27.822000503540039"/>
         <image name="runMan" width="61.341999053955078" height="39.076000213623047"/>
         <systemColor name="systemGray5Color">
