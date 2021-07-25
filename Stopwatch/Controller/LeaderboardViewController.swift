@@ -8,15 +8,17 @@
 import UIKit
 import RealmSwift
 
+
 class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableViewDelegate, UITableViewDataSource {
-   
+    
     
     @IBOutlet weak var noSessionFoundLabel: UILabel!
     @IBOutlet weak var leaderTV: UITableView!
-
     
+    
+    private var sortOption = "peakSpeed"
     private let refreshControl = UIRefreshControl()
-   
+    
     private var players: Results<PlayerRealm>? {
         didSet {
             
@@ -31,19 +33,14 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
                         self.noSessionFoundLabel.removeFromSuperview()
                     }
                 }
-                
             }
-           
         }
     }
     
     
-    private var sortOption = "peakSpeed"
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
         leaderTV.tableFooterView = UIView()
         leaderTV.contentInset.bottom = 15
@@ -58,9 +55,8 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    
-        players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: sortOption, ascending: false)
         
+        players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: sortOption, ascending: false)
     }
     
     
@@ -75,7 +71,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         }
     }
     
-
+    
     @IBAction func sort(_ sender: UIButton) {
         
         let sortView = SortViewController()
@@ -92,11 +88,10 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         if sortOption != self.sortOption {
             if players != nil {
                 players = players!.sorted(byKeyPath: sortOption, ascending: false)
-            
+                
                 DispatchQueue.main.async {
                     self.leaderTV.reloadData()
                 }
-            
             }
         }
         
@@ -107,6 +102,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players?.count ?? 0
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLeader") as? LeaderTVCell else { return UITableViewCell() }
@@ -135,12 +131,10 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         
         cell.profileImage.sd_setImage(with: URL(string: player.pictureUrl)) { image, err, cache, url in
             
-        
             guard image != nil else {return}
             
             cell.profileImage.image = image
         }
-        
         
         if sortOption == "peakSpeed" {
             cell.explValue.font = UIFont.systemFont(ofSize: 11, weight: .bold)
@@ -170,8 +164,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     }
     
     
-    
-    // CONTEXT MENU
+    // CONTEXT MENU TO DELETE PLAYER SESSION BLOCK
     func tableView(_ tableView: UITableView, previewForHighlightingContextMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         guard
             let identifier = configuration.identifier as? String,
@@ -183,9 +176,9 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         }
         
         let param = UIPreviewParameters()
-    
-       param.backgroundColor = .clear
-   
+        
+        param.backgroundColor = .clear
+        
         let targetView = UITargetedPreview(view: cell.background, parameters: param)
         return targetView
     }
@@ -200,7 +193,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         else {
             return nil
         }
-     
+        
         let targetView = UITargetedPreview(view: cell.background)
         return targetView
     }
@@ -212,12 +205,12 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         return UIContextMenuConfiguration(identifier: "\(indexPath.row)" as NSString, previewProvider: nil) { suggestedActions in
             
             let deletePlayerSession = UIAction(title: "Delete this session", image: UIImage(systemName: "trash"), attributes: .destructive) { action in
-            
+                
                 RealmManager().deletePlayerSession(player: player) { _ in
                     
                     DispatchQueue.main.async {
                         self.leaderTV.deleteRows(at: [indexPath], with: .automatic)
-                       
+                        
                         var cellNum = 1
                         for cell in self.leaderTV.visibleCells {
                             
@@ -228,25 +221,25 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
                         }
                     }
                 }
-                
             }
             return UIMenu(title: "", children: [deletePlayerSession])
+        }
     }
-    }
+    
     
     func tableView(_ tableView: UITableView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
         animator.preferredCommitStyle = .pop
     }
-    // CONTEXT MENU
-
+    // CONTEXT MENU TO DELETE PLAYER SESSION BLOCK
+    
 }
 
 
 
 
 extension LeaderboardViewController: UIViewControllerTransitioningDelegate {
-
+    
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-       SortPresentationPopView(presentedViewController: presented, presenting: presented)
+        SortPresentationPopView(presentedViewController: presented, presenting: presented)
     }
 }
