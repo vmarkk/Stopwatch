@@ -1,8 +1,8 @@
-# Stopwatch
+# ⏱ Stopwatch
 App to track athletes lap speed
 
 
-## HOW TO INSTALL
+## 🛠HOW TO INSTALL
 
 
 ### Important: Only in case you don't have Cocoapods installed on your device:
@@ -51,7 +51,7 @@ App to track athletes lap speed
 - Tap on device dropdown menu and select a device to run on the project, iPhone 12 Pro preferably, or connect your physical device and run on it:
 <img width="252" alt="Schermata 2021-07-25 alle 14 47 53" src="https://user-images.githubusercontent.com/47919543/126899521-9e54a57d-fb4d-49f8-b554-2ae7dcb82c4d.png">
 
-# THE APP
+# 📱 THE APP
 ### FRAMEWORKS INVOLVED:
 - UIKit: all the UI parts
 - Realm: local database to save each player's last session
@@ -64,7 +64,7 @@ App to track athletes lap speed
 - Key value observer design pattern
 - Delegate design pattern
 
-## QUICK GUIDE
+## 📘 QUICK GUIDE
 
 - Select a player from the list with whom you would start a training session:
 <img width="350" alt="Schermata 2021-07-25 alle 15 28 40" src="https://user-images.githubusercontent.com/47919543/126900965-f5d57ec5-c383-42e0-a45c-ea5cdfe9540f.png">
@@ -86,7 +86,7 @@ App to track athletes lap speed
 <img width="350" alt="Schermata 2021-07-25 alle 15 31 15" src="https://user-images.githubusercontent.com/47919543/126901267-cb4547fe-454a-4ecf-a7bb-45138045fdd7.png">
 
 
-## QUESTIONS? 🤔
+## 🤔 QUESTIONS? 
 
 Hit me on:
 ocram195@hotmail.com
