@@ -184,6 +184,12 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func x(_ sender: UIButton) {
+        
+        if !isCounting {
+            self.dismiss(finish: false)
+            return
+        }
+        
         timer.invalidate()
         alert()
     }
