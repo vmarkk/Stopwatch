@@ -25,7 +25,7 @@ class SortViewController: UIViewController {
     private var pointOrigin: CGPoint?
     var delegate: SortPopUpDelegate?
    
-    var sortOption = "peak"
+    var sortOption = "peakSpeed"
     
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class SortViewController: UIViewController {
     
     
     private func checkImage() {
-        if sortOption == "laps" {
+        if sortOption == "totalLaps" {
             peakSpeedCheck.image = UIImage(named: "checkEmpty")
             numLapsCheck.image = UIImage(named: "checkFull")
         } else {
@@ -84,8 +84,8 @@ class SortViewController: UIViewController {
     
 
     @IBAction func tapLap(_ sender: UITapGestureRecognizer) {
-        if sortOption != "laps" {
-            self.sortOption = "laps"
+        if sortOption != "totalLaps" {
+            self.sortOption = "totalLaps"
             self.checkImage()
             self.delegate!.syncSortOption(sortOption: sortOption)
         }
@@ -94,8 +94,8 @@ class SortViewController: UIViewController {
     
     
     @IBAction func tapPeak(_ sender: UITapGestureRecognizer) {
-        if sortOption != "peak" {
-            self.sortOption = "peak"
+        if sortOption != "peakSpeed" {
+            self.sortOption = "peakSpeed"
             self.checkImage()
             self.delegate!.syncSortOption(sortOption: sortOption)
         }

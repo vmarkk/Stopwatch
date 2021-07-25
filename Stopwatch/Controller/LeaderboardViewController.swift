@@ -36,7 +36,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     }
     
     
-    private var sortOption = "peak"
+    private var sortOption = "peakSpeed"
     
     
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     
-        players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: "peakSpeed", ascending: false)
+        players = try! Realm().objects(PlayerRealm.self).sorted(byKeyPath: sortOption, ascending: false)
         
     }
     
