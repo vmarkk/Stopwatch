@@ -26,11 +26,12 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
                 self.leaderTV.reloadData()
                 
                 guard self.noSessionFoundLabel != nil else {return}
+                
                 if self.players!.count > 0 && !self.noSessionFoundLabel.isHidden {
                     UIView.animate(withDuration: 0.13) {
                         self.noSessionFoundLabel.alpha = 0
                     } completion: { _ in
-                        self.noSessionFoundLabel.removeFromSuperview()
+                        self.noSessionFoundLabel.isHidden = true
                     }
                 }
             }
@@ -217,6 +218,14 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
                             if let cellToUpdate = cell as? LeaderTVCell {
                                 cellToUpdate.leaderNum.text = "\(cellNum)"
                                 cellNum += 1
+                            }
+                        }
+                        
+                        if self.players!.count == 0 {
+                            
+                            self.noSessionFoundLabel.isHidden = false
+                            UIView.animate(withDuration: 0.13) {
+                                self.noSessionFoundLabel.alpha = 1
                             }
                         }
                     }
