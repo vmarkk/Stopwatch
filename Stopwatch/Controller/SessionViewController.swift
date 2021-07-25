@@ -67,9 +67,13 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     self.lapTime = CGFloat(self.totalLapSeconds())/self.chartView.frame.size.height*100
                     
-                    print("laptime \(self.lapTime)")
                    
                     self.point = CGPoint(x: self.chartView.frame.size.width, y: self.lapTime)
+                    
+                    if self.lapTime > 100 {
+                        self.lapTime = 100
+                    }
+                    
                     self.chartView.points.append(self.point)
                   
                     self.secondLastLapTime = self.lapTime
