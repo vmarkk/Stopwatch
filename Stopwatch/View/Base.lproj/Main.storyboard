@@ -252,7 +252,7 @@
                                 <rect key="frame" x="0.0" y="313.5" width="414" height="582.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COW-76-Hhg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COW-76-Hhg">
                                 <rect key="frame" x="0.0" y="99.5" width="414" height="796.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p61-vf-Ocw" userLabel="containerView" customClass="BackgroundWhite" customModule="Stopwatch" customModuleProvider="target">

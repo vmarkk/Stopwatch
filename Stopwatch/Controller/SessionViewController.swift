@@ -315,8 +315,13 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func lap(_ sender: UIButton) {
+        
         UIView.animate(withDuration: 0.12) {
             self.lapOutlet.transform = .identity
+        }
+        
+        if !scroll.isScrollEnabled {
+            self.scroll.isScrollEnabled = true
         }
         
         if isCounting {
