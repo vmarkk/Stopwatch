@@ -123,6 +123,11 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         if updatedText.count > 0 {
             
+            // TO AVOID USER CHOOOSING 0 METERS DISTANCE
+            if updatedText.count == 1 && updatedText == "0" {
+                return false
+            }
+            
             UIView.animate(withDuration: 0.15) {
                 self.startOutlet.isUserInteractionEnabled = true
                 self.startOutlet.alpha = 1

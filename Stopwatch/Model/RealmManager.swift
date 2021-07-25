@@ -10,7 +10,6 @@ import RealmSwift
 
 class RealmManager: NSObject {
     
- 
     
     public func updateRealmPlayer(player: PlayerRealm) {
         
