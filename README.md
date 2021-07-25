@@ -88,7 +88,7 @@ App to track athletes lap speed
 
 ## 🤔 QUESTIONS? 
 
-Hit me on:
+Hit me on:\
 ocram195@hotmail.com
 
 
