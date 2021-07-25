@@ -25,6 +25,8 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
         print(players.count)
     
         leaderTV.register(UINib(nibName: "LeaderTVCell", bundle: nil), forCellReuseIdentifier: "cellLeader")
+        leaderTV.tableFooterView = UIView()
+        
         navigationController?.setShadow()
     }
     
@@ -46,16 +48,21 @@ class LeaderboardViewController: UIViewController, SortPopUpDelegate, UITableVie
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellLeader") as? LeaderTVCell else { return UITableViewCell() }
         
+        cell.background.layer.cornerRadius = 20
+        
         return cell
     }
     
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
 }
 
