@@ -72,7 +72,7 @@ App to track athletes lap speed
 <img width="350" alt="Schermata 2021-07-25 alle 15 31 53" src="https://user-images.githubusercontent.com/47919543/126901163-3e59cb9c-f465-4405-842e-f182bfd7af58.png">
 
 - Delete a session you don't need anymore by long pressing on correspondent cell:
-- <img width="350" alt="Schermata 2021-07-25 alle 15 31 15" src="https://user-images.githubusercontent.com/47919543/126901267-cb4547fe-454a-4ecf-a7bb-45138045fdd7.png">
+<img width="350" alt="Schermata 2021-07-25 alle 15 31 15" src="https://user-images.githubusercontent.com/47919543/126901267-cb4547fe-454a-4ecf-a7bb-45138045fdd7.png">
 
 
 
