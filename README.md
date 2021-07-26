@@ -35,7 +35,7 @@ App to track athletes lap speed
 ### 3. Run the project
 - On your desktop open "**Stopwatch**" named folder
 - Open "**Stopwatch.xcworkspace**" file
-- On Xcode go to top panel then go to "**Product -> Clean build folder**" as follows:
+- On Xcode's top panel go to "**Product -> Clean build folder**":
 <img width="364" alt="Schermata 2021-07-25 alle 14 35 47" src="https://user-images.githubusercontent.com/47919543/126899183-e682e598-6cb3-48da-8e28-8297f9dfb06c.png">
 
 - Wait for the build folder clean to finish
