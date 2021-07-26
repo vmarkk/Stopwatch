@@ -10,14 +10,12 @@ import UIKit
 
 class Chart: UIView {
     
-    
     var path = UIBezierPath()
     let shapeLayer = CAShapeLayer()
     var lastPoint: CGPoint!
-   
+    var circlePaths = [UIBezierPath]()
+    var circleLayers = [CAShapeLayer]()
   
-    
-    
     var points = [CGPoint]() {
         didSet {
             addPointToGraph()
@@ -38,18 +36,12 @@ class Chart: UIView {
         shapeLayer.lineCap = .round
     }
     
-    var circlePaths = [UIBezierPath]()
-    var circleLayers = [CAShapeLayer]()
-    
     
     func addPointToGraph() {
-        
-      
         
         for l in circleLayers {
             l.removeFromSuperlayer()
         }
-        
         
         for p in circlePaths {
             p.removeAllPoints()
@@ -73,42 +65,25 @@ class Chart: UIView {
             lastPoint.x = frame.size.width/CGFloat(points.count)
             
             lastPoint.y = frame.height-point.y
-            
-           
-           
+        
             let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width/CGFloat(points.count)*CGFloat(currentIndex), y: frame.size.height-point.y), radius: 4, startAngle: CGFloat(0), endAngle: CGFloat(Double.pi * 2.0), clockwise: true)
          
-       
             circlePaths.append(circlePath)
-            
     }
+        
       
         for pathh in circlePaths {
-      
             let layerr = CAShapeLayer()
             layerr.path = pathh.cgPath
-            
-            
             circleLayers.append(layerr)
-    
-
         }
         
-        print(circlePaths)
-        
-     
-        
-    
         for layerr in circleLayers {
-      
             layerr.setNeedsDisplay()
-           
             layer.addSublayer(layerr)
-            
         }
         
-      
-        print(circleLayers.count)
+
         shapeLayer.path = path.cgPath
         shapeLayer.setNeedsDisplay()
         
