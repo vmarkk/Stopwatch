@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E562E12821F230A8BB58F49 /* Pods_StopwatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312432BCE10406F002676600 /* Pods_StopwatchTests.framework */; };
-		B3269584A24A2C0CD809FB58 /* Pods_Stopwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4D71F92545D51A4277708B /* Pods_Stopwatch.framework */; };
-		D707006B458CE7E74E2C529F /* Pods_Stopwatch_StopwatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E0C636790F7F813CD2F8950 /* Pods_Stopwatch_StopwatchUITests.framework */; };
+		221DB2F23BC19149564A65BB /* Pods_StopwatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D45ABC0EB759BF114975693 /* Pods_StopwatchTests.framework */; };
+		931AAABA9C19CE567B2F3368 /* Pods_Stopwatch_StopwatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045F18397869796B0048FD8C /* Pods_Stopwatch_StopwatchUITests.framework */; };
 		EA110C3926AC725C00B97715 /* LeaderTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA110C3726AC725C00B97715 /* LeaderTVCell.swift */; };
 		EA110C3A26AC725C00B97715 /* LeaderTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA110C3826AC725C00B97715 /* LeaderTVCell.xib */; };
 		EA18667C26AA10A800616800 /* LapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18667A26AA10A800616800 /* LapTVCell.swift */; };
@@ -42,6 +41,7 @@
 		EAE7A6BD26A8AB72001ACD32 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */; };
 		EAE7A6BF26A8B4A9001ACD32 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6BE26A8B4A9001ACD32 /* SessionViewController.swift */; };
 		EAE7A6C126A8BB9B001ACD32 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7A6C026A8BB9B001ACD32 /* Background.swift */; };
+		FE5C980B1E57C74D898D89BA /* Pods_Stopwatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21AEE5DEBD7961B78C9C5B97 /* Pods_Stopwatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,15 +62,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D2A92B81975478F0A69662 /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.release.xcconfig"; sourceTree = "<group>"; };
-		0F37B97EB0B3AFF7B6E602A3 /* Pods-Stopwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch/Pods-Stopwatch.release.xcconfig"; sourceTree = "<group>"; };
-		312432BCE10406F002676600 /* Pods_StopwatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopwatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3872AF2AF83746650808190E /* Pods-StopwatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StopwatchTests.release.xcconfig"; path = "Target Support Files/Pods-StopwatchTests/Pods-StopwatchTests.release.xcconfig"; sourceTree = "<group>"; };
-		75B74C65215198A5031E0D03 /* Pods-StopwatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StopwatchTests.debug.xcconfig"; path = "Target Support Files/Pods-StopwatchTests/Pods-StopwatchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7E0C636790F7F813CD2F8950 /* Pods_Stopwatch_StopwatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch_StopwatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C4D71F92545D51A4277708B /* Pods_Stopwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A451239A6C2DB4F29DF5EC0E /* Pods-Stopwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch.debug.xcconfig"; path = "Target Support Files/Pods-Stopwatch/Pods-Stopwatch.debug.xcconfig"; sourceTree = "<group>"; };
-		B40C8B121C46737A2F1FEE16 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		045F18397869796B0048FD8C /* Pods_Stopwatch_StopwatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch_StopwatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D45ABC0EB759BF114975693 /* Pods_StopwatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StopwatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21AEE5DEBD7961B78C9C5B97 /* Pods_Stopwatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stopwatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22111648F091CEBCCA4440EF /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		22C6CCCE4910D65456AF30A5 /* Pods-Stopwatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch.debug.xcconfig"; path = "Target Support Files/Pods-Stopwatch/Pods-Stopwatch.debug.xcconfig"; sourceTree = "<group>"; };
+		44F90EC67C0D372074D5B46A /* Pods-StopwatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StopwatchTests.debug.xcconfig"; path = "Target Support Files/Pods-StopwatchTests/Pods-StopwatchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		53420ABD6948297D5BD64213 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch-StopwatchUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A56E19B892C2EA389ACF9D7 /* Pods-StopwatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StopwatchTests.release.xcconfig"; path = "Target Support Files/Pods-StopwatchTests/Pods-StopwatchTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4473C3405307711888449A7 /* Pods-Stopwatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stopwatch.release.xcconfig"; path = "Target Support Files/Pods-Stopwatch/Pods-Stopwatch.release.xcconfig"; sourceTree = "<group>"; };
 		EA110C3726AC725C00B97715 /* LeaderTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderTVCell.swift; sourceTree = "<group>"; };
 		EA110C3826AC725C00B97715 /* LeaderTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderTVCell.xib; sourceTree = "<group>"; };
 		EA18667A26AA10A800616800 /* LapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTVCell.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3269584A24A2C0CD809FB58 /* Pods_Stopwatch.framework in Frameworks */,
+				FE5C980B1E57C74D898D89BA /* Pods_Stopwatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E562E12821F230A8BB58F49 /* Pods_StopwatchTests.framework in Frameworks */,
+				221DB2F23BC19149564A65BB /* Pods_StopwatchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,19 +132,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D707006B458CE7E74E2C529F /* Pods_Stopwatch_StopwatchUITests.framework in Frameworks */,
+				931AAABA9C19CE567B2F3368 /* Pods_Stopwatch_StopwatchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C0C2E3C4C057BFCF4C63C374 /* Frameworks */ = {
+		4451261929C619495BE812C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9C4D71F92545D51A4277708B /* Pods_Stopwatch.framework */,
-				7E0C636790F7F813CD2F8950 /* Pods_Stopwatch_StopwatchUITests.framework */,
-				312432BCE10406F002676600 /* Pods_StopwatchTests.framework */,
+				21AEE5DEBD7961B78C9C5B97 /* Pods_Stopwatch.framework */,
+				045F18397869796B0048FD8C /* Pods_Stopwatch_StopwatchUITests.framework */,
+				0D45ABC0EB759BF114975693 /* Pods_StopwatchTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,12 +152,12 @@
 		DAD9551E90E0D9079F82D4E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A451239A6C2DB4F29DF5EC0E /* Pods-Stopwatch.debug.xcconfig */,
-				0F37B97EB0B3AFF7B6E602A3 /* Pods-Stopwatch.release.xcconfig */,
-				B40C8B121C46737A2F1FEE16 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */,
-				00D2A92B81975478F0A69662 /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */,
-				75B74C65215198A5031E0D03 /* Pods-StopwatchTests.debug.xcconfig */,
-				3872AF2AF83746650808190E /* Pods-StopwatchTests.release.xcconfig */,
+				22C6CCCE4910D65456AF30A5 /* Pods-Stopwatch.debug.xcconfig */,
+				A4473C3405307711888449A7 /* Pods-Stopwatch.release.xcconfig */,
+				53420ABD6948297D5BD64213 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */,
+				22111648F091CEBCCA4440EF /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */,
+				44F90EC67C0D372074D5B46A /* Pods-StopwatchTests.debug.xcconfig */,
+				7A56E19B892C2EA389ACF9D7 /* Pods-StopwatchTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 				EAD4F5AB26A73C920057DF32 /* StopwatchUITests */,
 				EAD4F58826A73C900057DF32 /* Products */,
 				DAD9551E90E0D9079F82D4E8 /* Pods */,
-				C0C2E3C4C057BFCF4C63C374 /* Frameworks */,
+				4451261929C619495BE812C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -295,11 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAD4F5B126A73C920057DF32 /* Build configuration list for PBXNativeTarget "Stopwatch" */;
 			buildPhases = (
-				FDCCD31EDEEE8D05E04C5241 /* [CP] Check Pods Manifest.lock */,
+				46E7CECEC202A72FE731BA3B /* [CP] Check Pods Manifest.lock */,
 				EAD4F58326A73C900057DF32 /* Sources */,
 				EAD4F58426A73C900057DF32 /* Frameworks */,
 				EAD4F58526A73C900057DF32 /* Resources */,
-				FA40AEF344325B67F1C5F7A5 /* [CP] Embed Pods Frameworks */,
+				82A31A54DC5A98F90CBE5FAD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,7 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAD4F5B426A73C920057DF32 /* Build configuration list for PBXNativeTarget "StopwatchTests" */;
 			buildPhases = (
-				DD67395D038A63155678B555 /* [CP] Check Pods Manifest.lock */,
+				EC45D186A67903A71403129E /* [CP] Check Pods Manifest.lock */,
 				EAD4F59926A73C920057DF32 /* Sources */,
 				EAD4F59A26A73C920057DF32 /* Frameworks */,
 				EAD4F59B26A73C920057DF32 /* Resources */,
@@ -333,11 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAD4F5B726A73C920057DF32 /* Build configuration list for PBXNativeTarget "StopwatchUITests" */;
 			buildPhases = (
-				BA7E011A34AE7E88078927F4 /* [CP] Check Pods Manifest.lock */,
+				5562760B5E7ABADA67660F9B /* [CP] Check Pods Manifest.lock */,
 				EAD4F5A426A73C920057DF32 /* Sources */,
 				EAD4F5A526A73C920057DF32 /* Frameworks */,
 				EAD4F5A626A73C920057DF32 /* Resources */,
-				B02CFA1D58A6A9C29EEEB331 /* [CP] Embed Pods Frameworks */,
+				8C45EEC189DFC5EA9207882A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -424,24 +424,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B02CFA1D58A6A9C29EEEB331 /* [CP] Embed Pods Frameworks */ = {
+		46E7CECEC202A72FE731BA3B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stopwatch-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BA7E011A34AE7E88078927F4 /* [CP] Check Pods Manifest.lock */ = {
+		5562760B5E7ABADA67660F9B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -463,29 +468,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD67395D038A63155678B555 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-StopwatchTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA40AEF344325B67F1C5F7A5 /* [CP] Embed Pods Frameworks */ = {
+		82A31A54DC5A98F90CBE5FAD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -502,7 +485,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stopwatch/Pods-Stopwatch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDCCD31EDEEE8D05E04C5241 /* [CP] Check Pods Manifest.lock */ = {
+		8C45EEC189DFC5EA9207882A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stopwatch-StopwatchUITests/Pods-Stopwatch-StopwatchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC45D186A67903A71403129E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -517,7 +517,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Stopwatch-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-StopwatchTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -725,7 +725,7 @@
 		};
 		EAD4F5B226A73C920057DF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A451239A6C2DB4F29DF5EC0E /* Pods-Stopwatch.debug.xcconfig */;
+			baseConfigurationReference = 22C6CCCE4910D65456AF30A5 /* Pods-Stopwatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -747,7 +747,7 @@
 		};
 		EAD4F5B326A73C920057DF32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F37B97EB0B3AFF7B6E602A3 /* Pods-Stopwatch.release.xcconfig */;
+			baseConfigurationReference = A4473C3405307711888449A7 /* Pods-Stopwatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -769,7 +769,7 @@
 		};
 		EAD4F5B526A73C920057DF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75B74C65215198A5031E0D03 /* Pods-StopwatchTests.debug.xcconfig */;
+			baseConfigurationReference = 44F90EC67C0D372074D5B46A /* Pods-StopwatchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -792,7 +792,7 @@
 		};
 		EAD4F5B626A73C920057DF32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3872AF2AF83746650808190E /* Pods-StopwatchTests.release.xcconfig */;
+			baseConfigurationReference = 7A56E19B892C2EA389ACF9D7 /* Pods-StopwatchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -815,7 +815,7 @@
 		};
 		EAD4F5B826A73C920057DF32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B40C8B121C46737A2F1FEE16 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */;
+			baseConfigurationReference = 53420ABD6948297D5BD64213 /* Pods-Stopwatch-StopwatchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -836,7 +836,7 @@
 		};
 		EAD4F5B926A73C920057DF32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00D2A92B81975478F0A69662 /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */;
+			baseConfigurationReference = 22111648F091CEBCCA4440EF /* Pods-Stopwatch-StopwatchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
