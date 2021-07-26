@@ -2,7 +2,7 @@
 App to track athletes lap speed
 
 
-## 🛠HOW TO INSTALL
+## 🛠 HOW TO INSTALL
 
 
 ### Important: only in case you don't have Cocoapods installed on your device:
