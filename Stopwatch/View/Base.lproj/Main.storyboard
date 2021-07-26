@@ -478,14 +478,14 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="1qT-ZK-x8a"/>
                                                 </constraints>
                                             </stackView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mda-Tp-KrU" customClass="Chart" customModule="Stopwatch" customModuleProvider="target">
+                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mda-Tp-KrU" customClass="Chart" customModule="Stopwatch" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="649" width="294" height="230"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="230" id="3sD-83-dMU"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKU-H7-Vif" userLabel="chartView1">
+                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKU-H7-Vif" userLabel="chartView1">
                                                 <rect key="frame" x="52" y="649" width="3" height="235"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -499,7 +499,7 @@
                                                     <constraint firstAttribute="height" constant="3" id="d67-zL-4wb"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MDt-YG-RV4">
+                                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MDt-YG-RV4">
                                                 <rect key="frame" x="15" y="649" width="32" height="230"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;= 30 s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHM-XB-SJe">
@@ -567,7 +567,7 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" insetsLayoutMarginsFromSafeArea="NO" text="Live chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ga-RE-PDv">
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" insetsLayoutMarginsFromSafeArea="NO" text="Live chart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ga-RE-PDv">
                                                 <rect key="frame" x="15" y="605" width="90.5" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="qQ9-Sy-oJz"/>
@@ -723,7 +723,10 @@
                         <outlet property="averageSpeedLabel" destination="ruT-OB-Vmd" id="Com-2s-8Su"/>
                         <outlet property="cadenceLabel" destination="t06-7k-nAw" id="8xa-Uh-9ZZ"/>
                         <outlet property="centsLabel" destination="mhY-TZ-kI0" id="XYN-aj-zRx"/>
+                        <outlet property="chartStack" destination="MDt-YG-RV4" id="iK8-cy-x5Z"/>
                         <outlet property="chartView" destination="mda-Tp-KrU" id="SMx-4W-ML5"/>
+                        <outlet property="chartView1" destination="tKU-H7-Vif" id="XS8-8a-8wB"/>
+                        <outlet property="chartView2" destination="FUn-2J-MZE" id="C6X-Pg-rbM"/>
                         <outlet property="container" destination="p61-vf-Ocw" id="ohJ-6T-hW3"/>
                         <outlet property="finishOutlet" destination="1eS-5R-U1T" id="hgZ-Bj-Ml3"/>
                         <outlet property="imageProfile" destination="IKu-gJ-bgz" id="QKZ-jq-Iv3"/>
@@ -731,6 +734,7 @@
                         <outlet property="lapTV" destination="BhZ-2y-tlG" id="fjt-n6-HXe"/>
                         <outlet property="lapTVHeight" destination="02f-2B-9eA" id="hvJ-nn-G0n"/>
                         <outlet property="lapsTitleLabel" destination="d8r-wx-dVo" id="U21-Zm-fc6"/>
+                        <outlet property="liveChartTitleLabel" destination="1Ga-RE-PDv" id="ZFY-Ws-RwI"/>
                         <outlet property="minutesLabel" destination="i5n-dt-Ysv" id="OjI-Ml-amw"/>
                         <outlet property="namePlayer" destination="v13-DY-szb" id="Q5p-8B-Hw8"/>
                         <outlet property="numberOfLaps" destination="Uks-y5-ylA" id="y5P-ay-mV3"/>

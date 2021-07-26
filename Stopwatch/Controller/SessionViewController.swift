@@ -11,6 +11,10 @@ import RealmSwift
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var chartView2: UIView!
+    @IBOutlet weak var chartView1: UIView!
+    @IBOutlet weak var chartStack: UIStackView!
+    @IBOutlet weak var liveChartTitleLabel: UILabel!
     @IBOutlet weak var chartView: Chart!
     @IBOutlet weak var cadenceLabel: UILabel!
     @IBOutlet weak var peakSpeedLabel: UILabel!
@@ -63,12 +67,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                         self.finishOutlet.alpha = 1
                     }
                     
-                    print("lapsss \(self.totalLapSeconds())")
-                    
-                   
-                    
                     self.lapTime = CGFloat(self.totalLapSeconds())*self.chartView.frame.size.height/30
-                    
                    
                     self.point = CGPoint(x: self.chartView.frame.size.width, y: self.lapTime)
                     
@@ -273,6 +272,12 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.stackStatistics.alpha = 1
             self.statisticsTitleLabel.alpha = 1
             self.shadowStatistics.alpha = 1
+            
+            self.chartView.alpha = 1
+            self.chartView1.alpha = 1
+            self.chartView2.alpha = 1
+            self.liveChartTitleLabel.alpha = 1
+            self.chartStack.alpha = 1
         } completion: { done in
             if done {
                 self.arrowImage.removeFromSuperview()
