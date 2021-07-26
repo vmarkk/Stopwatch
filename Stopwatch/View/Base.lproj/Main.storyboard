@@ -385,7 +385,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="364" height="17"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Number of laps:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqk-oH-vWJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="6PQ-hn-uKG"/>
                                                                 </constraints>
@@ -394,7 +394,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uks-y5-ylA">
-                                                                <rect key="frame" x="350" y="0.0" width="14" height="17"/>
+                                                                <rect key="frame" x="214.5" y="0.0" width="149.5" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="8zx-Fg-SWc"/>
                                                                 </constraints>
@@ -408,7 +408,7 @@
                                                         <rect key="frame" x="0.0" y="42" width="364" height="17"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Average speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMO-hp-MKo">
-                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="102.5" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="fTy-vF-fAB"/>
                                                                 </constraints>
@@ -417,7 +417,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruT-OB-Vmd">
-                                                                <rect key="frame" x="350" y="0.0" width="14" height="17"/>
+                                                                <rect key="frame" x="211.5" y="0.0" width="152.5" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="E2b-Fb-G3c"/>
                                                                 </constraints>
@@ -431,7 +431,7 @@
                                                         <rect key="frame" x="0.0" y="84" width="364" height="17"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Peak speed:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdL-Mz-Ey8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="eqU-cg-2nO"/>
                                                                 </constraints>
@@ -440,7 +440,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" ambiguous="YES" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mD0-7g-a5J">
-                                                                <rect key="frame" x="190" y="0.0" width="174" height="17"/>
+                                                                <rect key="frame" x="350" y="0.0" width="14" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="YSM-bP-4fO"/>
                                                                 </constraints>
@@ -576,6 +576,20 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ujx-00-Vgh">
+                                                <rect key="frame" x="57" y="889" width="300" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5F-Tz-6aN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="9cO-xW-aIF"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -585,6 +599,7 @@
                                             <constraint firstItem="zJC-y7-uTY" firstAttribute="trailing" secondItem="yRc-aL-PfA" secondAttribute="trailing" constant="10" id="5Ct-th-Arn"/>
                                             <constraint firstItem="uen-J7-2zH" firstAttribute="top" secondItem="BhZ-2y-tlG" secondAttribute="bottom" constant="25" id="7c8-kZ-Oqc"/>
                                             <constraint firstItem="9aS-xk-Fv2" firstAttribute="top" secondItem="naI-yV-dgC" secondAttribute="top" constant="-20" id="7eo-Gz-gx5"/>
+                                            <constraint firstItem="FUn-2J-MZE" firstAttribute="bottom" secondItem="ujx-00-Vgh" secondAttribute="top" constant="-5" id="8nM-lS-jCb"/>
                                             <constraint firstItem="d8r-wx-dVo" firstAttribute="top" secondItem="p61-vf-Ocw" secondAttribute="top" constant="50" id="9B6-yC-ScR"/>
                                             <constraint firstAttribute="trailing" secondItem="Cdk-kG-m0b" secondAttribute="trailing" id="ATt-bQ-Stp"/>
                                             <constraint firstItem="zJC-y7-uTY" firstAttribute="top" secondItem="yRc-aL-PfA" secondAttribute="top" constant="-10" id="Cnm-n2-zkr"/>
@@ -618,11 +633,13 @@
                                             <constraint firstItem="zJC-y7-uTY" firstAttribute="bottom" secondItem="yRc-aL-PfA" secondAttribute="bottom" constant="10" id="kIH-gC-R8J"/>
                                             <constraint firstItem="uen-J7-2zH" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="15" id="o8p-tm-aDk"/>
                                             <constraint firstItem="mda-Tp-KrU" firstAttribute="centerX" secondItem="p61-vf-Ocw" secondAttribute="centerX" id="oSj-4G-rSL"/>
+                                            <constraint firstItem="mda-Tp-KrU" firstAttribute="trailing" secondItem="ujx-00-Vgh" secondAttribute="trailing" constant="-3" id="ogb-fG-kqZ"/>
                                             <constraint firstItem="naI-yV-dgC" firstAttribute="leading" secondItem="p61-vf-Ocw" secondAttribute="leading" constant="25" id="sLf-Wm-3Gw"/>
                                             <constraint firstAttribute="trailing" secondItem="BhZ-2y-tlG" secondAttribute="trailing" id="tg7-oZ-yaB"/>
                                             <constraint firstItem="9aS-xk-Fv2" firstAttribute="leading" secondItem="naI-yV-dgC" secondAttribute="leading" constant="-10" id="u30-AI-JFG"/>
                                             <constraint firstItem="9aS-xk-Fv2" firstAttribute="bottom" secondItem="naI-yV-dgC" secondAttribute="bottom" constant="20" id="wAc-Eu-kxz"/>
                                             <constraint firstAttribute="trailing" secondItem="yRc-aL-PfA" secondAttribute="trailing" constant="25" id="wnM-n9-e5n"/>
+                                            <constraint firstItem="mda-Tp-KrU" firstAttribute="leading" secondItem="ujx-00-Vgh" secondAttribute="leading" constant="3" id="yxU-Z4-xM0"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -745,6 +762,7 @@
                         <outlet property="sexLabel" destination="Ul5-b2-gRG" id="QHh-Gb-Xsy"/>
                         <outlet property="shadowProfile" destination="zJC-y7-uTY" id="nb8-XE-zic"/>
                         <outlet property="shadowStatistics" destination="9aS-xk-Fv2" id="XEv-28-zsf"/>
+                        <outlet property="stackLapTimes" destination="ujx-00-Vgh" id="oEE-yB-u43"/>
                         <outlet property="stackStatistics" destination="naI-yV-dgC" id="m3e-bE-4fs"/>
                         <outlet property="statisticsTitleLabel" destination="xbV-V6-w8v" id="JA0-Fj-Fta"/>
                         <outlet property="titleView" destination="gr3-8L-cLu" id="kMO-Bw-8Qa"/>

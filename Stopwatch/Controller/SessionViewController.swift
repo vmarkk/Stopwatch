@@ -11,6 +11,7 @@ import RealmSwift
 class SessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
+    @IBOutlet weak var stackLapTimes: UIStackView!
     @IBOutlet weak var chartView2: UIView!
     @IBOutlet weak var chartView1: UIView!
     @IBOutlet weak var chartStack: UIStackView!
@@ -55,7 +56,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     private var lapTime: CGFloat = 0
     private var secondLastLapTime: CGFloat = 0
     
-    var testValue: CGFloat = 0
+
     private var laps = [Lap]() {
         didSet {
             
@@ -71,11 +72,22 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                    
                     self.point = CGPoint(x: self.chartView.frame.size.width, y: self.lapTime)
                     
-                   
-                    
                     self.chartView.points.append(self.point)
                   
                     self.secondLastLapTime = self.lapTime
+                    
+                    
+                    let lapChartNumberLabel = UILabel()
+                    lapChartNumberLabel.font = UIFont.systemFont(ofSize: 11, weight: .medium)
+                    lapChartNumberLabel.textColor = .black
+                    
+                    lapChartNumberLabel.text = "\(self.laps.count)"
+                    
+                  
+                    lapChartNumberLabel.textAlignment = .center
+                    
+                    self.stackLapTimes.addArrangedSubview(lapChartNumberLabel)
+                    self.stackLapTimes.setNeedsDisplay()
                 }
                 
                 self.lapTV.insertRows(at: [IndexPath(row: 0, section: 0)], with: .left)
@@ -114,7 +126,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.testValue = 100
+        
         scroll.contentInset.top = 150
         scroll.contentInset.bottom = lapOutlet.frame.size.height+45
         
@@ -146,6 +158,8 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
             sexImage.image = UIImage(named: "female")
             sexLabel.text = "Female"
         }
+        
+        stackLapTimes.translatesAutoresizingMaskIntoConstraints = false
     }
     
     
