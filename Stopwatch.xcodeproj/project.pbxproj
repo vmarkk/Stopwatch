@@ -13,7 +13,6 @@
 		EA110C3A26AC725C00B97715 /* LeaderTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA110C3826AC725C00B97715 /* LeaderTVCell.xib */; };
 		EA18667C26AA10A800616800 /* LapTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18667A26AA10A800616800 /* LapTVCell.swift */; };
 		EA18667D26AA10A800616800 /* LapTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA18667B26AA10A800616800 /* LapTVCell.xib */; };
-		EA3BDC5126ADAB6600104197 /* Chart.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3BDC5026ADAB6600104197 /* Chart.xib */; };
 		EA3BDC5326ADAB8300104197 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3BDC5226ADAB8300104197 /* Chart.swift */; };
 		EA6BC23826AAE195000B8075 /* Lap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6BC23726AAE195000B8075 /* Lap.swift */; };
 		EA82E15726A83F7E000F1797 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82E15626A83F7E000F1797 /* Extensions.swift */; };
@@ -75,7 +74,6 @@
 		EA110C3826AC725C00B97715 /* LeaderTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaderTVCell.xib; sourceTree = "<group>"; };
 		EA18667A26AA10A800616800 /* LapTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapTVCell.swift; sourceTree = "<group>"; };
 		EA18667B26AA10A800616800 /* LapTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LapTVCell.xib; sourceTree = "<group>"; };
-		EA3BDC5026ADAB6600104197 /* Chart.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Chart.xib; sourceTree = "<group>"; };
 		EA3BDC5226ADAB8300104197 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		EA6BC23726AAE195000B8075 /* Lap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lap.swift; sourceTree = "<group>"; };
 		EA82E15626A83F7E000F1797 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 				EAE7A6BC26A8AB72001ACD32 /* Spinner.swift */,
 				EAE7A6C026A8BB9B001ACD32 /* Background.swift */,
 				EAA7ACD526AC564B008619BC /* SortView.xib */,
-				EA3BDC5026ADAB6600104197 /* Chart.xib */,
 				EA3BDC5226ADAB8300104197 /* Chart.swift */,
 			);
 			path = CustomShapes;
@@ -400,7 +397,6 @@
 				EAD4F5C826A775C60057DF32 /* PlayerTVCell.xib in Resources */,
 				EAD4F59726A73C910057DF32 /* LaunchScreen.storyboard in Resources */,
 				EAD4F59426A73C910057DF32 /* Assets.xcassets in Resources */,
-				EA3BDC5126ADAB6600104197 /* Chart.xib in Resources */,
 				EA110C3A26AC725C00B97715 /* LeaderTVCell.xib in Resources */,
 				EAD4F59226A73C900057DF32 /* Main.storyboard in Resources */,
 				EA18667D26AA10A800616800 /* LapTVCell.xib in Resources */,

@@ -83,8 +83,7 @@ class SessionViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                     lapChartNumberLabel.text = "\(self.laps.count)"
                     
-                  
-                    lapChartNumberLabel.textAlignment = .center
+                    lapChartNumberLabel.textAlignment = .left
                     
                     self.stackLapTimes.addArrangedSubview(lapChartNumberLabel)
                     self.stackLapTimes.setNeedsDisplay()
