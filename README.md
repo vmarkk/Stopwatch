@@ -1,6 +1,8 @@
 # ⏱ Stopwatch
 App to track athletes lap speed
 
+### 📲 APP STORE: you can now get the complete version of this app: https://apps.apple.com/us/app/sprint/id1579188934
+
 
 ## 🛠  HOW TO INSTALL
 
